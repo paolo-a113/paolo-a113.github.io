@@ -843,7 +843,7 @@ h2 {
 .section-6 {
   margin-top: 79px;
   padding-top: 0px;
-  background-image: url("https://uploads-ssl.webflow.com/5d03bf14e13f275377a42202/5d03c2b1e13f2734a5a43611_CornellGrad-2407-2.jpg");
+  background-image: url("../resources/pics/about_bg.jpg"); 
   background-position: 50% 50%;
   background-size: cover;
 }
