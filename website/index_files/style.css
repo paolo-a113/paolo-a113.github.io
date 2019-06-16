@@ -1105,6 +1105,24 @@ h2 {
   font-size: 20px;
 }
 
+a.description {
+  text-decoration: none;
+  transition: color 200ms ease-in-out;
+  transition: background-color 400ms ease-in-out;
+  color: #DE5021;
+  cursor: pointer;
+}
+
+a.description:link {
+  color: #da1010;
+}
+
+a.description:hover {
+  color: white;
+  background-color: #DE5021;
+}
+
+
 @media (max-width: 991px) {
   .collection-list {
     padding-top: 0px;
