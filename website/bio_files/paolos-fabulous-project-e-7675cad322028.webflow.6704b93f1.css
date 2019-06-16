@@ -95,6 +95,7 @@ h2 {
   text-align: left;
   text-shadow: 1px 1px 6px #000;
   overflow-x: hidden;
+  overflow-y: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
 }
