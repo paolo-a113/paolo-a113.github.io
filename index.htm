@@ -26,19 +26,68 @@
             n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
         }(window, document);
     </script>
+
+    <style>
+       /* Style the header with a grey background and some padding */
+    .header {
+      overflow: hidden;
+      background-color: #f1f1f1;
+      padding: 20px 50px;
+    }
+
+    /* Style the header links */
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      line-height: 25px;
+      border-radius: 4px;
+    }
+
+    /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+    .header a.logo {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      color: #DE5021;
+    }
+
+    /* Float the link section to the right */
+    .header-right {
+      float: right;
+      font-size: 12px;
+    }
+
+    /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .header-right {
+        float: none;
+      }
+    }
+    </style>
 </head>
 
 <body class="body">
-  <div class="section-3">
-      <div data-collapse="medium" data-animation="default" data-duration="400" data-doc-height="1" class="navbar-4 w-nav">
-          <div class="container-4 w-container"><a href="./index.htm" data-w-id="0db1b140-a4fb-6f41-53b0-af6d51e14587" style="color:rgb(0,0,0)" class="nav-link-6-copy w-nav-link w--current">Paolo Arguelles</a>
-              <nav role="navigation" class="w-clearfix w-nav-menu"><a href="./projects.htm" data-w-id="0db1b140-a4fb-6f41-53b0-af6d51e1458a" style="color:rgb(0,0,0)" class="nav-link-4 w-nav-link">Projects</a><a href="./bio.htm" data-w-id="0db1b140-a4fb-6f41-53b0-af6d51e1458c" style="color:rgb(0,0,0)" class="nav-link-4 w-nav-link">Biography</a><a href="./website/resources/PaoloArguelles_Resume.pdf" data-w-id="0db1b140-a4fb-6f41-53b0-af6d51e1458e" style="color:rgb(0,0,0)" class="nav-link-4 w-nav-link">Resume</a></nav>
-              <div class="menu-button-2 w-nav-button">
-                  <div class="icon w-icon-nav-menu"></div>
-              </div>
-          </div>
-      </div>
+  <div class="header">
+  <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+  <div class="header-right">
+    <a class=myPages href="./projects.htm">PROJECTS</a>
+    <a class=myPages href="./bio.htm">BIOGRAPHY</a>
+    <a class=myPages href="#about">SPEECH</a>
+    <a class=myPages href="./website/resources/PaoloArguelles_Resume.pdf">RESUME</a>
   </div>
+</div>
+
+
     <div class="section-6">
         <div class="div-block-15 w-clearfix">
             <h1 class="heading-15">Hi, I'm Paolo!</h1>
