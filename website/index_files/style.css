@@ -1098,7 +1098,9 @@ h2 {
 
 .myPages {
   float: left;
-  font-family: 'Futura', 'Book Antiqua', Palatino, serif;
+  font-family: 'myBrandon';
+  font-weight:normal;
+  font-size:normal
   color: #000;
   font-size: 20px;
 }
