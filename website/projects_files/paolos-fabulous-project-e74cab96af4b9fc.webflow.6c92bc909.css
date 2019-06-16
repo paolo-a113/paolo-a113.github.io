@@ -3063,6 +3063,7 @@ h2 {
 	background-image: url("https://uploads-ssl.webflow.com/5cfd93a271000a4eb8533f96/5cfdee4b982a746cf8f33739_CornellGrad-2627.jpg");
 	background-position: 50% 40%;
 	background-size: cover;
+	background-attachment: fixed;
 	line-height: 30px;
 }
 
@@ -3273,6 +3274,7 @@ h2 {
 	}
 	.div-block-15-copy {
 		background-size: cover;
+		background-attachment: fixed;
 	}
 	.text-block-11 {
 		overflow: scroll;
@@ -3474,7 +3476,7 @@ h2 {
 		font-size: 16px;
 	}
 	.div-block-15-copy {
-		height: 200px;
+		height: 2000px;
 		background-position: 70% 50%;
 	}
 	.heading-15-copy {
