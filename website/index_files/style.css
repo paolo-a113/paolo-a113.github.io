@@ -1113,10 +1113,6 @@ a.description {
   cursor: pointer;
 }
 
-a.description:link {
-  color: #da1010;
-}
-
 a.description:hover {
   color: white;
   background-color: #DE5021;
