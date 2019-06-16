@@ -3098,8 +3098,9 @@ h2 {
 	height: 102%;
 	margin-bottom: 0px;
 	padding-bottom: 0px;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+	/* background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000)); */
 	background-image: linear-gradient(180deg, transparent, #000);
+	transition: text-decoration 200ms ease-in-out;
 	text-decoration: none;
 }
 
@@ -3194,12 +3195,8 @@ h2 {
 	height: 400px;
 	opacity: 0;
 	background-color: transparent;
+	transition: opacity 200ms ease-in-out;
 }
-
-.div-block-16:hover {
-	opacity: 1.0;
-}
-
 
 .nav-link-6-copy {
 	float: left;
