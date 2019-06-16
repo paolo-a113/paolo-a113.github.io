@@ -1004,7 +1004,7 @@ h2 {
   text-decoration: none;
 }
 
-.text-block-11 {
+.home_description {
   position: static;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1107,8 +1107,8 @@ h2 {
 
 a.description {
   text-decoration: none;
-  transition: color 200ms ease-in-out;
-  transition: background-color 400ms ease-in-out;
+  transition: color 400ms;
+  transition: background-color 400ms;
   color: #DE5021;
   cursor: pointer;
 }
@@ -1178,7 +1178,7 @@ a.description:hover {
   .div-block-15-copy {
     background-size: cover;
   }
-  .text-block-11 {
+  .home_description {
     padding-right: 36px;
     padding-left: 350px;
   }
@@ -1262,7 +1262,7 @@ a.description:hover {
     color: #000;
     text-align: center;
   }
-  .text-block-11 {
+  .home_description {
     overflow: scroll;
     padding: 60px 60px 100px;
     color: #000;
@@ -1366,7 +1366,7 @@ a.description:hover {
     padding-top: 141px;
     font-size: 30px;
   }
-  .text-block-11 {
+  .home_description {
     padding: 28px 10px 60px 20px;
     color: #272727;
     font-size: 16px;
