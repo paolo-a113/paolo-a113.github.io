@@ -1079,6 +1079,14 @@ h2 {
   color: #000;
 }
 
+.project_box{
+  float: right;
+  background-color: white;
+  margin-top: -140px;
+  margin-left: 145px;
+  max-width: 1500px;
+}
+
 .myPages {
   float: left;
   font-family: 'myBrandon';
