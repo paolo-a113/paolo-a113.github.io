@@ -1087,6 +1087,18 @@ h2 {
   max-width: 1500px;
 }
 
+.project_title {
+	padding-left: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+
+	font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+	font-size: 48px;
+	font-weight: 300;
+  line-height: 1.2;
+}
+
 .myPages {
   float: left;
   font-family: 'myBrandon';
