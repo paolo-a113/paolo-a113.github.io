@@ -1083,7 +1083,8 @@ h2 {
   float: right;
   background-color: white;
   margin-top: -140px;
-  margin-left: 145px;
+  margin-left: 600px;
+  margin-right: 100px;
   max-width: 1500px;
 }
 
