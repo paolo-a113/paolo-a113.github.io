@@ -191,6 +191,16 @@
           Built for Cornell's Space Systems Design Studio, this project consists of a remotely controlled testbed containing six onboard thrusters and three reaction wheels to simulate multi-axis orbital dynamics of spacecraft in a frictionless environment.        </div>
         <div class="project_body">
 
+          <h1 class="project_body_header">
+            Simulating Space in a Lab
+          </h1>
+          The idea was to simulate spacecraft control by developing a physical system that mimics the friction-free environment of outer space and is able to rotate in three axes. The system we built is suspended on an air bearing which levitates the system on a thin layer of air (like an air hockey puck). Our system is controlled via three reaction wheels (motors that turn spacecraft by gyroscopic effects) and six compressed air thrusters.
+Bettina (Team Lead) and Zach (Mechanical/Aerospace Engineer) broke out some insane mechanical engineering skills to build the physical system and ensure its structural integrity through simulations. I put together an electronic system to control the three reaction wheels and six compressed air thrusters, as well as actively monitor air pressure. The electronics are controlled wirelessly from a nearby computer with a custom-built graphical user interface.
+We hope it will continue to be useful to test autonomous control algorithms for some of the small spacecraft developed in our lab, as well as provide professors with an instructional platform for advanced spacecraft control students!
+
+          <img src="./website/resources/pics/fullsetup.jpg" height=500px class="center">
+          <figcaption class="caption">Complete lab test setup of the simulator and testbed</figcaption>
+
           <img src="./website/resources/pics/ssds_team.jpg" height=400px class="center">
           <figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical and Computer Engineer), and Zach Tretler (Mechanical Engineer)</figcaption>
 
@@ -206,9 +216,11 @@
 
         the Raspberry Pi
 
-        controlled via secure shell (SSH) or virtual network computing (VNC) from any computer logged on to the Cornell University network.
 
-
+        <h1 class="project_body_header">
+          Hardware Details
+        </h1>
+        <i> Explore testbed components and subsystems. </i>
         <button class="collapsible">SIMULINK CONTROL INTERFACE</button>
         <div class="content"><br>
           <img src="./website/resources/pics/interface.png" height=500px class="center">
@@ -231,10 +243,12 @@
                 <li>Transmits inertial telemetry, reaction wheel speeds, and pressure readings back to the operator
             </ul>
 
+            <h2 class="project_body_subheader"> Switching from Arduino Due to Raspberry Pi </h2>
             Previous teams' designs called for an Arduino Due to act as the flight computer. However, after compiling a requirement set for the flight computer, I realized that an Arduino Due is not sufficient to realize the requirement set
             and instead opted for a Raspberry Pi 3B+. This switch enabled me to take advantage of a number of new capabilities including multithreading (enabling multiple processes to run concurrently, a desired trait for realtime hardware applications), increased clock speed for faster code execution, and the benefit of an entire Linux-based embedded operating system fully contained on the testbed.
             Each Arduino microcontroller acting as a peripheral device was plugged directly into the Raspberry Pi USB hub and would achieve bidirectional communication with the flight computer over a UART bus.
 
+            <h2 class="project_body_subheader"> Persistent Serial Device Identification </h2>
             Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0) depending on which Arduino was recognized first. I introduced u-dev rules to capture uniquely identifying id values for each connected COM device and used SYMLINKs to create an identifying name (e.g., /dev/imu_reader, /dev/motor_controller, etc.) that uniquely and persistently identifies each microcontroller.
 
 
@@ -245,6 +259,10 @@
         <div class="content">
           <p>The six solenoid valves controlling each of the six thrust outlets are each connected to a logic-level MOSFET which can be controlled by an Arduino microcontroller.
           There is code on the microcontroller to limit each thrust duration to 200 ms. </p>
+
+          <img src="./website/resources/pics/valves.jpg" height=500px class="center">
+          <figcaption class="caption">MOSFET drivers to control thrusters</figcaption>
+
         </div>
         <button class="collapsible">DRIVING THE REACTION WHEELS</button>
         <div class="content">
@@ -255,13 +273,26 @@
         </p>
         </div>
         <h1 class="project_body_header">
-          Closed-Loop (Autonomous) Control
+          Successful Test
         </h1>
+        The first successful test of the fully operational testbed was achieved eight months after our team began working on the project.
+        Our report
+
+        <h1 class="project_body_header">
+          Continuing Work
+         </h1>
+
+         <h2 class="project_body_subheader">
+           Autonomous (Closed-Loop) Control
+        </h2>
         Having built and successfully demonstrated open-loop control on the testbed to faculty members in the Sibley School of Mechanical and Aerospace Engineering, students from Professor Mason Peck's graduate spaceflight course were tasked with creating a closed-loop attitude control algorithm in simulation and deploying the controller to our hardware testbed for verification.
-        The Simulink control program may be simplified to a single subsystem that effectively acts as a plant in a closed-loop control system. A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or 1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
+        The Simulink control program may be simplified to a single subsystem that effectively acts as a plant in a closed-loop control system.
         <br><br>
         <img src="./website/resources/pics/block.png" height=300px class="center">
         <figcaption class="caption">User interface as control plant</figcaption>
+        A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or 1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
+
+        We hope it will continue to be useful to test autonomous control algorithms for some of the small spacecraft developed in our lab, as well as provide professors with an instructional platform for advanced spacecraft control students!
 
         <script>
         var coll = document.getElementsByClassName("collapsible");

@@ -1140,6 +1140,13 @@ background-color: #f1f1f1;
   font-size: 22px;
 }
 
+.project_body_subheader{
+  font-family: 'Palatino';
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+}
+
 .myPages {
   float: left;
   font-family: 'myBrandon';
