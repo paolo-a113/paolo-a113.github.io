@@ -666,7 +666,8 @@ h2 {
 }
 
 .body-2 {
-  background-color: #fff;
+background-color: #f1f1f1;
+;
 }
 
 .container-5 {
@@ -703,7 +704,7 @@ h2 {
 .collection-list-wrapper {
   margin-left: 0px;
   padding: 0px 60px 100px;
-  background-color: #fff;
+  background-color: #f1f1f1;
   color: #fff;
 }
 
@@ -1071,23 +1072,24 @@ h2 {
 
 .project_topic{
   font-family: 'Futura';
+  padding-top: 10px;
   color: #DE5021;
   font-size: 12px;
 }
 
 .project_contain{
   align-content: left;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 60px;
+  padding-right: 70px;
   padding-top: 30px;
 }
 
 .project_box{
   float: right;
   background-color: white;
-  margin-top: -140px;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-top: -300px;
+  margin-left: 400px;
+  margin-right: 100px;
 }
 
 .project_description{
@@ -1135,6 +1137,17 @@ h2 {
   font-size: 20px;
 }
 
+
+.backButton {
+  float: left;
+  font-family: 'Palatino';
+  font-weight:normal;
+  font-size:normal;
+  color: black;
+  font-size: 14px;
+  padding-bottom: 10px;
+}
+
 .div-block-15-copy {
   height: 600px;
   background-image: url("./resources/pics/project_bg.jpg");
@@ -1171,6 +1184,8 @@ h2 {
   .collection-list-wrapper {
     padding-right: 0px;
     padding-left: 0px;
+    background-color: #f1f1f1;
+
   }
   .div-block-15 {
     background-size: cover;
@@ -1228,6 +1243,8 @@ h2 {
   .collection-list-wrapper {
     padding-right: 0px;
     padding-left: 0px;
+    background-color: #f1f1f1;
+
   }
   .div-block-9 {
     overflow: hidden;
@@ -1351,6 +1368,8 @@ h2 {
     padding-right: 0px;
     padding-bottom: 61px;
     padding-left: 0px;
+    background-color: #f1f1f1;
+
   }
   .div-block-15 {
     background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
@@ -1845,7 +1864,7 @@ h2 {
 .collection-list-wrapper {
 	margin-left: 0px;
 	padding: 0px 60px 100px;
-	background-color: #fff;
+  background-color: #f1f1f1;
 	color: #fff;
 }
 
@@ -2042,6 +2061,8 @@ h2 {
 		-webkit-align-items: flex-start;
 		-ms-flex-align: start;
 		align-items: flex-start;
+    background-color: #f1f1f1;
+
 	}
 	.text-block-6 {
 		padding-top: 0px;
@@ -2116,6 +2137,8 @@ h2 {
 	.collection-list-wrapper {
 		padding-right: 0px;
 		padding-left: 0px;
+    background-color: #f1f1f1;
+
 	}
 	.div-block-9 {
 		overflow: hidden;
@@ -2245,6 +2268,8 @@ h2 {
 		padding-right: 0px;
 		padding-bottom: 61px;
 		padding-left: 0px;
+    background-color: #f1f1f1;
+
 	}
 	.div-block-15 {
 		background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
