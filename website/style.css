@@ -723,7 +723,7 @@ background-color: #f1f1f1;
   width: 100%;
   height: 100px;
   margin-top: 0px;
-  padding-top: 0px;
+  padding-top: 100px;
   padding-bottom: 100px;
   font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
   color: #2e2e2e;
@@ -940,7 +940,9 @@ background-color: #f1f1f1;
 .caption {
   font-family: 'Palatino';
   font-style: italic;
-  font-size: 12px;
+  font-size: 14px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
 .heading-15-copy {
@@ -1099,7 +1101,7 @@ background-color: #f1f1f1;
 .project_box{
   float: right;
   background-color: white;
-  margin-top: -300px;
+  margin-top: -500px;
   margin-left: 400px;
   margin-right: 100px;
 }
@@ -1137,7 +1139,8 @@ background-color: #f1f1f1;
 .project_body_header{
   font-family: 'Palatino';
   font-weight: 400;
-  font-size: 22px;
+  font-size: 28px;
+  margin-bottom: 0;
 }
 
 .project_body_subheader{
@@ -1145,6 +1148,9 @@ background-color: #f1f1f1;
   font-weight: 400;
   font-style: italic;
   font-size: 18px;
+  margin-top:0;
+  margin-bottom:0;
+
 }
 
 .myPages {
@@ -2352,5 +2358,6 @@ h2 {
 		display: -ms-flexbox;
 		display: flex;
 		margin-top: 2000px;
+    margin-bottom: 100px;
 	}
 }
