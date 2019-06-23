@@ -930,16 +930,6 @@ h2 {
   text-align: center;
 }
 
-.div-block-15-copy {
-  height: 600px;
-  margin-top: 0px;
-  padding-top: 0px;
-  background-image: url("https://uploads-ssl.webflow.com/5cfd93a271000a4eb8533f96/5cfdee4b982a746cf8f33739_CornellGrad-2627.jpg");
-  background-position: 50% 40%;
-  background-size: cover;
-  line-height: 30px;
-}
-
 .heading-15-copy {
   position: static;
   display: -webkit-box;
@@ -1079,18 +1069,40 @@ h2 {
   color: #000;
 }
 
+.project_topic{
+  font-family: 'Futura';
+  color: #DE5021;
+  font-size: 12px;
+}
+
+.project_contain{
+  align-content: left;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+}
+
 .project_box{
   float: right;
   background-color: white;
   margin-top: -140px;
-  margin-left: 600px;
-  margin-right: 100px;
-  max-width: 1500px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.project_description{
+  background-color: white;
+  font-family: 'Palatino';
+  color: gray;
+  font-size: 20px;
+  padding-bottom: 20px;
+  line-height: 1.2;
+  font-style: oblique;
 }
 
 .project_title {
-	padding-left: 32px;
-  padding-top: 10px;
+	padding-left: 0px;
+  padding-top: 0px;
   padding-bottom: 10px;
   padding-right: 10px;
 
@@ -1100,6 +1112,20 @@ h2 {
   line-height: 1.2;
 }
 
+.project_body{
+  font-family: 'Lato';
+  color: black;
+  font-size: 16px;
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+
+.project_body_header{
+  font-family: 'Palatino';
+  font-weight: 400;
+  font-size: 22px;
+}
+
 .myPages {
   float: left;
   font-family: 'myBrandon';
@@ -1107,6 +1133,15 @@ h2 {
   font-size:normal
   color: #000;
   font-size: 20px;
+}
+
+.div-block-15-copy {
+  height: 600px;
+  background-image: url("./resources/pics/project_bg.jpg");
+  background-position: 50% 40%;
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: 30px;
 }
 
 @media (max-width: 991px) {
@@ -1830,18 +1865,6 @@ h2 {
 	padding-top: 0px;
 	background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.76)));
 	background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.76));
-}
-
-
-.div-block-15-copy {
-	height: 600px;
-	margin-top: 0px;
-	padding-top: 0px;
-	background-image: url("https://uploads-ssl.webflow.com/5cfd93a271000a4eb8533f96/5cfdee4b982a746cf8f33739_CornellGrad-2627.jpg");
-	background-position: 50% 40%;
-	background-size: cover;
-	background-attachment: fixed;
-	line-height: 30px;
 }
 
 .heading-15-copy {
