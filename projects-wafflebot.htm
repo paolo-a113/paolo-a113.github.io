@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Project Page | Paolo Arguelles</title>
+    <title>Spacecraft Flight Simulator | Paolo Arguelles</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="Webflow" name="generator">
     <link href="./website/style.css" rel="stylesheet" type="text/css">
@@ -53,16 +53,108 @@
       font-size: 20px;
     }
 
-    .div-block-15-copy {
+    .project_image {
     	height: 600px;
     	margin-top: 0px;
     	padding-top: 0px;
-    	background-image: url("./website/resources/pics/waffle_bg.jpg");
-    	background-position: 50% 100%;
+    	background-image: url("./website/resources/pics/ssds_bg.jpg");
+    	background-position: 50% 40%;
     	background-size: cover;
     	background-attachment: fixed;
     	line-height: 30px;
     }
+
+    .collapsible {
+      background-color: #fff;
+      color: black;
+      font-family: 'Futura';
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      border-bottom-style: solid;
+      border-bottom-color: inherit;
+    }
+
+    .active, .collapsible:hover {
+      transition: 200ms;
+      color: #DE5021;
+    }
+
+    .collapsible:after {
+      content: '+';
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+      color: inherit;
+    }
+
+    .active:after {
+      content: "−";
+      color: #DE5021;
+    }
+
+    .content {
+      padding: 0 18px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 300ms;
+      background-color: #f1f1f1;
+    }
+
+    .sidenav {
+    font-family: 'Palatino';
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+    height: 50%;
+    width: 400px;
+    z-index: 1;
+    top: 0px;
+    position: relative;
+    background-color: transparent;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-left: 40px;
+
+    }
+
+.sidenav a {
+  font-family: 'Helvetica';
+  padding: 6px 40px 6px 0px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  display: block;
+}
+
+.sidenav d {
+  font-family: 'Helvetica';
+  padding: 6px 40px 6px 0px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  transition: 200ms;
+  color: #DE5021;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
+
 
     /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
     @media screen and (max-width: 500px) {
@@ -88,23 +180,148 @@
     <a class=myPages href="./website/resources/PaoloArguelles_Resume.pdf">RESUME</a>
   </div>
   </div>
-    <div class="div-block-15-copy">
+
+    <div class="project_image">
+    </div>
+    <div class="sidenav">
+      <a href="./projects.htm" text-align:"center"> ‹ Back to Project Page </a>
+<br>
+      Project Name
+      <d>WaffleBot: A Shape-Shifting, Soft Robotic Matrix Platform for Multi-Agent Control</d>
+      <br>
+      Status
+      <d>IN PROGRESS</d>
+      <br>
+      Affiliations
+      <br>
+      <a href="https://www.spacecraftresearch.com/people/">Collective Embodied Intelligence Laboratory, Cornell University
+      <br></a>
+      <br>
+      Documentation
+      <a href="./website/resources/Initial_Testing_of_the_High_Agility_Attitude_Test_Bed.pdf"><i>WaffleBot: A Shape-Shifting, Soft Robotic Matrix Platform for Multi-Agent Control</i></a>
+      <a href="./website/resources/Spacecraft_Flight_Simulator_User_Manual__SSDS_ (1).pdf">Project Proposal</a>
+      <a href="./website/resources/Initial_Testing_of_the_High_Agility_Attitude_Test_Bed.pdf">COMS Subsystem Progress Report Slides</a>
+
     </div>
     <div class="project_box">
       <div class="project_contain">
-        <div class="project_topic">
-          ROBOTICS
-        </div>
+        <div class="project_topic"> ROBOTICS </div>
         <div class="project_title">
-          WaffleBot: A Shape-Shifting, Soft Robotic Matrix Platform for Multi-Agent Control        </div>
+        WaffleBot: A Shape-Shifting, Soft Robotic Matrix Platform for Multi-Agent Control
+        </div>
         <div class="project_description">
-          A bio-inspired, decentralized shape-shifting robot created at Cornell's Collective Embodied Intelligence Lab        </div>
+          Built for Cornell's Space Systems Design Studio, this project consists of a remotely controlled testbed containing six onboard thrusters and three reaction wheels to simulate multi-axis orbital dynamics of spacecraft in a frictionless environment.        </div>
         <div class="project_body">
           <h1 class="project_body_header">
-            Test
+            Simulating Outer Space in a Lab Environment
           </h1>
-          Soft robots show great promise for reducing the kinematic complexity of motion but with the added challenge of characterizing and reliably controlling motion. Here we expand on that work by introducing a soft, cheap square matrix with embedded rigid walls. This robot is capable of shape shifting by means of a motor and a tendon pulling opposing vertices of a square agent together. Actuation of local agents impact the motion of neighboring agents and the global shape of the structure. These agents use capacitive sensing for detecting objects in their environment. Upon detection of an object, the agent shape shifts enabling the robot to bypass an object in the way. Lastly, this work is extended to developing a simulation platform that looks at scaling the matrix size and the shape deformation of local agents and the global matrix with multiple obstacles in its path. This work develops a platform for future testing of local and global shape changes, different control algorithms, and various communication between agents. The robot's cost, durability, and ability to sense and react to environmental stimuli may be beneficial in applications such as water filtration and waste catchment.
 
+          The idea is to simulate spacecraft control by developing a physical system that mimics the friction-free environment of outer space and is able to rotate in three axes. The system we built is suspended on an air bearing which levitates the system on a thin layer of air (like an air hockey puck). Our system is controlled via three reaction wheels (motors that turn spacecraft by gyroscopic effects) and six compressed air thrusters.           The electronics are controlled wirelessly from a nearby computer with a custom-built graphical user interface.
+          <br><br>
+          <img src="./website/resources/pics/fullsetup.jpg" height=500px class="center">
+          <figcaption class="caption">Complete lab test setup of the simulator and testbed</figcaption>
+          <br>
+          The <i> Spacecraft Flight Simulator and Attitude Testbed </i> will provide a lab environment to test autonomous attitude control algorithms for the small spacecraft developed in our research lab, as well as provide professors with an instructional platform for advanced spacecraft control students.
+
+
+        <h1 class="project_body_header">
+          <br>Hardware Details
+        </h1>
+        <i> Explore testbed components and subsystems. </i>
+        <button class="collapsible">SIMULINK CONTROL INTERFACE</button>
+        <div class="content"><br>
+          <img src="./website/resources/pics/interface.png" height=500px class="center">
+          <figcaption class="caption">User interface for the spacecraft flight simulator</figcaption>
+          <h2 class="project_body_subheader">
+            Design
+         </h2>
+
+          <p>Because the data stream has been formatted such that it is sent to the Simulink program serially, it is relatively trivial to parse the incoming string and extract desired values. The Simulink program makes use of the Serial Instrumentation blockset to interface with an XBee plugged directly into the computer. Upon simulation execution, Simulink recognizes the XBee as a COM device, establishes a connection, and begins reading the raw data strings sent by the Arduino.</p>
+
+          <img src="./website/resources/pics/scope.png" height=700px class="center">
+          <figcaption class="caption">Realtime telemetry visualization</figcaption>
+
+        </div>
+        <button class="collapsible">FLIGHT COMPUTER</button>
+        <div class="content"><br>
+          <p>The FLIGHT COMPUTER retains the following roles:
+            <ul>
+                <li>Receives and interprets commands sent wirelessly to the testbed by an operator</li>
+                <li>Sends instructions to the REACTION WHEEL CONTROLLER and THRUSTER CONTROLLER to execute operator commands </li>
+                <li>Receives realtime telemetry from the inertial measurement unit (IMU) and pressure sensor</li>
+                <li>Detects pulse information from three optical tachometers and calculates corresponding reaction wheel speed readings</li>
+                <li>Transmits inertial telemetry, reaction wheel speeds, and pressure readings back to the operator
+            </ul>
+
+            <h2 class="project_body_subheader"> Switching from Arduino Due to Raspberry Pi </h2>
+            Previous teams' designs called for an Arduino Due to act as the flight computer. However, after compiling a requirement set for the flight computer, I realized that an Arduino Due is not sufficient to realize the requirement set
+            and instead opted for a Raspberry Pi 3B+. This switch enabled me to take advantage of a number of new capabilities including multithreading (enabling multiple processes to run concurrently, a desired trait for realtime hardware applications), increased clock speed for faster code execution, and the benefit of an entire Linux-based embedded operating system fully contained on the testbed.
+            Each Arduino microcontroller acting as a peripheral device was plugged directly into the Raspberry Pi USB hub and would achieve bidirectional communication with the flight computer over a UART bus.
+
+            <h2 class="project_body_subheader"> <br>Transmitting Telemetry</h2>
+            A primary task of the flight computer is to relay telemetry from the onboard IMU sensor back to the operator. The flight computer achieves this by
+            reading serial data from the IMU reader microcontroller to gather inertial telemetry and using a FIFO to collect reaction wheel speed calculated by another Python script running in the background. The program then compiles an ASCII string and transmits it to the operator over the local XBee link.
+
+            <h2 class="project_body_subheader"> <br>Persistent Serial Device Identification </h2>
+            Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0) depending on which Arduino was recognized first. I introduced u-dev rules to capture uniquely identifying id values for each connected COM device and used SYMLINKs to create an identifying name (e.g., /dev/imu_reader, /dev/motor_controller, etc.) that uniquely and persistently identifies each microcontroller.
+
+            <img src="./website/resources/pics/telemetry.png" height=300px class="center">
+            <figcaption class="caption">Received telemetry strings on the operator side</figcaption>
+
+            Each line carries information about the speed of each reaction wheel, and accelerometer, gyroscope, and magnetometer readings in three axes from the IMU sensor.
+            This serial stream is captured and parsed in Simulink where the resulting information is displayed to the operator in a readable manner.
+          </p>
+        </div>
+        <button class="collapsible">CONTROLLING THE THRUSTERS</button>
+        <div class="content">
+          <p><br>The six solenoid valves controlling each of the six thrust outlets are each connected to a logic-level MOSFET driven by an Arduino microcontroller.
+          Code on the microcontroller limits each thrust duration to 200 ms. </p>
+
+          <img src="./website/resources/pics/valves.jpg" height=500px class="center">
+          <figcaption class="caption">MOSFET drivers to control thrusters</figcaption>
+
+        </div>
+        <button class="collapsible">DRIVING THE REACTION WHEELS</button>
+        <div class="content">
+          <p><br>The testbed contains three high-torque DC pancake motors that act as reaction wheels. The reaction wheels were affixed orthogonally to each other to effect torques around three axes.
+          An optical tachometer was carefully aimed at the spindle of each motor (which held a piece of reflective tape) to count revolutions. The optical tachometers were connected electrically to the flight computer's GPIO, where a pulse resulting from one revolution would trigger an interrupt service routine that updates an RPM value and sends it to the operator.
+          Additionally, each reaction wheel was driven by a motor driver that actively monitors temperature, voltage, and current and cuts power to the load when a prespecified shutoff event is detected. Constraints were also placed on the brake ability of the reaction wheels (i.e., limits for acceleration/deceleration were put in place) to prevent large, sudden current draws.
+          The reaction wheel direction and speed are both controlled by an 8-bit integer; a value of '128' sent by the operator to a reaction wheel on the testbed corresponds to zero rotation, '255' to full-speed (3600 RPM) clockwise, and '0' to full-speed counter-clockwise.
+        </p>
+        </div>
+
+        <h1 class="project_body_header">
+          <br>Continuing Work
+         </h1>
+         <h2 class="project_body_subheader">
+           Autonomous (Closed-Loop) Control
+        </h2>
+        Having built and successfully demonstrated open-loop control on the testbed to faculty members in the Sibley School of Mechanical and Aerospace Engineering, students from Professor Mason Peck's graduate spaceflight course were tasked with creating a closed-loop attitude control algorithm in simulation and deploying the controller to our hardware testbed for verification.
+        The Simulink control program may be simplified to a single subsystem that effectively acts as a plant in a closed-loop control system.
+        <br><br>
+        <img src="./website/resources/pics/block.png" height=300px class="center">
+        <figcaption class="caption">User interface as control plant</figcaption>
+        A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or 1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
+
+        <h1 class="project_body_header"><br> Our Team </h1>
+        <img src="./website/resources/pics/ssds_team.jpg" height=500px class="center">
+        <figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical and Computer Engineer), and Zach Tretler (Mechanical Engineer)</figcaption>
+        <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+        </script>
 
         </div>
       </div>
@@ -113,12 +330,8 @@
   </div>
 
     <div class="section-8">
-        <div class="text-block-6">© 2019 - 2023 by Paolo Arguelles.
-            <br>All rights reserved.</div>
+        <div class="text-block-6">© 2019 - 2023 by Paolo Arguelles. All rights reserved.<br></div>
     </div>
-    <script src="./website/projects_files/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="./website/projects_files/webflow.147763e2a.js" type="text/javascript"></script>
-    <!--[if lte IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif]-->
 
 </body>
 
