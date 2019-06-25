@@ -203,7 +203,7 @@
       <d>Spacecraft Flight Simulator and Attitude Testbed</d>
       <br>
       Status
-      <d>COMPLETED MAY 2019</d>
+      <d>Completed (May 2019)</d>
       <br>
       Affiliations
       <br>
@@ -239,6 +239,8 @@
         <h1 class="project_body_header">
           Hardware Details
         </h1>
+        The successful completion of this project is a result of a
+        the intricacies and of which are to detail here.
         <i> Explore testbed components and subsystems. </i>
         <button class="collapsible">SIMULINK CONTROL INTERFACE</button>
         <div class="content"><br>
@@ -248,7 +250,14 @@
             Design
          </h2>
 
-          <p>Because the data stream has been formatted such that it is sent to the Simulink program serially, it is relatively trivial to parse the incoming string and extract desired values. The Simulink program makes use of the Serial Instrumentation blockset to interface with an XBee plugged directly into the computer. Upon simulation execution, Simulink recognizes the XBee as a COM device, establishes a connection, and begins reading the raw data strings sent by the Arduino.</p>
+          <p>Significant effort was invested in ensuring that the user interface was aesthetically pleasing and evoked in users the excitement of space travel. The typography, color palette, and overall design was inspired by UI design in popular science fiction films with heavy influence from <a href="https://territorystudio.com/project/the-martian/"> Territory Studio's VFX work </a> on the 2015 film <i>The Martian</i>.
+           The Simulink Aerospace Instrumentation blockset was used to provide such as an artificial horizon which was fed with a vector containing roll, pitch, and yaw components, and RPM indicators to display reaction wheel speed. Unfortunately, further artistic liberty was heavily limited by the design constraints of Simulink. </p>
+
+           <h2 class="project_body_subheader">
+             Functionality
+          </h2>
+
+           <p>The user interface allows operators to specify a combination of thruster activations and reaction wheel speeds which will be commanded to the testbed at a button press. The dashboard also updates with realtime inertial and attitude telemetry, reaction wheel speeds, and other system status metrics. There are also failsafe functions that command the onboard flight computer to execute bash scripts that shutdown or reboot the testbed. </p>
 
           <img src="./website/resources/pics/scope.png" height=700px class="center">
           <figcaption class="caption">Realtime telemetry visualization</figcaption>
@@ -334,6 +343,12 @@
         <img src="./website/resources/pics/block.png" height=300px class="center">
         <figcaption class="caption">User interface as control plant</figcaption>
         A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or 1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
+
+        <h2 class="project_body_subheader">
+          <br>Custom PCB Integration
+        </h2>
+        While fully operational, the electrical hookups on the testbed (i.e. jumper wires and solderless breadboards) are consistent with those of a preliminary prototyping phase.
+        A refined design consists of a single PCB that integrates all the wiring and electronics with bold, clear silkscreen labeling.
 
         <h1 class="project_body_header">Our Team </h1>
         <img src="./website/resources/pics/ssds_team.jpg" height=500px class="center">
