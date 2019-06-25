@@ -79,6 +79,19 @@
       border-bottom-color: inherit;
     }
 
+    .column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
     .active, .collapsible:hover {
       transition: 200ms;
       color: #DE5021;
@@ -184,7 +197,7 @@
     <div class="project_image">
     </div>
     <div class="sidenav">
-      <a href="./projects.htm" text-align:"center"> ‹ Back to Project Page </a>
+      <a href="./projects.htm" text-align:"center"> ‹ Back to Projects </a>
 <br>
       Project Name
       <d>Spacecraft Flight Simulator and Attitude Testbed</d>
@@ -260,15 +273,14 @@
             <h2 class="project_body_subheader"> <br>Transmitting Telemetry</h2>
             A primary task of the flight computer is to relay telemetry from the onboard IMU sensor back to the operator. The flight computer achieves this by
             reading serial data from the IMU reader microcontroller to gather inertial telemetry and using a FIFO to collect reaction wheel speed calculated by another Python script running in the background. The program then compiles an ASCII string and transmits it to the operator over the local XBee link.
-
-            <h2 class="project_body_subheader"> <br>Persistent Serial Device Identification </h2>
-            Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0) depending on which Arduino was recognized first. I introduced u-dev rules to capture uniquely identifying id values for each connected COM device and used SYMLINKs to create an identifying name (e.g., /dev/imu_reader, /dev/motor_controller, etc.) that uniquely and persistently identifies each microcontroller.
-
             <img src="./website/resources/pics/telemetry.png" height=300px class="center">
-            <figcaption class="caption">Received telemetry strings on the operator side</figcaption>
+            <figcaption class="caption">Transmitted strings containing wheel speeds and inertial telemetry</figcaption>
 
             Each line carries information about the speed of each reaction wheel, and accelerometer, gyroscope, and magnetometer readings in three axes from the IMU sensor.
             This serial stream is captured and parsed in Simulink where the resulting information is displayed to the operator in a readable manner.
+            <h2 class="project_body_subheader"> <br>Persistent Serial Device Identification </h2>
+            Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0) depending on which Arduino was recognized first. I introduced u-dev rules to capture uniquely identifying id values for each connected COM device and used SYMLINKs to create an identifying name (e.g., /dev/imu_reader, /dev/motor_controller, etc.) that uniquely and persistently identifies each microcontroller.
+
           </p>
         </div>
         <button class="collapsible">CONTROLLING THE THRUSTERS</button>
@@ -276,15 +288,36 @@
           <p><br>The six solenoid valves controlling each of the six thrust outlets are each connected to a logic-level MOSFET driven by an Arduino microcontroller.
           Code on the microcontroller limits each thrust duration to 200 ms. </p>
 
-          <img src="./website/resources/pics/valves.jpg" height=500px class="center">
+          <img src="./website/resources/pics/valves.jpg" height=300px class="center">
           <figcaption class="caption">MOSFET drivers to control thrusters</figcaption>
+
+          The microcontroller controlling the propulsion subsystem is also connected to a pressure transducer which monitors the air pressure within the manifold that channels air from the tanks to the thruster outlets. If the pressure dips below a certain threshold, an LED
+          signalling that the tanks need to be refilled. The warning light turns off when the air pressure returns to its nominal range.
+
+
+          <img src="./website/resources/pics/transducer.jpg" height=300px class="center">
+          <figcaption class="caption">Transducer in-line with manifold</figcaption>
+
+          <img src="./website/resources/pics/tanks.jpg" height=300px class="center">
+          <figcaption class="caption">Onboard compressed air tanks</figcaption>
+
 
         </div>
         <button class="collapsible">DRIVING THE REACTION WHEELS</button>
         <div class="content">
-          <p><br>The testbed contains three high-torque DC pancake motors that act as reaction wheels. The reaction wheels were affixed orthogonally to each other to effect torques around three axes.
+          <p><br>
+
+          The testbed contains three high-torque DC pancake motors that act as reaction wheels. The reaction wheels were affixed orthogonally to each other to effect torques around three axes.
+          <img src="./website/resources/pics/reactionwheels.jpg" height=300px class="center">
+          <figcaption class="caption">Reaction wheels and optical tachometers</figcaption>
+
           An optical tachometer was carefully aimed at the spindle of each motor (which held a piece of reflective tape) to count revolutions. The optical tachometers were connected electrically to the flight computer's GPIO, where a pulse resulting from one revolution would trigger an interrupt service routine that updates an RPM value and sends it to the operator.
-          Additionally, each reaction wheel was driven by a motor driver that actively monitors temperature, voltage, and current and cuts power to the load when a prespecified shutoff event is detected. Constraints were also placed on the brake ability of the reaction wheels (i.e., limits for acceleration/deceleration were put in place) to prevent large, sudden current draws.
+          Additionally, each reaction wheel was driven by a motor driver that actively monitors temperature, voltage, and current and cuts power to the load when a prespecified shutoff event is detected.          <br>
+
+          <img src="./website/resources/pics/drivers.jpg" height=300px class="center">
+          <figcaption class="caption">Motor drivers and Raspberry Pi flight computer</figcaption>
+
+          Constraints were also placed on the brake ability of the reaction wheels (i.e., limits for acceleration/deceleration were put in place) to prevent large, sudden current draws.
           The reaction wheel direction and speed are both controlled by an 8-bit integer; a value of '128' sent by the operator to a reaction wheel on the testbed corresponds to zero rotation, '255' to full-speed (3600 RPM) clockwise, and '0' to full-speed counter-clockwise.
         </p>
         </div>
@@ -304,7 +337,7 @@
 
         <h1 class="project_body_header">Our Team </h1>
         <img src="./website/resources/pics/ssds_team.jpg" height=500px class="center">
-        <figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical and Computer Engineer), and Zach Tretler (Mechanical Engineer)</figcaption>
+        <figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical & Computer Engineer), and Zach Tretler (Mechanical Engineer)</figcaption>
         <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
