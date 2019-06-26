@@ -718,20 +718,6 @@ background-color: #f1f1f1;
   background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), rgba(0, 0, 0, 0.85));
 }
 
-.text-block-6 {
-  position: relative;
-  width: 100%;
-  height: auto;
-  margin-top: 100px;
-  margin-top: 100px;
-
-
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-  color: #2e2e2e;
-  font-size: 12px;
-  text-align: center;
-}
-
 .div-block-10 {
   height: 60vh;
   background-image: url("https://uploads-ssl.webflow.com/5cfd93a271000a4eb8533f96/5cfd93a271000a6391533fa9_Image%20from%20iOS%20(1).jpg");
