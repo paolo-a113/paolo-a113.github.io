@@ -229,18 +229,22 @@
             Simulating Outer Space in a Lab Environment
           </h1>
 
-          The idea is to simulate spacecraft control by developing a physical system that mimics the friction-free environment of outer space and is able to rotate in three axes. The system we built is suspended on an air bearing which levitates the system on a thin layer of air (like an air hockey puck). Our system is controlled via three reaction wheels (motors that turn spacecraft by gyroscopic effects) and six compressed air thrusters.           The electronics are controlled wirelessly from a nearby computer with a custom-built graphical user interface.
+          The idea is to simulate spacecraft control by developing a physical system that mimics the friction-free environment of outer space and is able to rotate in three axes. The system we built is suspended on an air bearing which levitates the system on a thin layer of air (like an air hockey puck).
+          <br><br>
+          <img src="./website/resources/pics/testbed.gif" height=380px class="center">
+          <figcaption class="caption">Air bearing levitates testbed to create friction-free environment</figcaption>
+<br>
+          Our system is controlled via three reaction wheels (motors that turn spacecraft by gyroscopic effects) and six compressed air thrusters.           The electronics are controlled wirelessly from a nearby computer with a custom-built graphical user interface.
+
           <br><br>
           <img src="./website/resources/pics/fullsetup.jpg" height=500px class="center">
           <figcaption class="caption">Complete lab test setup of the simulator and testbed</figcaption>
           <br>
-          The <i> Spacecraft Flight Simulator and Attitude Testbed </i> will provide a lab environment to test autonomous attitude control algorithms for the small spacecraft developed in our research lab, as well as provide professors with an instructional platform for advanced spacecraft control students.
+          The <i> Spacecraft Flight Simulator and Attitude Testbed </i> provides a lab environment to test autonomous attitude control algorithms for the small spacecraft developed in our research lab, as well as provide professors with an instructional platform for advanced spacecraft control students.
 
         <h1 class="project_body_header">
           Hardware Details
         </h1>
-        The successful completion of this project is a result of a
-        the intricacies and of which are to detail here.
         <i> Explore testbed components and subsystems. </i>
         <button class="collapsible">SIMULINK CONTROL INTERFACE</button>
         <div class="content"><br>
@@ -274,6 +278,9 @@
                 <li>Transmits inertial telemetry, reaction wheel speeds, and pressure readings back to the operator
             </ul>
 
+            <img src="./website/resources/pics/flightcomputer.jpg" height=400px class="center">
+            <figcaption class="caption">Raspberry Pi flight computer with XBee adapter shield for wireless bidirectional communication</figcaption>
+            <br>
             <h2 class="project_body_subheader"> Switching from Arduino Due to Raspberry Pi </h2>
             Previous teams' designs called for an Arduino Due to act as the flight computer. However, after compiling a requirement set for the flight computer, I realized that an Arduino Due is not sufficient to realize the requirement set
             and instead opted for a Raspberry Pi 3B+. This switch enabled me to take advantage of a number of new capabilities including multithreading (enabling multiple processes to run concurrently, a desired trait for realtime hardware applications), increased clock speed for faster code execution, and the benefit of an entire Linux-based embedded operating system fully contained on the testbed.
@@ -330,6 +337,7 @@
           The reaction wheel direction and speed are both controlled by an 8-bit integer; a value of '128' sent by the operator to a reaction wheel on the testbed corresponds to zero rotation, '255' to full-speed (3600 RPM) clockwise, and '0' to full-speed counter-clockwise.
         </p>
         </div>
+
 
         <h1 class="project_body_header">
           Continuing Work
