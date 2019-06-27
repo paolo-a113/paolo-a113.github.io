@@ -3,151 +3,140 @@
 This site was built and developed by Paolo Arguelles.
 pa394@cornell.edu
 -->
-
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Spacecraft Flight Simulator | Paolo Arguelles</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="./website/style.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="./website/fonts.css" media="all">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Spacecraft Flight Simulator | Paolo Arguelles</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="./website/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./website/fonts.css" media="all">
+	<style>
+		video {
+		            width: 80%;
+		            height: auto;
+		            box-shadow: 2px 2px 6px 1px gray;
+		            margin-top: 20px;
+		        }
+		        /* Style the header with a grey background and some padding */
 
-    <style>
-        video {
-            width: 80%;
-            height: auto;
-            box-shadow: 2px 2px 6px 1px gray;
-            margin-top: 20px;
-        }
-        /* Style the header with a grey background and some padding */
+		        .header {
+		            overflow: hidden;
+		            background-color: #f1f1f1;
+		            padding: 20px 50px;
+		        }
+		        /* Style the header links */
 
-        .header {
-            overflow: hidden;
-            background-color: #f1f1f1;
-            padding: 20px 50px;
-        }
-        /* Style the header links */
+		        .header a {
+		            float: left;
+		            color: black;
+		            text-align: center;
+		            padding: 12px;
+		            text-decoration: none;
+		            line-height: 25px;
+		            border-radius: 4px;
+		            transition: color 200ms;
+		        }
 
-        .header a {
-            float: left;
-            color: black;
-            text-align: center;
-            padding: 12px;
-            text-decoration: none;
-            line-height: 25px;
-            border-radius: 4px;
-            transition: color 200ms;
-        }
+		        .header a:hover {
+		            color: #DE5021;
+		        }
+		        /* Float the link section to the right */
 
-        .header a:hover {
-            color: #DE5021;
-        }
-        /* Float the link section to the right */
+		        .header-right {
+		            float: right;
+		            font-size: 12px;
+		        }
 
-        .header-right {
-            float: right;
-            font-size: 12px;
-        }
+		        .myHeader {
+		            float: left;
+		            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+		            font-size: 30px;
+		            color: #000;
+		            padding-top: 30px;
+		            padding-left: 200px;
+		            padding-bottom: 50px;
+		        }
 
-        .myHeader {
-            float: left;
-            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-            font-size: 30px;
-            color: #000;
-            padding-top: 30px;
-            padding-left: 200px;
-            padding-bottom: 50px;
-        }
+		        .myPages {
+		            float: left;
+		            font-family: 'Futura';
+		            color: #000;
+		            font-size: 20px;
+		        }
 
-        .myPages {
-            float: left;
-            font-family: 'Futura';
-            color: #000;
-            font-size: 20px;
-        }
+		        .main {
+		            margin-left: 160px;
+		            /* Same as the width of the sidenav */
+		            font-size: 28px;
+		            /* Increased text to enable scrolling */
+		            padding: 0px 10px;
+		        }
 
-        .main {
-            margin-left: 160px;
-            /* Same as the width of the sidenav */
-            font-size: 28px;
-            /* Increased text to enable scrolling */
-            padding: 0px 10px;
-        }
+		        .speechtitle {
+		            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+		            font-size: 2vw;
+		            width: 80%;
+		            height: auto;
+		            display: block;
+		            margin-left: auto;
+		            margin-right: auto;
+		        }
 
-        .speechtitle {
-            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-            font-size: 2vw;
-            width: 80%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+		        .speechdesc {
+		            font-family: 'Futura';
+		            color: #DE5021;
+		            font-size: 0.8vw;
+		            width: 80%;
+		            height: auto;
+		            display: block;
+		            margin-left: auto;
+		            margin-right: auto;
+		            padding-bottom: 1%;
+		        }
+		        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 
-        .speechdesc {
-            font-family: 'Futura';
-            color: #DE5021;
-            font-size: 0.8vw;
-            width: 80%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding-bottom: 1%;
-        }
-        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-
-        @media screen and (max-width: 500px) {
-            .header a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-            .header-right {
-                float: none;
-            }
-            video {
-                width: 100%;
-                height: auto;
-                box-shadow: 2px 2px 6px -4px #000;
-            }
-        }
-    </style>
+		        @media screen and (max-width: 500px) {
+		            .header a {
+		                float: none;
+		                display: block;
+		                text-align: left;
+		            }
+		            .header-right {
+		                float: none;
+		            }
+		            video {
+		                width: 100%;
+		                height: auto;
+		                box-shadow: 2px 2px 6px -4px #000;
+		            }
+		        }
+	</style>
 </head>
 
 <body class="body-2">
-    <div class="header">
-        <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
-        <div class="header-right">
-            <a class=myPages href="./projects.htm">PROJECTS</a>
-            <a class=myPages href="./bio.htm">BIOGRAPHY</a>
-            <a class=myPages href="./speech.htm">SPEECH</a>
-            <a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
-        </div>
-    </div>
-
-    <video class="center" controls>
-        <source src="https://github.com/paolo-a113/paolo-a113.github.io/blob/master/website/resources/vids/PaoloArguelles_ECSTConvocation_FullRemarksHD.mp4?raw=true" type="video/mp4">
-    </video>
-
-    <div class="speechdesc">
-        <br> COLLEGE OF ENGINEERING, COMPUTER SCIENCE, AND TECHNOLOGY | CALIFORNIA STATE UNIVERSITY - LOS ANGELES
-        <br>
-    </div>
-
-    <div class="speechtitle">
-        Full Remarks at the 2019 Engineering Honors Convocation
-    </div>
-    <div class="speechdesc">
-        <br>
-
-        <div class="section-8">
-            <div class="text-block-6">© 2019 - 2023 by Paolo Arguelles. All rights reserved.
-                <br>
-            </div>
-        </div>
-
+	<div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+		<div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
+			<a class=myPages href="./bio.htm">BIOGRAPHY</a>
+			<a class=myPages href="./speech.htm">SPEECH</a>
+			<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
+		</div>
+	</div>
+	<video class="center" controls>
+		<source src="https://github.com/paolo-a113/paolo-a113.github.io/blob/master/website/resources/vids/PaoloArguelles_ECSTConvocation_FullRemarksHD.mp4?raw=true" type="video/mp4">
+	</video>
+	<div class="speechdesc">
+		<br>COLLEGE OF ENGINEERING, COMPUTER SCIENCE, AND TECHNOLOGY | CALIFORNIA STATE UNIVERSITY - LOS ANGELES
+		<br>
+	</div>
+	<div class="speechtitle">Full Remarks at the 2019 Engineering Honors Convocation</div>
+	<div class="speechdesc">
+		<br>
+		<div class="section-8">
+			<div class="text-block-6">© 2019 - 2023 by Paolo Arguelles. All rights reserved.
+				<br>
+			</div>
+		</div>
 </body>
 
 </html>
