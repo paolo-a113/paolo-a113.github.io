@@ -291,7 +291,7 @@ img{
     }
      .home_description {
          overflow: hidden;
-         padding: 10px 60px 100px;
+         padding: 10px 40px 10px;
          color: #000;
          font-size: 14px;
          line-height: 30px;
