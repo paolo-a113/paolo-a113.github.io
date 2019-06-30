@@ -1,37 +1,27 @@
-
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
-
 body {
     margin: 0;
     background-color: #f1f1f1;
 }
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box
 }
-
 p {
     margin-top: 0;
     margin-bottom: 10px
 }
-
-
-/* ===================
-   HEADER FORMATTING
-   =================== */
-
+/* =================== HEADER FORMATTING =================== */
 .header {
     overflow: hidden;
     background-color: #f1f1f1;
     padding: 20px 50px;
 }
-
 .header a {
     float: left;
     color: black;
@@ -42,77 +32,67 @@ p {
     border-radius: 4px;
     transition: color 200ms;
 }
-
 .header a:hover {
     color: #DE5021;
 }
-
 .header-right {
     float: right;
     font-size: 12px;
 }
-
 .myHeader {
     float: left;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 30px;
     color: #000;
 }
-
 .myPages {
     float: left;
     font-family: 'Futura';
     color: black;
     font-size: 20px;
 }
-
-
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-
 @media screen and (max-width: 800px) {
     .myPages {
         margin-top: 1vh;
         margin-left: 5vw;
-    }
+   }
     .header a {
         float: none;
         display: block;
         text-align: left;
-    }
+   }
     .header-right {
         display: none;
-    }
+   }
     .container {
         display: block;
         cursor: pointer;
         float: right;
         margin-top: -45px;
-    }
-    .bar1,
-    .bar2,
-    .bar3 {
+   }
+    .bar1, .bar2, .bar3 {
         width: 35px;
         height: 1px;
         background-color: #333;
         margin: 8px 0;
         transition: 0.2s;
-    }
+   }
     .change .bar1 {
         -webkit-transform: rotate(-45deg) translate(-5px, 6px);
         transform: rotate(-45deg) translate(-5px, 6px);
-    }
+   }
     .change .bar2 {
         opacity: 0;
-    }
+   }
     .change .bar3 {
         -webkit-transform: rotate(45deg) translate(-7px, -8px);
         transform: rotate(45deg) translate(-7px, -8px);
-    }
+   }
     .myHeader {
         font-size: 5vw;
-    }
+   }
 }
-
 .overlay {
     height: 0;
     width: 100%;
@@ -124,7 +104,6 @@ p {
     overflow: hidden;
     transition: 0.5s;
 }
-
 .overlay-content {
     position: relative;
     top: 50%;
@@ -133,7 +112,6 @@ p {
     margin-top: 30px;
     overflow: hidden;
 }
-
 .overlay a {
     padding: 8px;
     text-decoration: none;
@@ -142,54 +120,47 @@ p {
     display: block;
     transition: 0.3s;
 }
-
 .overlay a:hover {
     color: #DE5021;
 }
-
 .overlay .closebtn {
     position: absolute;
     top: 20px;
     right: 45px;
     font-size: 60px;
 }
-
 .collection {
     position: relative;
     margin-top: 33px;
     background-color: #fff;
     text-align: left;
 }
-
 .container {
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     color: #fff;
 }
-
 .Absolute-Center {
     height: 50%;
-    /* Set your own height: percents, ems, whatever! */
+   /* Set your own height: percents, ems, whatever! */
     width: 50%;
-    /* Set your own width: percents, ems, whatever! */
+   /* Set your own width: percents, ems, whatever! */
     margin: auto;
-    /* Center the item vertically & horizontally */
+   /* Center the item vertically & horizontally */
     position: absolute;
-    /* Break it out of the regular flow */
+   /* Break it out of the regular flow */
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    /* Set the bounds in which to center it, relative to its parent/container */
+   /* Set the bounds in which to center it, relative to its parent/container */
     overflow: hidden;
 }
-
 .collection-list-wrapper {
     margin-left: 0px;
     padding: 0px 60px 100px;
     background-color: #f1f1f1;
     color: #fff;
 }
-
 .home_bg_grad {
     height: 100vh;
     margin-top: 0px;
@@ -197,7 +168,6 @@ p {
     background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.76)));
     background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.76));
 }
-
 .home_big_heading {
     position: static;
     display: -webkit-box;
@@ -232,20 +202,17 @@ p {
     text-align: center;
     text-shadow: 1px 1px 6px #000;
 }
-
 .home_bg {
     padding-top: 0px;
     background-image: url("../website/resources/pics/home_bg.jpg");
     background-position: 50% 50%;
     background-size: cover;
 }
-
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
-
 .caption {
     font-family: 'Palatino';
     font-style: italic;
@@ -254,7 +221,6 @@ p {
     padding-right: 200px;
     text-align: center;
 }
-
 .project_heading {
     position: static;
     display: -webkit-box;
@@ -288,21 +254,18 @@ p {
     text-align: center;
     text-shadow: 1px 1px 6px #000;
 }
-
 .project_topic {
     font-family: 'Futura';
     padding-top: 10px;
     color: #DE5021;
     font-size: 12px;
 }
-
 .project_contain {
     align-content: left;
     padding-left: 60px;
     padding-right: 70px;
     padding-top: 30px;
 }
-
 .project_box {
     float: right;
     background-color: white;
@@ -310,7 +273,6 @@ p {
     margin-left: 400px;
     margin-right: 100px;
 }
-
 .project_description {
     background-color: white;
     font-family: 'Palatino';
@@ -320,7 +282,6 @@ p {
     line-height: 1.2;
     font-style: oblique;
 }
-
 .project_title {
     padding-left: 0px;
     padding-top: 0px;
@@ -331,7 +292,6 @@ p {
     font-weight: 300;
     line-height: 1.2;
 }
-
 .project_body {
     font-family: 'Lato';
     color: grey;
@@ -340,7 +300,6 @@ p {
     line-height: 1.5;
     weight: 100;
 }
-
 .project_body_header {
     font-family: 'Palatino';
     font-weight: 400;
@@ -348,7 +307,6 @@ p {
     margin-bottom: 0;
     color: black;
 }
-
 .project_body_subheader {
     font-family: 'Palatino';
     font-weight: 400;
@@ -358,7 +316,6 @@ p {
     margin-bottom: 0;
     color: black;
 }
-
 .project_bg {
     height: 600px;
     background-image: url("./resources/pics/project_bg.jpg");
@@ -367,31 +324,30 @@ p {
     background-attachment: fixed;
     line-height: 30px;
 }
-
 @media (max-width: 800px) {
     .collection-list {
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    }
+   }
     .collection {
         height: 100px;
         margin-top: 0px;
-    }
+   }
     .collection-list-wrapper {
         height: 100px;
         padding-right: 0px;
         padding-bottom: 61px;
         padding-left: 0px;
         background-color: #f1f1f1;
-    }
+   }
     .home_bg_grad {
         background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
         background-image: linear-gradient(180deg, transparent, transparent);
         color: #fff;
         width: auto;
-    }
+   }
     .home_big_heading {
         padding-top: 121px;
         padding-bottom: 1px;
@@ -402,22 +358,20 @@ p {
         align-items: center;
         font-size: 40px;
         text-align: center;
-    }
+   }
     .project_bg {
         background-position: 70% 50%;
-    }
+   }
     .project_heading {
         margin-top: 0px;
         padding-top: 141px;
         font-size: 30px;
-    }
+   }
 }
-
 .w-inline-block {
     max-width: 100%;
     display: inline-block
 }
-
 .collection-item {
     display: block;
     overflow: hidden;
@@ -435,7 +389,6 @@ p {
     box-shadow: 2px 2px 6px -4px #000;
     cursor: pointer;
 }
-
 .collection-list {
     display: -ms-grid;
     display: grid;
@@ -458,25 +411,21 @@ p {
     background-color: hsla(0, 0%, 100%, 0);
     cursor: default;
 }
-
 .heading {
     padding-left: 32px;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 25px;
     font-weight: 400;
 }
-
 .section {
     background-color: #000;
 }
-
 .collection {
     position: relative;
     margin-top: 33px;
     background-color: #fff;
     text-align: left;
 }
-
 .item_title {
     overflow: visible;
     margin-top: 0px;
@@ -493,11 +442,9 @@ p {
     text-transform: none;
     text-shadow: 1px 0 2px rgba(0, 0, 0, 0.82);
 }
-
 .item_title:hover ~ item_bg_grad {
     background-color: rgba(0, 0, 0, 0.6)
 }
-
 .item_topic {
     position: static;
     padding-top: 10px;
@@ -512,14 +459,12 @@ p {
     text-decoration: none;
     text-transform: capitalize;
 }
-
 .collection-list-wrapper {
     margin-left: 0px;
     padding: 0px 60px 100px;
     background-color: #f1f1f1;
     color: #fff;
 }
-
 .home_bg_grad {
     height: 100vh;
     margin-top: 70px;
@@ -527,7 +472,6 @@ p {
     background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.76)));
     background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.76));
 }
-
 .project_heading {
     position: static;
     display: -webkit-box;
@@ -561,7 +505,6 @@ p {
     text-align: center;
     text-shadow: 1px 1px 6px #000;
 }
-
 .link-block {
     position: static;
     overflow: visible;
@@ -569,22 +512,20 @@ p {
     height: 102%;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    /* background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000)); */
+   /* background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
+    */
     background-image: linear-gradient(180deg, transparent, #000);
     transition: text-decoration 200ms ease-in-out;
     text-decoration: none;
     cursor: pointer;
 }
-
 .link-block:hover {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.7), #000);
     cursor: pointer;
 }
-
 .link-block:hover .item_bg_grad {
     opacity: 1.0;
 }
-
 .item_desc {
     position: static;
     display: -webkit-box;
@@ -614,7 +555,6 @@ p {
     text-align: left;
     text-shadow: 1px 1px 1px #000;
 }
-
 .item_bg_grad {
     width: 100%;
     height: 400px;
@@ -623,33 +563,30 @@ p {
     transition: opacity 200ms ease-in-out;
     cursor: pointer;
 }
-
-
-/*  FOR MOBILE PHONES */
-
+/* FOR MOBILE PHONES */
 @media (max-width: 500px) {
     .collection-list {
         grid-column-gap: 0px;
         grid-row-gap: 0px;
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    }
+   }
     .collection {
         height: 100px;
         margin-top: 0px;
-    }
+   }
     .collection-list-wrapper {
         height: 100px;
         padding-right: 0px;
         padding-bottom: 61px;
         padding-left: 0px;
         background-color: #f1f1f1;
-    }
+   }
     .home_bg_grad {
         background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
         background-image: linear-gradient(180deg, transparent, transparent);
         color: #fff;
-    }
+   }
     .home_big_heading {
         padding-top: 121px;
         padding-bottom: 1px;
@@ -660,16 +597,16 @@ p {
         align-items: center;
         font-size: 40px;
         text-align: center;
-    }
+   }
     .project_bg {
         width: auto;
         background-size: auto;
-    }
+   }
     .project_heading {
         margin-top: 0px;
         padding-top: 0px;
         font-size: 30px;
-    }
+   }
     .footer {
         display: -webkit-box;
         display: -webkit-flex;
@@ -677,20 +614,17 @@ p {
         display: flex;
         margin-top: 2000px;
         margin-bottom: 100px;
-    }
+   }
 }
-
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box
 }
-
 p {
     margin-top: 0;
     margin-bottom: 10px
 }
-
 h2 {
     margin-top: 20px;
     margin-bottom: 10px;
@@ -698,19 +632,13 @@ h2 {
     line-height: 36px;
     font-weight: bold;
 }
-
-
 /* Style the header with a grey background and some padding */
-
 .header {
     overflow: hidden;
     background-color: #f1f1f1;
     padding: 20px 50px;
 }
-
-
 /* Style the header links */
-
 .header a {
     float: left;
     color: black;
@@ -721,44 +649,32 @@ h2 {
     border-radius: 4px;
     transition: color 200ms;
 }
-
-
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-
 .header a.logo {
     font-size: 50px;
     font-weight: bold;
 }
-
 .header a:hover {
     color: #DE5021;
 }
-
-
 /* Float the link section to the right */
-
 .header-right {
     float: right;
     font-size: 12px;
 }
-
 .myHeader {
     float: left;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 30px;
     color: #000;
 }
-
 .myPages {
     float: left;
     font-family: 'Futura';
     color: #000;
     font-size: 20px;
 }
-
-
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-
 .home_bg_grad {
     height: 100vh;
     margin-top: 0px;
@@ -766,7 +682,6 @@ h2 {
     background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(0, 0, 0, 0.76)));
     background-image: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.76));
 }
-
 .home_big_heading {
     position: static;
     display: -webkit-box;
@@ -801,14 +716,12 @@ h2 {
     text-align: center;
     text-shadow: 1px 1px 6px #000;
 }
-
 .home_bg {
     padding-top: 0px;
     background-image: url("./resources/pics/home_bg.jpg");
     background-position: 50% 50%;
     background-size: cover;
 }
-
 .home_description {
     position: static;
     display: -webkit-box;
@@ -842,14 +755,12 @@ h2 {
     text-align: left;
     text-shadow: 1px 1px 6px #000;
 }
-
 .myHeader {
     float: left;
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-size: 30px;
     color: #000;
 }
-
 a.description {
     text-decoration: none;
     transition: color 400ms;
@@ -857,24 +768,22 @@ a.description {
     color: #DE5021;
     cursor: pointer;
 }
-
 a.description:hover {
     color: white;
     background-color: #DE5021;
 }
-
 @media (max-width: 800px) {
     .header a {
         float: none;
         display: block;
         text-align: left;
-    }
+   }
     .header-right {
         float: none;
-    }
+   }
     .home_bg_grad {
         height: 100%;
-    }
+   }
     .home_big_heading {
         height: 100%;
         padding-top: 0px;
@@ -894,7 +803,7 @@ a.description:hover {
         -ms-flex-align: center;
         align-items: center;
         text-align: right;
-    }
+   }
     .home_description {
         overflow: scroll;
         padding: 60px 60px 100px;
@@ -902,9 +811,8 @@ a.description:hover {
         font-size: 18px;
         line-height: 30px;
         text-shadow: none;
-    }
+   }
 }
-
 .bio_bg_grad {
     height: 100vh;
     margin-top: 0px;
@@ -912,7 +820,6 @@ a.description:hover {
     background-image: -webkit-gradient(linear, left top, right top, from(#000), to(transparent));
     background-image: linear-gradient(90deg, #000, transparent);
 }
-
 .bio_header {
     position: static;
     display: -webkit-box;
@@ -947,7 +854,6 @@ a.description:hover {
     text-align: center;
     text-shadow: 1px 1px 6px #000;
 }
-
 .bio_bg {
     margin-top: 0px;
     padding-top: 0px;
@@ -955,7 +861,6 @@ a.description:hover {
     background-position: 50% 50%;
     background-size: cover;
 }
-
 .bio_desc {
     position: static;
     display: -webkit-box;
@@ -993,11 +898,10 @@ a.description:hover {
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: none;
-    /* Firefox */
+   /* Firefox */
     -ms-overflow-style: none;
-    /* IE 10+ */
+   /* IE 10+ */
 }
-
 @media (max-width: 800px) {
     .bio_bg_grad {
         height: 100%;
@@ -1006,7 +910,7 @@ a.description:hover {
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), linear-gradient(180deg, transparent, transparent);
         color: #fff;
         font-size: 12px;
-    }
+   }
     .bio_header {
         height: 100%;
         padding-top: 40px;
@@ -1022,12 +926,12 @@ a.description:hover {
         align-items: center;
         font-size: 30px;
         text-align: center;
-    }
+   }
     .bio_bg {
         width: 100%;
         height: 300px;
         background-position: 65% 50%;
-    }
+   }
     .bio_desc {
         overflow: visible;
         height: 100%;
@@ -1038,10 +942,62 @@ a.description:hover {
         font-size: 16px;
         line-height: 30px;
         text-shadow: none;
-        /* overflow-y: scroll; */
+       /* overflow-y: scroll;
+        */
         scrollbar-width: none;
-        /* Firefox */
+       /* Firefox */
         -ms-overflow-style: none;
-        /* IE 10+ */
-    }
+       /* IE 10+ */
+   }
+}
+.speechtitle {
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    font-size: 2vw;
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.speechdesc {
+    font-family: 'Futura';
+    color: #DE5021;
+    width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1%;
+}
+video {
+    width: 80%;
+    height: auto;
+    box-shadow: 2px 2px 6px 1px gray;
+    margin-top: 20px;
+}
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 800px) {
+    .speechtitle {
+        font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+        font-size: 20px;
+        width: 80%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+   }
+    .speechdesc {
+        font-family: 'Futura';
+        color: #DE5021;
+        font-size: 1.2vw;
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+   }
+    video {
+        width: 100%;
+        height: auto;
+        box-shadow: 2px 2px 6px -4px #000;
+   }
 }
