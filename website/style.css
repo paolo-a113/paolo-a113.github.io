@@ -896,6 +896,10 @@ width: 100%
     border-bottom-color: inherit;
 }
 
+.project_image{
+display: none;
+}
+
 }
 
 /* ============== END INDIVIDUAL PROJECT FORMATTING ==================== */
