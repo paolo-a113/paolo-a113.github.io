@@ -1,316 +1,319 @@
 <!DOCTYPE html>
+
+<!-- ==================================================================
+This site was built and developed by Paolo Arguelles (6/19/2019).
+pa394@cornell.edu
+================================================================== -->
+	 
 <html data-wf-domain="paolos-fabulous-project-e74cab96af4b9fc.webflow.io" data-wf-page="5cfd93a271000a535c533f97" data-wf-site="5cfd93a271000a4eb8533f96" data-wf-status="1" class="w-mod-js w-mod-ix wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-inconsolata-n4-active wf-inconsolata-n7-active wf-oswald-n2-active wf-oswald-n3-active wf-oswald-n4-active wf-oswald-n5-active wf-oswald-n6-active wf-oswald-n7-active wf-robotomono-n4-active wf-roboto-n4-active wf-active">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Spacecraft Flight Simulator | Paolo Arguelles</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<meta content="Webflow" name="generator">
-	<link href="./website/style.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="./website/fonts.css" media="all">
-	<style>
-		/* Style the header with a grey background and some padding */
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Spacecraft Flight Simulator | Paolo Arguelles</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="./website/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./website/fonts.css" media="all">
+    <style>
+        /* Style the header with a grey background and some padding */
 
+        .project_image {
+            height: 600px;
+            margin-top: 0px;
+            padding-top: 0px;
+            background-image: url("./website/resources/pics/ssds_bg.jpg");
+            background-position: 50% 40%;
+            background-size: cover;
+            background-attachment: fixed;
+            line-height: 30px;
+        }
 
+        .collapsible {
+            background-color: #fff;
+            color: black;
+            font-family: 'Futura';
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            border-bottom-style: solid;
+            border-bottom-color: inherit;
+        }
 
-		        .project_image {
-		            height: 600px;
-		            margin-top: 0px;
-		            padding-top: 0px;
-		            background-image: url("./website/resources/pics/ssds_bg.jpg");
-		            background-position: 50% 40%;
-		            background-size: cover;
-		            background-attachment: fixed;
-		            line-height: 30px;
-		        }
+        .column {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+        /* Clearfix (clear floats) */
 
-		        .collapsible {
-		            background-color: #fff;
-		            color: black;
-		            font-family: 'Futura';
-		            cursor: pointer;
-		            padding: 18px;
-		            width: 100%;
-		            border: none;
-		            text-align: left;
-		            outline: none;
-		            font-size: 18px;
-		            border-bottom-style: solid;
-		            border-bottom-color: inherit;
-		        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
 
-		        .column {
-		            float: left;
-		            width: 33.33%;
-		            padding: 5px;
-		        }
-		        /* Clearfix (clear floats) */
+        .active,
+        .collapsible:hover {
+            transition: 200ms;
+            color: #DE5021;
+        }
 
-		        .row::after {
-		            content: "";
-		            clear: both;
-		            display: table;
-		        }
+        .collapsible:after {
+            content: '+';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            color: inherit;
+        }
 
-		        .active,
-		        .collapsible:hover {
-		            transition: 200ms;
-		            color: #DE5021;
-		        }
+        .active:after {
+            content: "−";
+            color: #DE5021;
+        }
 
-		        .collapsible:after {
-		            content: '+';
-		            font-weight: bold;
-		            float: right;
-		            margin-left: 5px;
-		            color: inherit;
-		        }
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms;
+            background-color: #f1f1f1;
+        }
 
-		        .active:after {
-		            content: "−";
-		            color: #DE5021;
-		        }
+        .sidenav {
+            font-family: 'Palatino';
+            font-size: 18px;
+            font-weight: 400;
+            color: black;
+            height: 50%;
+            width: 400px;
+            z-index: 1;
+            top: 0px;
+            position: relative;
+            background-color: transparent;
+            overflow-x: hidden;
+            padding-top: 20px;
+            padding-left: 40px;
+        }
 
-		        .content {
-		            padding: 0 18px;
-		            max-height: 0;
-		            overflow: hidden;
-		            transition: max-height 300ms;
-		            background-color: #f1f1f1;
-		        }
+        .sidenav a {
+            font-family: 'Helvetica';
+            padding: 6px 40px 6px 0px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            display: block;
+        }
 
-		        .sidenav {
-		            font-family: 'Palatino';
-		            font-size: 18px;
-		            font-weight: 400;
-		            color: black;
-		            height: 50%;
-		            width: 400px;
-		            z-index: 1;
-		            top: 0px;
-		            position: relative;
-		            background-color: transparent;
-		            overflow-x: hidden;
-		            padding-top: 20px;
-		            padding-left: 40px;
-		        }
+        .sidenav d {
+            font-family: 'Helvetica';
+            padding: 6px 40px 6px 0px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            color: black;
+            display: block;
+        }
 
-		        .sidenav a {
-		            font-family: 'Helvetica';
-		            padding: 6px 40px 6px 0px;
-		            text-decoration: none;
-		            font-size: 14px;
-		            font-weight: bold;
-		            color: black;
-		            display: block;
-		        }
+        .sidenav a:hover {
+            transition: 200ms;
+            color: #DE5021;
+        }
 
-		        .sidenav d {
-		            font-family: 'Helvetica';
-		            padding: 6px 40px 6px 0px;
-		            text-decoration: none;
-		            font-size: 14px;
-		            font-weight: bold;
-		            color: black;
-		            display: block;
-		        }
+        .main {
+            margin-left: 160px;
+            /* Same as the width of the sidenav */
+            font-size: 28px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 
-		        .sidenav a:hover {
-		            transition: 200ms;
-		            color: #DE5021;
-		        }
-
-		        .main {
-		            margin-left: 160px;
-		            /* Same as the width of the sidenav */
-		            font-size: 28px;
-		            /* Increased text to enable scrolling */
-		            padding: 0px 10px;
-		        }
-		        /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-
-		        @media screen and (max-width: 500px) {
-		            .header a {
-		                float: none;
-		                display: block;
-		                text-align: left;
-		            }
-		            .header-right {
-		                float: none;
-		            }
-		        }
-	</style>
+        @media screen and (max-width: 500px) {
+            .header a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+            .header-right {
+                float: none;
+            }
+        }
+    </style>
 </head>
 
 <body class="body">
-	<div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
-		<div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
-			<a class=myPages href="./bio.htm">BIOGRAPHY</a>
-			<a class=myPages href="./speech.htm">SPEECH</a>
-			<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
-		</div>
-		<div id="myNav" class="overlay">
-			<div class="Absolute-Center">
-				<div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
-					<a class=myPages href="./bio.htm">BIOGRAPHY</a>
-					<a class=myPages href="./speech.htm">SPEECH</a>
-					<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
-				</div>
-			</div>
-		</div>
-		<div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
-			<div class="bar1"></div>
-			<div class="bar2"></div>
-			<div class="bar3"></div>
-		</div>
-		<script>
-			function myFunction(x) {
-			            x.classList.toggle("change");
-			          }
-		</script>
-		<script>
-			function openNav() {
-			        myFunction(document.getElementById("toggle"));
-			        document.getElementById("myNav").style.height = "100%";
-			        document.getElementById("toggle").onclick = closeNav;
-			      }
+    <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+        <div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
+            <a class=myPages href="./bio.htm">BIOGRAPHY</a>
+            <a class=myPages href="./speech.htm">SPEECH</a>
+            <a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
+        </div>
+        <div id="myNav" class="overlay">
+            <div class="Absolute-Center">
+                <div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
+                    <a class=myPages href="./bio.htm">BIOGRAPHY</a>
+                    <a class=myPages href="./speech.htm">SPEECH</a>
+                    <a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
+                </div>
+            </div>
+        </div>
+        <div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <script>
+            function openNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "100%";
+                document.getElementById("toggle").onclick = closeNav;
+            }
 
-			      function closeNav() {
-			        myFunction(document.getElementById("toggle"));
-			        document.getElementById("myNav").style.height = "0%";
-			        document.getElementById("toggle").onclick = openNav;
+            function closeNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "0%";
+                document.getElementById("toggle").onclick = openNav;
 
-			      }
-		</script>
-	</div>
-	<div class="project_image"></div>
-	<div class="sidenav"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
-		<br>Project Name
-		<d>Spacecraft Flight Simulator and Attitude Testbed</d>
-		<br>Status
-		<d>Completed (May 2019)</d>
-		<br>Affiliations
-		<br> <a href="https://www.spacecraftresearch.com/people/">Space Systems Design Studio, Sibley School of Mechanical and Aerospace Engineering, Cornell University
+            }
+        </script>
+    </div>
+    <div class="project_image"></div>
+    <div class="sidenav"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
+        <br>Project Name
+        <d>Spacecraft Flight Simulator and Attitude Testbed</d>
+        <br>Status
+        <d>Completed (May 2019)</d>
+        <br>Affiliations
+        <br> <a href="https://www.spacecraftresearch.com/people/">Space Systems Design Studio, Sibley School of Mechanical and Aerospace Engineering, Cornell University
       <br></a>
-		<br>Documentation <a href="https://drive.google.com/file/d/1NxzaLj2ZQ5mfK8Np1Bqytdaup1xIWbcF/view?usp=sharing">Operating Manual</a>
-		<a href="https://drive.google.com/file/d/1jhVrCEwU1HlSFq-RFkDKwWMvN3YjMn6Y/view?usp=sharing">Initial Testing Report</a>
-		<a href="https://drive.google.com/file/d/1zLbBJRLDpb3ArYOebd8V6Li6tWvDFnFl/view?usp=sharing">COMS Subsystem Progress Report Slides</a>
-	</div>
-	<div class="project_box">
-		<div class="project_contain">
-			<div class="project_topic">SPACE AND DEFENSE</div>
-			<div class="project_title">Spacecraft Flight Simulator and Attitude Testbed</div>
-			<div class="project_description">Built for Cornell's Space Systems Design Studio, this remotely controlled testbed uses six cold gas thrusters and three reaction wheels to simulate multi-axis orbital dynamics of spacecraft in a friction-free environment.</div>
-			<div class="project_body">
-				<h1 class="project_body_header">
+        <br>Documentation <a href="https://drive.google.com/file/d/1NxzaLj2ZQ5mfK8Np1Bqytdaup1xIWbcF/view?usp=sharing">Operating Manual</a>
+        <a href="https://drive.google.com/file/d/1jhVrCEwU1HlSFq-RFkDKwWMvN3YjMn6Y/view?usp=sharing">Initial Testing Report</a>
+        <a href="https://drive.google.com/file/d/1zLbBJRLDpb3ArYOebd8V6Li6tWvDFnFl/view?usp=sharing">COMS Subsystem Progress Report Slides</a>
+    </div>
+    <div class="project_box">
+        <div class="project_contain">
+            <div class="project_topic">SPACE AND DEFENSE</div>
+            <div class="project_title">Spacecraft Flight Simulator and Attitude Testbed</div>
+            <div class="project_description">Built for Cornell's Space Systems Design Studio, this remotely controlled testbed uses six cold gas thrusters and three reaction wheels to simulate multi-axis orbital dynamics of spacecraft in a friction-free environment.</div>
+            <div class="project_body">
+                <h1 class="project_body_header">
             Simulating Outer Space in a Lab Environment
           </h1> The idea is to simulate spacecraft control by developing a physical system that mimics the friction-free environment of outer space and is able to rotate in three axes. The system we built is suspended on an air bearing which levitates the system on a thin layer of air (like an air hockey puck).
-				<br>
-				<br>
-				<img src="./website/resources/pics/testbed.gif" height=380px class="center">
-				<figcaption class="caption">Air bearing levitates testbed to create friction-free environment</figcaption>
-				<br>The simulator maneuvers using three reaction wheels (motors that turn spacecraft through gyroscopic effects) and six cold gas thrusters. The electronics are controlled wirelessly from a nearby computer with a custom-built graphical user interface.
-				<br>
-				<br>
-				<img src="./website/resources/pics/fullsetup.jpg" height=500px class="center">
-				<figcaption class="caption">Complete lab test setup of the simulator and testbed</figcaption>
-				<br>The <i> Spacecraft Flight Simulator and Attitude Testbed </i> provides a lab environment to test autonomous attitude control algorithms for the small spacecraft developed in our research lab, as well as provide professors with a hands-on instructional platform for advanced spacecraft control students.
-				<h1 class="project_body_header">
+                <br>
+                <br>
+                <img src="./website/resources/pics/testbed.gif" height=380px class="center">
+                <figcaption class="caption">Air bearing levitates testbed to create friction-free environment</figcaption>
+                <br>The simulator maneuvers using three reaction wheels (motors that turn spacecraft through gyroscopic effects) and six cold gas thrusters. The electronics are controlled wirelessly from a nearby computer with a custom-built graphical user interface.
+                <br>
+                <br>
+                <img src="./website/resources/pics/fullsetup.jpg" height=500px class="center">
+                <figcaption class="caption">Complete lab test setup of the simulator and testbed</figcaption>
+                <br>The <i> Spacecraft Flight Simulator and Attitude Testbed </i> provides a lab environment to test autonomous attitude control algorithms for the small spacecraft developed in our research lab, as well as provide professors with a hands-on instructional platform for advanced spacecraft control students.
+                <h1 class="project_body_header">
           Hardware Details
         </h1>
-				<i> Explore testbed components and subsystems. </i>
-				<button class="collapsible">SIMULINK CONTROL INTERFACE</button>
-				<div class="content">
-					<br>
-					<img src="./website/resources/pics/interface.png" height=500px class="center">
-					<figcaption class="caption">User interface for the spacecraft flight simulator</figcaption>
-					<h2 class="project_body_subheader">
+                <i> Explore testbed components and subsystems. </i>
+                <button class="collapsible">SIMULINK CONTROL INTERFACE</button>
+                <div class="content">
+                    <br>
+                    <img src="./website/resources/pics/interface.png" height=500px class="center">
+                    <figcaption class="caption">User interface for the spacecraft flight simulator</figcaption>
+                    <h2 class="project_body_subheader">
             Design
          </h2>
-					<p>Significant effort was invested in ensuring that the user interface was aesthetically pleasing and evoked in users the excitement of space travel. The typography, color palette, and overall design was inspired by UI design in popular science fiction films with heavy influence from <a href="https://territorystudio.com/project/the-martian/"> Territory Studio's VFX work </a> on the 2015 film <i>The Martian</i>. The Simulink Aerospace Instrumentation blockset was used to provide such as an artificial horizon which was fed with a vector containing roll, pitch, and yaw components, and RPM indicators to display reaction wheel speed. Unfortunately, further artistic liberty was heavily limited by the design constraints of Simulink.</p>
-					<h2 class="project_body_subheader">
+                    <p>Significant effort was invested in ensuring that the user interface was aesthetically pleasing and evoked in users the excitement of space travel. The typography, color palette, and overall design was inspired by UI design in popular science fiction films with heavy influence from <a href="https://territorystudio.com/project/the-martian/"> Territory Studio's VFX work </a> on the 2015 film <i>The Martian</i>. The Simulink Aerospace Instrumentation blockset was used to provide such as an artificial horizon which was fed with a vector containing roll, pitch, and yaw components, and RPM indicators to display reaction wheel speed. Unfortunately, further artistic liberty was heavily limited by the design constraints of Simulink.</p>
+                    <h2 class="project_body_subheader">
              Functionality
           </h2>
-					<p>The user interface allows operators to specify a combination of thruster activations and reaction wheel speeds which will be commanded to the testbed at a button press. The dashboard also updates with realtime inertial and attitude telemetry, reaction wheel speeds, and other system status metrics. There are also failsafe functions that command the onboard flight computer to execute bash scripts that shutdown or reboot the testbed.</p>
-					<img src="./website/resources/pics/scope.png" height=700px class="center">
-					<figcaption class="caption">Realtime telemetry visualization</figcaption>
-				</div>
-				<button class="collapsible">FLIGHT COMPUTER</button>
-				<div class="content">
-					<br>
-					<p>The FLIGHT COMPUTER retains the following roles:
-						<ul>
-							<li>Receives and interprets commands sent wirelessly to the testbed by an operator</li>
-							<li>Sends instructions to the REACTION WHEEL CONTROLLER and THRUSTER CONTROLLER to execute operator commands</li>
-							<li>Receives realtime telemetry from the inertial measurement unit (IMU) and pressure sensor</li>
-							<li>Detects pulse information from three optical tachometers and calculates corresponding reaction wheel speed readings</li>
-							<li>Transmits inertial telemetry, reaction wheel speeds, and pressure readings back to the operator</ul>
-						<img src="./website/resources/pics/flightcomputer.jpg" height=400px class="center">
-						<figcaption class="caption">Raspberry Pi flight computer with XBee adapter shield for wireless bidirectional communication</figcaption>
-						<br>
-						<h2 class="project_body_subheader"> Switching from Arduino Due to Raspberry Pi </h2> Previous teams' designs called for an Arduino Due to act as the flight computer. However, after compiling a requirement set for the flight computer, I realized that an Arduino Due is not sufficient to realize the requirement set and instead opted for a Raspberry Pi 3B+. This switch enabled me to take advantage of a number of new capabilities including multithreading (enabling multiple processes to run concurrently, a desired trait for realtime hardware applications), increased clock speed for faster code execution, and the benefit of an entire Linux-based embedded operating system fully contained on the testbed. Each Arduino microcontroller acting as a peripheral device was plugged directly into the Raspberry Pi USB hub and would achieve bidirectional communication with the flight computer over a UART bus.
-						<h2 class="project_body_subheader"> <br>Transmitting Telemetry</h2> A primary task of the flight computer is to relay telemetry from the onboard IMU sensor back to the operator. The flight computer achieves this by reading serial data from the IMU reader microcontroller to gather inertial telemetry and using a FIFO to collect reaction wheel speed calculated by another Python script running in the background. The program then compiles an ASCII string and transmits it to the operator over the local XBee link.
-						<img src="./website/resources/pics/telemetry.png" height=300px class="center">
-						<figcaption class="caption">Transmitted strings containing wheel speeds and inertial telemetry</figcaption>Each line carries information about the speed of each reaction wheel, and accelerometer, gyroscope, and magnetometer readings in three axes from the IMU sensor. This serial stream is captured and parsed in Simulink where the resulting information is displayed to the operator in a readable manner.
-						<h2 class="project_body_subheader"> <br>Persistent Serial Device Identification </h2> Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0) depending on which Arduino was recognized first. I introduced u-dev rules to capture uniquely identifying id values for each connected COM device and used SYMLINKs to create an identifying name (e.g., /dev/imu_reader, /dev/motor_controller, etc.) that uniquely and persistently identifies each microcontroller.</p>
-				</div>
-				<button class="collapsible">CONTROLLING THE COLD GAS THRUSTERS</button>
-				<div class="content">
-					<p>
-						<br>The six solenoid valves controlling each of the six thrust outlets are each connected to a logic-level MOSFET driven by an Arduino microcontroller. Code on the microcontroller limits each thrust duration to 200 ms.</p>
-					<img src="./website/resources/pics/valves.jpg" height=300px class="center">
-					<figcaption class="caption">MOSFET drivers to control thrusters</figcaption>The microcontroller controlling the propulsion subsystem is also connected to a pressure transducer which monitors the air pressure within the manifold that channels air from the tanks to the thruster outlets. If the pressure dips below a certain threshold, an LED signalling that the tanks need to be refilled. The warning light turns off when the air pressure returns to its nominal range.
-					<img src="./website/resources/pics/transducer.jpg" height=300px class="center">
-					<figcaption class="caption">Transducer in-line with manifold</figcaption>
-					<img src="./website/resources/pics/tanks.jpg" height=300px class="center">
-					<figcaption class="caption">Onboard compressed air tanks</figcaption>
-				</div>
-				<button class="collapsible">DRIVING THE REACTION WHEELS</button>
-				<div class="content">
-					<p>
-						<br>The testbed contains three high-torque DC pancake motors that act as reaction wheels. The reaction wheels were affixed orthogonally to each other to effect torques around three axes.
-						<img src="./website/resources/pics/reactionwheels.jpg" height=300px class="center">
-						<figcaption class="caption">Reaction wheels and optical tachometers</figcaption>An optical tachometer was carefully aimed at the spindle of each motor (which held a piece of reflective tape) to count revolutions. The optical tachometers were connected electrically to the flight computer's GPIO, where a pulse resulting from one revolution would trigger an interrupt service routine that updates an RPM value and sends it to the operator. Additionally, each reaction wheel was driven by a motor driver that actively monitors temperature, voltage, and current and cuts power to the load when a prespecified shutoff event is detected.
-						<br>
-						<img src="./website/resources/pics/drivers.jpg" height=300px class="center">
-						<figcaption class="caption">Motor drivers and Raspberry Pi flight computer</figcaption>Constraints were also placed on the brake ability of the reaction wheels (i.e., limits for acceleration/deceleration were put in place) to prevent large, sudden current draws. The reaction wheel direction and speed are both controlled by an 8-bit integer; a value of '128' sent by the operator to a reaction wheel on the testbed corresponds to zero rotation, '255' to full-speed (3600 RPM) clockwise, and '0' to full-speed counter-clockwise.</p>
-				</div>
-				<h1 class="project_body_header">
+                    <p>The user interface allows operators to specify a combination of thruster activations and reaction wheel speeds which will be commanded to the testbed at a button press. The dashboard also updates with realtime inertial and attitude telemetry, reaction wheel speeds, and other system status metrics. There are also failsafe functions that command the onboard flight computer to execute bash scripts that shutdown or reboot the testbed.</p>
+                    <img src="./website/resources/pics/scope.png" height=700px class="center">
+                    <figcaption class="caption">Realtime telemetry visualization</figcaption>
+                </div>
+                <button class="collapsible">FLIGHT COMPUTER</button>
+                <div class="content">
+                    <br>
+                    <p>The FLIGHT COMPUTER retains the following roles:
+                        <ul>
+                            <li>Receives and interprets commands sent wirelessly to the testbed by an operator</li>
+                            <li>Sends instructions to the REACTION WHEEL CONTROLLER and THRUSTER CONTROLLER to execute operator commands</li>
+                            <li>Receives realtime telemetry from the inertial measurement unit (IMU) and pressure sensor</li>
+                            <li>Detects pulse information from three optical tachometers and calculates corresponding reaction wheel speed readings</li>
+                            <li>Transmits inertial telemetry, reaction wheel speeds, and pressure readings back to the operator</ul>
+                        <img src="./website/resources/pics/flightcomputer.jpg" height=400px class="center">
+                        <figcaption class="caption">Raspberry Pi flight computer with XBee adapter shield for wireless bidirectional communication</figcaption>
+                        <br>
+                        <h2 class="project_body_subheader"> Switching from Arduino Due to Raspberry Pi </h2> Previous teams' designs called for an Arduino Due to act as the flight computer. However, after compiling a requirement set for the flight computer, I realized that an Arduino Due is not sufficient to realize the requirement set and instead opted for a Raspberry Pi 3B+. This switch enabled me to take advantage of a number of new capabilities including multithreading (enabling multiple processes to run concurrently, a desired trait for realtime hardware applications), increased clock speed for faster code execution, and the benefit of an entire Linux-based embedded operating system fully contained on the testbed. Each Arduino microcontroller acting as a peripheral device was plugged directly into the Raspberry Pi USB hub and would achieve bidirectional communication with the flight computer over a UART bus.
+                        <h2 class="project_body_subheader"> <br>Transmitting Telemetry</h2> A primary task of the flight computer is to relay telemetry from the onboard IMU sensor back to the operator. The flight computer achieves this by reading serial data from the IMU reader microcontroller to gather inertial telemetry and using a FIFO to collect reaction wheel speed calculated by another Python script running in the background. The program then compiles an ASCII string and transmits it to the operator over the local XBee link.
+                        <img src="./website/resources/pics/telemetry.png" height=300px class="center">
+                        <figcaption class="caption">Transmitted strings containing wheel speeds and inertial telemetry</figcaption>Each line carries information about the speed of each reaction wheel, and accelerometer, gyroscope, and magnetometer readings in three axes from the IMU sensor. This serial stream is captured and parsed in Simulink where the resulting information is displayed to the operator in a readable manner.
+                        <h2 class="project_body_subheader"> <br>Persistent Serial Device Identification </h2> Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0) depending on which Arduino was recognized first. I introduced u-dev rules to capture uniquely identifying id values for each connected COM device and used SYMLINKs to create an identifying name (e.g., /dev/imu_reader, /dev/motor_controller, etc.) that uniquely and persistently identifies each microcontroller.</p>
+                </div>
+                <button class="collapsible">CONTROLLING THE COLD GAS THRUSTERS</button>
+                <div class="content">
+                    <p>
+                        <br>The six solenoid valves controlling each of the six thrust outlets are each connected to a logic-level MOSFET driven by an Arduino microcontroller. Code on the microcontroller limits each thrust duration to 200 ms.</p>
+                    <img src="./website/resources/pics/valves.jpg" height=300px class="center">
+                    <figcaption class="caption">MOSFET drivers to control thrusters</figcaption>The microcontroller controlling the propulsion subsystem is also connected to a pressure transducer which monitors the air pressure within the manifold that channels air from the tanks to the thruster outlets. If the pressure dips below a certain threshold, an LED signalling that the tanks need to be refilled. The warning light turns off when the air pressure returns to its nominal range.
+                    <img src="./website/resources/pics/transducer.jpg" height=300px class="center">
+                    <figcaption class="caption">Transducer in-line with manifold</figcaption>
+                    <img src="./website/resources/pics/tanks.jpg" height=300px class="center">
+                    <figcaption class="caption">Onboard compressed air tanks</figcaption>
+                </div>
+                <button class="collapsible">DRIVING THE REACTION WHEELS</button>
+                <div class="content">
+                    <p>
+                        <br>The testbed contains three high-torque DC pancake motors that act as reaction wheels. The reaction wheels were affixed orthogonally to each other to effect torques around three axes.
+                        <img src="./website/resources/pics/reactionwheels.jpg" height=300px class="center">
+                        <figcaption class="caption">Reaction wheels and optical tachometers</figcaption>An optical tachometer was carefully aimed at the spindle of each motor (which held a piece of reflective tape) to count revolutions. The optical tachometers were connected electrically to the flight computer's GPIO, where a pulse resulting from one revolution would trigger an interrupt service routine that updates an RPM value and sends it to the operator. Additionally, each reaction wheel was driven by a motor driver that actively monitors temperature, voltage, and current and cuts power to the load when a prespecified shutoff event is detected.
+                        <br>
+                        <img src="./website/resources/pics/drivers.jpg" height=300px class="center">
+                        <figcaption class="caption">Motor drivers and Raspberry Pi flight computer</figcaption>Constraints were also placed on the brake ability of the reaction wheels (i.e., limits for acceleration/deceleration were put in place) to prevent large, sudden current draws. The reaction wheel direction and speed are both controlled by an 8-bit integer; a value of '128' sent by the operator to a reaction wheel on the testbed corresponds to zero rotation, '255' to full-speed (3600 RPM) clockwise, and '0' to full-speed counter-clockwise.</p>
+                </div>
+                <h1 class="project_body_header">
           Continuing Work
          </h1>
-				<h2 class="project_body_subheader">
+                <h2 class="project_body_subheader">
            Autonomous (Closed-Loop) Control
         </h2> Having built and successfully demonstrated open-loop control on the testbed to faculty members in the Sibley School of Mechanical and Aerospace Engineering, students from Professor Mason Peck's graduate spaceflight course were tasked with creating a closed-loop attitude control algorithm in simulation and deploying the controller to our hardware testbed for verification. The Simulink control program may be simplified to a single subsystem that effectively acts as a plant in a closed-loop control system.
-				<br>
-				<br>
-				<img src="./website/resources/pics/block.png" height=300px class="center">
-				<figcaption class="caption">User interface as control plant</figcaption>A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or 1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
-				<h2 class="project_body_subheader">
+                <br>
+                <br>
+                <img src="./website/resources/pics/block.png" height=300px class="center">
+                <figcaption class="caption">User interface as control plant</figcaption>A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or 1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
+                <h2 class="project_body_subheader">
           <br>Custom PCB Integration
         </h2> While fully operational, the electrical hookups on the testbed (i.e. jumper wires and solderless breadboards) are consistent with those of a preliminary prototyping phase. A refined design consists of a single PCB that integrates all the wiring and electronics with bold, clear silkscreen labeling.
-				<h1 class="project_body_header">Our Team </h1>
-				<img src="./website/resources/pics/ssds_team.jpg" height=500px class="center">
-				<figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical & Computer Engineer), and Zach Tretler (Mechanical Engineer)</figcaption>
-				<script>
-					var coll = document.getElementsByClassName("collapsible");
-					                    var i;
+                <h1 class="project_body_header">Our Team </h1>
+                <img src="./website/resources/pics/ssds_team.jpg" height=500px class="center">
+                <figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical & Computer Engineer), and Zach Tretler (Mechanical Engineer)</figcaption>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
 
-					                    for (i = 0; i < coll.length; i++) {
-					                        coll[i].addEventListener("click", function() {
-					                            this.classList.toggle("active");
-					                            var content = this.nextElementSibling;
-					                            if (content.style.maxHeight) {
-					                                content.style.maxHeight = null;
-					                            } else {
-					                                content.style.maxHeight = content.scrollHeight + "px";
-					                            }
-					                        });
-					                    }
-				</script>
-			</div>
-		</div>
-	</div>
-	</div>
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
 
 </body>
 

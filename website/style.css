@@ -1,12 +1,3 @@
-/* Generated on: Fri Jun 14 2019 18:41:40 GMT+0000 (UTC) */
-
-
-/* ==========================================================================
-   normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css
-   ========================================================================== */
-
-
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
     font-family: sans-serif;
@@ -688,11 +679,6 @@ p {
         margin-bottom: 100px;
     }
 }
-
-
-/* ==========================================================================
-   Start of base Webflow CSS - If you're looking for some ultra-clean CSS, skip the boilerplate and see the unminified code below.
-   ========================================================================== */
 
 * {
     -webkit-box-sizing: border-box;
