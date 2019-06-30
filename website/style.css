@@ -311,6 +311,7 @@ img{
 
     .home_bg{
       height: 30vh;
+      background-size: 120%;
     }
 
 }
