@@ -162,7 +162,7 @@ pa394@cornell.edu
                         <figcaption class="caption">Transmitted strings containing wheel speeds and inertial telemetry</figcaption>Each line carries information about the speed of each reaction wheel, and accelerometer, gyroscope, and magnetometer readings in three axes from the IMU sensor. This serial stream is captured and parsed in Simulink where the resulting information is displayed to the operator in a readable manner.
                         <h2 class="project_body_subheader"> <br>Persistent Serial Device Identification </h2> Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0) depending on which Arduino was recognized first. I introduced u-dev rules to capture uniquely identifying id values for each connected COM device and used SYMLINKs to create an identifying name (e.g., /dev/imu_reader, /dev/motor_controller, etc.) that uniquely and persistently identifies each microcontroller.</p>
                 </div>
-                <button class="collapsible">CONTROLLING THE COLD GAS THRUSTERS</button>
+                <button class="collapsible">CONTROLLING THE THRUSTERS</button>
                 <div class="content">
                     <p>
                         <br>The six solenoid valves controlling each of the six thrust outlets are each connected to a logic-level MOSFET driven by an Arduino microcontroller. Code on the microcontroller limits each thrust duration to 200 ms.</p>
