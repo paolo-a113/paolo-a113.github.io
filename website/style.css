@@ -232,7 +232,6 @@ img{
      padding-right: 10vw;
      overflow: scroll;
      padding-bottom: 100;
-     padding-top: 60px;
      float: left;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
@@ -861,7 +860,7 @@ display: none;
     width: 100%;
     line-height: 1.5;
     weight: 100;
-    text-align: justify;
+    text-align: left;
 }
 
 .project_body_header {
