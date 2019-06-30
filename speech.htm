@@ -18,52 +18,7 @@ pa394@cornell.edu
 		            box-shadow: 2px 2px 6px 1px gray;
 		            margin-top: 20px;
 		        }
-		        /* Style the header with a grey background and some padding */
-
-		        .header {
-		            overflow: hidden;
-		            background-color: #f1f1f1;
-		            padding: 20px 50px;
-		        }
-		        /* Style the header links */
-
-		        .header a {
-		            float: left;
-		            color: black;
-		            text-align: center;
-		            padding: 12px;
-		            text-decoration: none;
-		            line-height: 25px;
-		            border-radius: 4px;
-		            transition: color 200ms;
-		        }
-
-		        .header a:hover {
-		            color: #DE5021;
-		        }
-		        /* Float the link section to the right */
-
-		        .header-right {
-		            float: right;
-		            font-size: 12px;
-		        }
-
-		        .myHeader {
-		            float: left;
-		            font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-		            font-size: 30px;
-		            color: #000;
-		            padding-top: 30px;
-		            padding-left: 200px;
-		            padding-bottom: 50px;
-		        }
-
-		        .myPages {
-		            float: left;
-		            font-family: 'Futura';
-		            color: #000;
-		            font-size: 20px;
-		        }
+	
 
 		        .main {
 		            margin-left: 160px;
@@ -138,6 +93,39 @@ pa394@cornell.edu
 			<a class=myPages href="./speech.htm">SPEECH</a>
 			<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
 		</div>
+		<div id="myNav" class="overlay">
+			<div class="Absolute-Center">
+				<div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
+					<a class=myPages href="./bio.htm">BIOGRAPHY</a>
+					<a class=myPages href="./speech.htm">SPEECH</a>
+					<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
+				</div>
+			</div>
+		</div>
+		<div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<script>
+			function myFunction(x) {
+			            x.classList.toggle("change");
+			          }
+		</script>
+		<script>
+			function openNav() {
+			        myFunction(document.getElementById("toggle"));
+			        document.getElementById("myNav").style.height = "100%";
+			        document.getElementById("toggle").onclick = closeNav;
+			      }
+
+			      function closeNav() {
+			        myFunction(document.getElementById("toggle"));
+			        document.getElementById("myNav").style.height = "0%";
+			        document.getElementById("toggle").onclick = openNav;
+
+			      }
+		</script>
 	</div>
 	<video class="center" controls>
 		<source src="https://github.com/paolo-a113/paolo-a113.github.io/blob/master/website/resources/vids/PaoloArguelles_ECSTConvocation_FullRemarksHD.mp4?raw=true" type="video/mp4">
