@@ -10,7 +10,7 @@ pa394@cornell.edu
 	<title>Home | Paolo Arguelles</title>
 	<meta content="Project" property="og:title">
 	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<link href="./website/index_files/style.css" rel="stylesheet" type="text/css">
+	<link href="./website/style.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="./website/fonts.css" media="all">
 	<style>
 	</style>
@@ -23,6 +23,39 @@ pa394@cornell.edu
 			<a class=myPages href="./speech.htm">SPEECH</a>
 			<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
 		</div>
+		<div id="myNav" class="overlay">
+			<div class="Absolute-Center">
+				<div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
+					<a class=myPages href="./bio.htm">BIOGRAPHY</a>
+					<a class=myPages href="./speech.htm">SPEECH</a>
+					<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
+				</div>
+			</div>
+		</div>
+		<div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<script>
+			function myFunction(x) {
+			            x.classList.toggle("change");
+			          }
+		</script>
+		<script>
+			function openNav() {
+			        myFunction(document.getElementById("toggle"));
+			        document.getElementById("myNav").style.height = "100%";
+			        document.getElementById("toggle").onclick = closeNav;
+			      }
+
+			      function closeNav() {
+			        myFunction(document.getElementById("toggle"));
+			        document.getElementById("myNav").style.height = "0%";
+			        document.getElementById("toggle").onclick = openNav;
+
+			      }
+		</script>
 	</div>
 	<div class="section-6">
 		<div class="div-block-15 w-clearfix">
