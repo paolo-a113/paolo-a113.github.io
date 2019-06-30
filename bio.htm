@@ -4,7 +4,7 @@
 		This site was built and developed by Paolo Arguelles (6/19/2019).
 		pa394@cornell.edu
 		================================================================== -->
-	 
+
 <html>
 
 <head>
@@ -18,11 +18,44 @@
 
 <body class="body">
 	<div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
-		<div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
-			<a class=myPages href="./bio.htm">BIOGRAPHY</a>
-			<a class=myPages href="./speech.htm">SPEECH</a>
-			<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
-		</div>
+			<div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
+					<a class=myPages href="./bio.htm">BIOGRAPHY</a>
+					<a class=myPages href="./speech.htm">SPEECH</a>
+					<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
+			</div>
+			<div id="myNav" class="overlay">
+					<div class="Absolute-Center">
+							<div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
+									<a class=myPages href="./bio.htm">BIOGRAPHY</a>
+									<a class=myPages href="./speech.htm">SPEECH</a>
+									<a class=myPages href="https://drive.google.com/file/d/13bpb_zUXokdzU9XViRuhRjnIcB8op8Bh/view?usp=sharing">RESUME</a>
+							</div>
+					</div>
+			</div>
+			<div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+			</div>
+			<script>
+					function myFunction(x) {
+							x.classList.toggle("change");
+					}
+			</script>
+			<script>
+					function openNav() {
+							myFunction(document.getElementById("toggle"));
+							document.getElementById("myNav").style.height = "100%";
+							document.getElementById("toggle").onclick = closeNav;
+					}
+
+					function closeNav() {
+							myFunction(document.getElementById("toggle"));
+							document.getElementById("myNav").style.height = "0%";
+							document.getElementById("toggle").onclick = openNav;
+
+					}
+			</script>
 	</div>
 	<div class="bio_bg">
 		<div class="bio_bg_grad w-clearfix">

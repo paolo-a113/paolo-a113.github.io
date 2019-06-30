@@ -23,6 +23,12 @@ html {
      line-height: 36px;
      font-weight: bold;
 }
+
+img{
+  @media (max-width: 800px) {
+    width: 10px;
+  }
+}
  .center {
      display: block;
      margin-left: auto;
@@ -181,12 +187,11 @@ html {
      display: -ms-flexbox;
      display: flex;
      width: 100%;
-     height: auto;
      margin-top: auto;
-     margin-bottom: 0px;
      padding-top: 100px;
      padding-bottom: 0px;
-     padding-left: 850px;
+     padding-left: 50vw;
+     padding-right: 10vw;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
      -webkit-flex-direction: column;
@@ -213,6 +218,7 @@ html {
      background-image: url("./resources/pics/home_bg.jpg");
      background-position: 50% 50%;
      background-size: cover;
+     height: 100vh;
 }
  .home_description {
      position: static;
@@ -221,10 +227,12 @@ html {
      display: -ms-flexbox;
      display: flex;
      width: 100%;
-     margin-left: 0px;
+     height: 70vh;
+     padding-left: 50vw;
+     padding-right: 10vw;
+     overflow: scroll;
+     padding-bottom: 100;
      padding-top: 60px;
-     padding-right: 220px;
-     padding-left: 850px;
      float: left;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
@@ -284,7 +292,7 @@ html {
     }
      .home_description {
          overflow: scroll;
-         padding: 60px 60px 100px;
+         padding: 10px 60px 100px;
          color: #000;
          font-size: 18px;
          line-height: 30px;
@@ -293,34 +301,21 @@ html {
      .home_big_heading {
          padding-top: 120px;
          padding-bottom: 120px;
-         padding-left: 0px;
+         padding-left: 40vw;
          -webkit-box-align: center;
          -webkit-align-items: center;
          -ms-flex-align: center;
          align-items: center;
-         font-size: 40px;
+         font-size: 8vw;
          text-align: center;
     }
-}
- @media (max-width: 500px) {
-     .home_bg_grad {
-         background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(transparent));
-         background-image: linear-gradient(180deg, transparent, transparent);
-         color: #fff;
+
+    .home_bg{
+      height: 30vh;
     }
-     .home_big_heading {
-         padding-top: 120px;
-         padding-bottom: 120px;
-         padding-left: 0px;
-         -webkit-box-align: center;
-         -webkit-align-items: center;
-         -ms-flex-align: center;
-         align-items: center;
-         font-size: 40px;
-         text-align: center;
-    }
+
 }
-/* =================== END HOME FORMATTING ========================== */
+/*================== END HOME FORMATTING ========================== */
 /* =================== BEGIN BIO FORMATTING ========================= */
  .bio_bg_grad {
      height: 100vh;
@@ -341,7 +336,7 @@ html {
      margin-bottom: 0px;
      padding-top: 100px;
      padding-bottom: 68px;
-     padding-left: 220px;
+     padding-left: 10vw;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
      -webkit-flex-direction: column;
@@ -381,8 +376,8 @@ html {
      height: 600px;
      margin-left: 0px;
      padding-top: 0px;
-     padding-right: 850px;
-     padding-left: 220px;
+     padding-right: 60vw;
+     padding-left: 10vw;
      float: left;
      -webkit-box-orient: vertical;
      -webkit-box-direction: normal;
@@ -411,7 +406,7 @@ html {
      -ms-overflow-style: none;
     /* IE 10+ */
 }
- @media (max-width: 800px) {
+ @media (max-width: 900px) {
      .bio_bg_grad {
          height: 100%;
          margin-top: 0px;
@@ -459,6 +454,14 @@ html {
 }
 /* =================== END BIO FORMATTING ==================================== */
 /* =================== BEGIN PROJECT PAGE FORMATTING ========================= */
+.project_bg {
+    height: 60vh;
+    background-image: url("./resources/pics/project_bg.jpg");
+    background-position: 50% 40%;
+    background-size: cover;
+    background-attachment: fixed;
+    line-height: 30px;
+}
  .w-inline-block {
      max-width: 100%;
      display: inline-block
@@ -639,6 +642,14 @@ html {
      cursor: pointer;
 }
  @media (max-width: 800px) {
+   .project_heading {
+     font-size: 30px;
+   }
+
+   .project_bg{
+     height: 30vh;
+   }
+
      .collection-list {
          grid-column-gap: 0px;
          grid-row-gap: 0px;
@@ -657,13 +668,7 @@ html {
          background-color: #f1f1f1;
     }
 }
- @media screen and (max-width: 500px) {
-     .project_heading {
-         margin-top: 0px;
-         padding-top: 0px;
-         font-size: 30px;
-    }
-}
+
 /* =================== END PROJECT PAGE FORMATTING ================================= */
 /* =================== BEGIN INDIVIDUAL PROJECT FORMATTING ========================= */
  .project_topic {
@@ -677,6 +682,7 @@ html {
      padding-left: 60px;
      padding-right: 70px;
      padding-top: 30px;
+     width: 100%;
 }
  .project_box {
      float: right;
@@ -708,9 +714,9 @@ html {
      font-family: 'Palatino';
      font-style: italic;
      font-size: 14px;
-     padding-left: 200px;
-     padding-right: 200px;
+
      text-align: center;
+     width: 100%
 }
  .project_body {
      font-family: 'Lato';
@@ -735,14 +741,6 @@ html {
      margin-top: 0;
      margin-bottom: 0;
      color: black;
-}
- .project_bg {
-     height: 600px;
-     background-image: url("./resources/pics/project_bg.jpg");
-     background-position: 50% 40%;
-     background-size: cover;
-     background-attachment: fixed;
-     line-height: 30px;
 }
 
 .sidenav {
@@ -784,6 +782,120 @@ html {
 .sidenav a:hover {
     transition: 200ms;
     color: #DE5021;
+}
+
+.project_image{
+  height: 600px;
+  margin-top: 0px;
+  padding-top: 0px;
+  background-size: cover;
+  background-attachment: fixed;
+  line-height: 30px;
+}
+.collapsible {
+    background-color: #fff;
+    color: black;
+    font-family: 'Futura';
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+}
+
+@media (max-width: 800px) {
+
+  .project_topic {
+      font-size: 10px;
+      text-align: center;
+      padding-bottom: 20px;
+ }
+
+  .sidenav {
+display: none;
+  }
+
+  .project_image{
+    height: 30vh;
+  }
+
+  .project_box {
+      float: center;
+      background-color: white;
+      margin-top: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
+      width: 100vw;
+ }
+
+ .project_title {
+     padding-left: 0px;
+     padding-top: 0px;
+     padding-bottom: 20px;
+     padding-right: 0px;
+     width: 100%;
+     text-align: center;
+     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+     font-size: 20px;
+     font-weight: 300;
+     line-height: 1.2;
+}
+
+.project_description {
+    font-size: 14px;
+    padding-bottom: 20px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+    line-height: 1.2;
+    font-style: oblique;
+}
+
+.project_body {
+    font-size: 12px;
+    padding-bottom: 20px;
+    width: 100%;
+    line-height: 1.5;
+    weight: 100;
+    text-align: justify;
+}
+
+.project_body_header {
+    font-size: 20px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+
+}
+
+.project_contain{
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.caption {
+    font-size: 12px;
+width: 100%
+    text-align: center;
+}
+.collapsible {
+    background-color: #fff;
+    color: black;
+    font-family: 'Futura';
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 2.5vw;
+    border-bottom-style: solid;
+    border-bottom-color: inherit;
+}
+
 }
 
 /* ============== END INDIVIDUAL PROJECT FORMATTING ==================== */
