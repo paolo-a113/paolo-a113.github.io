@@ -320,7 +320,7 @@ html {
          text-align: center;
     }
 }
-/* =================== END HOME FORMATTING ========================= */
+/* =================== END HOME FORMATTING ========================== */
 /* =================== BEGIN BIO FORMATTING ========================= */
  .bio_bg_grad {
      height: 100vh;
@@ -457,7 +457,7 @@ html {
         /* IE 10+ */
     }
 }
-/* =================== END BIO FORMATTING ========================= */
+/* =================== END BIO FORMATTING ==================================== */
 /* =================== BEGIN PROJECT PAGE FORMATTING ========================= */
  .w-inline-block {
      max-width: 100%;
@@ -664,7 +664,7 @@ html {
          font-size: 30px;
     }
 }
-/* =================== END PROJECT PAGE FORMATTING ========================= */
+/* =================== END PROJECT PAGE FORMATTING ================================= */
 /* =================== BEGIN INDIVIDUAL PROJECT FORMATTING ========================= */
  .project_topic {
      font-family: 'Futura';
@@ -744,8 +744,8 @@ html {
      background-attachment: fixed;
      line-height: 30px;
 }
-/* =================== END INDIVIDUAL PROJECT FORMATTING ========================= */
-/* =================== BEGIN SPEECH FORMATTING ========================= */
+/* ============== END INDIVIDUAL PROJECT FORMATTING ==================== */
+/* ============== BEGIN SPEECH FORMATTING ============================== */
  .speechtitle {
      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
      font-size: 2vw;
