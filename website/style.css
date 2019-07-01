@@ -828,7 +828,10 @@ display: none;
   }
 
   .project_image{
-    height: 67vh;
+    background-size: contain;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
   }
 
   .project_box {
