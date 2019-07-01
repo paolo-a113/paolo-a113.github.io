@@ -829,7 +829,7 @@ display: none;
 
   .project_image{
     background-size: cover;
-    height: 70vh;
+    height: 40vh;
     background-position: 50% 50%;
     background-attachment: scroll;
 
@@ -838,11 +838,10 @@ display: none;
   .project_box {
       float: center;
       background-color: white;
-      margin-top: -10vh;
+      margin-top: 0vh;
       margin-left: 0px;
       margin-right: 0px;
       width: 100vw;
-      border-radius: 30px;
  }
 
  .project_title {
