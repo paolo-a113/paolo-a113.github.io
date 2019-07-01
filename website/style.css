@@ -72,7 +72,7 @@ img{
 }
  .myPages {
      float: left;
-     font-family: 'Futura';
+     font-family: 'Roboto';
      color: black;
      font-size: 20px;
 }
@@ -679,7 +679,7 @@ img{
 /* =================== END PROJECT PAGE FORMATTING ================================= */
 /* =================== BEGIN INDIVIDUAL PROJECT FORMATTING ========================= */
  .project_topic {
-     font-family: 'Futura';
+     font-family: 'Roboto';
      padding-top: 10px;
      color: #DE5021;
      font-size: 12px;
@@ -726,7 +726,7 @@ img{
      width: 100%
 }
  .project_body {
-     font-family: 'Helvetica Neue';
+     font-family: 'Helvetica';
      font-weight: normal;
      color: rgba(29,29,29,0.7);
      font-size: 18px;
@@ -803,7 +803,7 @@ img{
 .collapsible {
     background-color: #fff;
     color: black;
-    font-family: 'Futura';
+    font-family: 'Roboto';
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -897,7 +897,7 @@ width: 100%
 .collapsible {
     background-color: #fff;
     color: black;
-    font-family: 'Futura';
+    font-family: 'Roboto';
     cursor: pointer;
     padding: 18px;
     width: 100%;
@@ -924,7 +924,7 @@ width: 100%
      margin-right: auto;
 }
  .speechdesc {
-     font-family: 'Futura';
+     font-family: 'Roboto';
      color: #DE5021;
      width: 80%;
      height: auto;
@@ -951,7 +951,7 @@ width: 100%
          margin-right: auto;
     }
      .speechdesc {
-         font-family: 'Futura';
+         font-family: 'Roboto';
          color: #DE5021;
          font-size: 1.2vw;
          width: 80%;
