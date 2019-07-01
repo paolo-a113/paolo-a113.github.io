@@ -24,7 +24,14 @@ html {
      font-weight: bold;
 }
 
+hr {
+  border: 0.5px solid #ddd;
+  width: 30%;
+}
+
 img{
+  padding-top: 20px;
+  padding-bottom: 5px;
   @media (max-width: 800px) {
     width: 10px;
   }
@@ -714,13 +721,14 @@ img{
      font-family: 'Palatino';
      font-style: italic;
      font-size: 14px;
-
+     padding-bottom: 20px;
      text-align: center;
      width: 100%
 }
  .project_body {
-     font-family: 'Lato';
-     color: grey;
+     font-family: 'Helvetica Neue';
+     font-weight: normal;
+     color: rgba(29,29,29,0.7);
      font-size: 18px;
      padding-bottom: 20px;
      line-height: 1.5;
@@ -820,16 +828,17 @@ display: none;
   }
 
   .project_image{
-    height: 30vh;
+    height: 67vh;
   }
 
   .project_box {
       float: center;
       background-color: white;
-      margin-top: 0px;
+      margin-top: -20vh;
       margin-left: 0px;
       margin-right: 0px;
       width: 100vw;
+      border-radius: 30px;
  }
 
  .project_title {
@@ -896,9 +905,6 @@ width: 100%
     border-bottom-color: inherit;
 }
 
-.project_image{
-display: none;
-}
 
 }
 
