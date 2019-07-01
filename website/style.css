@@ -653,8 +653,14 @@ img{
      font-size: 30px;
    }
 
-   .project_bg{
-     height: 30vh;
+   .project_bg {
+       height: 50vh;
+       background-image: url("./resources/pics/project_bg.jpg");
+       background-position: 50% 0%;
+       background-size: cover;
+       background-repeat: no-repeat;
+       background-attachment: scroll;
+       line-height: 30px;
    }
 
      .collection-list {
