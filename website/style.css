@@ -828,16 +828,17 @@ display: none;
   }
 
   .project_image{
-    background-size: contain;
-    height: 40vh;
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
+    background-size: cover;
+    height: 70vh;
+    background-position: 50% 50%;
+    background-attachment: scroll;
+
   }
 
   .project_box {
       float: center;
       background-color: white;
-      margin-top: -20vh;
+      margin-top: -10vh;
       margin-left: 0px;
       margin-right: 0px;
       width: 100vw;
