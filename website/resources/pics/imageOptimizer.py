@@ -7,7 +7,7 @@ def rmMeta(image):
         image_without_exif = Image.new(image.mode, (width, height))
         image_without_exif.putdata(data)
 
-        bound_size = 1920
+        bound_size = 1440
         scale_factor = max(width, height)/bound_size
         if scale_factor > 1:
             newSize = (int(width/scale_factor), int(height/scale_factor))
