@@ -1,3 +1,5 @@
+# I created this image optimizer to automatically remove metadata and resize images in a directory for HTML site optimization
+
 import os, sys
 from PIL import Image
 
