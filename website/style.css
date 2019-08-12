@@ -651,6 +651,7 @@ img{
  @media (max-width: 800px) {
    .project_heading {
      font-size: 30px;
+     letter-spacing: -0.03em;
    }
 
    .project_bg {
