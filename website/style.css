@@ -50,8 +50,8 @@ img{
 }
  .header a {
      float: left;
-     color: black;
-     text-align: center;
+      color: black;
+      text-align: center;
      padding: 12px;
      text-decoration: none;
      line-height: 25px;
@@ -67,9 +67,10 @@ img{
 }
  .myHeader {
      float: left;
-     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+     font-family: 'Helvetica', 'Book Antiqua', Palatino, serif;
      font-size: 30px;
-     color: #000;
+     font-weight: bold;
+     letter-spacing: -0.03em;
 }
  .myPages {
      float: left;
