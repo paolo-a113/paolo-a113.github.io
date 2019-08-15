@@ -373,6 +373,7 @@ img{
      background-image: url("./resources/pics/about_bg.jpg");
      background-position: 40% 40%;
      background-size: cover;
+     background-attachment: fixed;
 }
  .bio_desc {
      position: static;
@@ -402,7 +403,7 @@ img{
      -ms-flex-align: center;
      align-items: center;
      font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-     color: rgba(29,29,29,0.7);
+     color: black;
      font-size: 20px;
      line-height: 40px;
      font-style: normal;
@@ -980,5 +981,14 @@ width: 100%
     font-weight: lighter;
     font-size: 12px;
     color: rgba(29,29,29,0.7);
+    padding-bottom: 20px;
+}
+
+.footer-home {
+    padding-top: 100px;
+    font-family: 'Palatino';
+    font-weight: lighter;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
     padding-bottom: 20px;
 }
