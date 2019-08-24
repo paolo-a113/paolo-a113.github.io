@@ -13,7 +13,7 @@ def rmMeta(image):
         scale_factor = max(width, height)/bound_size
         if scale_factor > 1:
             newSize = (int(width/scale_factor), int(height/scale_factor))
-            imresize=image_without_exif.resize(newSize)
+            imresize=image_without_exif.resize(newSize, 1)
             return imresize
         else:
             return image_without_exif
@@ -30,7 +30,7 @@ def main():
                 try:
                     image = Image.open(filepath)
                     imRmMeta = rmMeta(image)
-                    imRmMeta.save(dirName+"/"+f)
+                    imRmMeta.save(dirName+"/compressed/"+f)
 
                 except OSError:
                     continue
