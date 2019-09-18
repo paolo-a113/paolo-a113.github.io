@@ -5,7 +5,7 @@ html {
 }
  body {
      margin: 0;
-     background-color: #f1f1f1;
+     background-color: #e7e7e7;
 }
  * {
      -webkit-box-sizing: border-box;
@@ -45,7 +45,7 @@ img{
 /* =================== HEADER FORMATTING =================== */
  .header {
      overflow: hidden;
-     background-color: #f1f1f1;
+     background-color: #e7e7e7;
      padding: 20px 50px;
 }
  .header a {
@@ -588,7 +588,7 @@ img{
  .collection-list-wrapper {
      margin-left: 0px;
      padding: 0px 60px 100px;
-     background-color: #f1f1f1;
+     background-color: #e7e7e7;
      color: #fff;
 }
  .link-block {
