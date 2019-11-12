@@ -460,6 +460,53 @@ img{
 }
 /* =================== END BIO FORMATTING ==================================== */
 /* =================== BEGIN PROJECT PAGE FORMATTING ========================= */
+
+.slider-heading{
+  font-family: 'Helvetica';
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  font-size: 30px;
+  margin-left: 6.25%;
+}
+
+.slider{
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.slider .post-wrapper{
+  width: 85%;
+  height: auto;
+  margin: 0px auto;
+  /* border: 1px dashed red; */
+  overflow: hidden;
+}
+
+.slider .next{
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  cursor: pointer;
+  font-size: 2em;
+}
+
+.slider .prev{
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  cursor: pointer;
+  font-size: 2em;
+
+}
+
+.slider .post-wrapper .post{
+  width: 300px;
+  height: auto;
+  margin: 0px 15px;
+  background-color: cyan;
+  display: inline-block;
+}
+
 .project_bg {
     height: 60vh;
     background-image: url("./resources/pics/project_bg.jpg");
