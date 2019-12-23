@@ -19,8 +19,26 @@ pa394@cornell.edu
             color: white;
         }
         .project_image {
-            background-image: url("./website/resources/pics/ssds_bg.jpg");
+            background-color: #FF644E;
         }
+
+        .sidenav a{
+            color: white;
+        }
+
+        .sidenav a:hover {
+    transition: 200ms;
+    color: #FF644E;
+}
+
+.header a:hover {
+     color: #FF644E;
+}
+
+.header a {
+     color: white;
+}
+
 
         .collapsible {
             color: white;
@@ -58,10 +76,10 @@ pa394@cornell.edu
 
 <body class="body" style="background-color: #434343;">
     <div class="header" style="background-color: #434343;"> <a href="./index.htm" class="myHeader" style="color: white;">Paolo Arguelles</a>
-        <div class="header-right"> <a class=myPages style="color: white;" href="./projects.htm">PROJECTS</a>
-            <a class=myPages style="color: white;" href="./bio.htm">ABOUT ME</a>
-            <a class=myPages style="color: white;" href="./speech.htm">SPEECH</a>
-            <a class=myPages style="color: white;" href="./PaoloArguelles_Resume.pdf">RESUME</a>
+        <div class="header-right"> <a class=myPages  href="./projects.htm">PROJECTS</a>
+            <a class=myPages href="./bio.htm">ABOUT ME</a>
+            <a class=myPages href="./speech.htm">SPEECH</a>
+            <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
         </div>
         <div id="myNav" class="overlay">
             <div class="Absolute-Center">
@@ -113,7 +131,7 @@ pa394@cornell.edu
                   </video>
             </div>
 
-            <div class="project_description" style="background-color: black;">This presentation on "human-swarm interaction" was originally given as part of a graduate seminar on bio-inspired multi-agent coordination facilitated by Dr. Kirstin Petersen.</div>
+            <div class="project_description" style="background-color: black;">This piece on "human-swarm interaction" was originally presented at a graduate seminar on bio-inspired multi-agent coordination facilitated by Dr. Kirstin Petersen.</div>
 						<hr>
 						<div class="project_body" style="color: #808080;">
    
@@ -126,7 +144,7 @@ pa394@cornell.edu
           </video>
           Human-robot interaction is more or less a one-to-one relationship. We do something and the robot does something in response. But in interacting with single robots, we can only do so much. We are, of course, no stranger to the immense power of the swarm. We know that swarms possess power in numbers. And because of its distributed, often decentralized nature, swarms afford us much further reach in tasks such as urban search and rescue. It makes sense that the conversation in recent years has shifted from <i>human-robot interaction</i> to <i>human-swarm interaction (HSI).</i>
           <br><br>
-          It seems straightforward to project ourselves and our intentions onto single robots. What is arguably less apparent is how to make swarms work for and with us. And because any changes made at the local level are bound to have some emergent global effect, the ways by which we impose these swarm control methods matter and make a big difference.
+          It seems straightforward to project ourselves and our intentions onto single robots. What is arguably less apparent is how to make swarms work for and with us. Because any changes made at the local level are bound to have some emergent global effect, the ways by which we impose these swarm control methods matter and make a big difference.
           <br>
           <h1 class="project_body_header" style="color: white"><i>Kolling et al.</i></h1>   
           <img src="./website/resources/pics/kolling_paper.png" width = 70% class="center">
@@ -143,12 +161,12 @@ pa394@cornell.edu
 
           <h1 class="project_body_header" style="color: white">Control Methods</h1>   
 
-          There are two kinds of control methods with which human operators are able to interact with certain swarm agents to carry out some action.
+          There are two kinds of control methods with which human operators are able to interact with certain swarm agents to carry out some prescribed action.
           <video preload="yes" autoplay muted loop playsinline width = 90% class="center">
             <source src="./website/resources/vids/control_modes.m4v" type="video/mp4" />
           </video>
 
-          The first kind is called <i>intermittent control,</i> where a human operator performs a one-time assignment of some algorithm onto a group of agents of their choosing. This kind of control is persistent through time, because the agents maintain their assigned mode as they propagate throughout the swarm.
+          The first kind is called <i>intermittent control,</i> where a human operator performs a one-time assignment of some algorithm onto a group of agents of their choosing. This kind of control is persistent through time because the agents maintain their assigned mode as they propagate throughout the swarm.
 
           In the testbed this is realized by <i>selection control;</i> the authors use a selection tool to select robots.
           <br><br>
@@ -158,19 +176,18 @@ pa394@cornell.edu
           
           Simple leader-predator models can be simulated by beacon control. When you program the beacon to attract agents, it’s a leader. When you program the beacon to repel agents, it’s a predator.
           
-          The participant is given these two ways to interact with the swarm.
 
           <h1 class="project_body_header" style="color: white">Human Control Algorithms</h1>   
 
-        The authors made six algorithms, or modes, available to the human operators. Using either selection or beacon control, the human operators can impose these modes on a subset of the swarm.
+          The authors made six algorithms, or modes, available to the human operators. Using either selection or beacon control, the human operators can impose these modes on a subset of the swarm.
 
         <video preload="yes" autoplay muted loop playsinline width = 90% class="center">
             <source src="./website/resources/vids/human_modes.m4v" type="video/mp4" />
           </video>   
 
-        The Deploy and Rendezvous modes require a bit more explanation:
+        The <i>Deploy</i> and <i>Rendezvous</i> modes require a bit more explanation.
 
-        <button class="collapsible">Deploy Algorithm</button>
+        <button class="collapsible">Deploy Mode</button>
                 <div class="content">
                     <video preload="yes" autoplay muted loop playsinline width = 90% class="center">
                         <source src="./website/resources/vids/deploy.m4v" type="video/mp4" />
@@ -180,7 +197,7 @@ pa394@cornell.edu
                       The purpose of the deploy algorithm is to distribute agents uniformly throughout a space. It does this by iteratively calculating Voronoi tessellations with each agent’s current position as the generating point for each facet. This algorithm will converge to what’s called a centroidal Voronoi tessellation over time.
 
                 </div>
-        <button class="collapsible">Rendezvous Algorithm</button>
+        <button class="collapsible">Rendezvous Mode</button>
                 <div class="content">
                     <video preload="yes" autoplay muted loop playsinline width = 90% class="center">
                         <source src="./website/resources/vids/rendezvous.m4v" type="video/mp4" />
@@ -194,7 +211,7 @@ By iterating this algorithm, communication links will be maintained and agents w
                 </div> 
                 <br>    
                 <h1 class="project_body_header" style="color: white">Autonomous Swarm Algorithms</h1>   
-        The authors also created five autonomous swarm algorithms to compare with the human operator performance.
+        The authors also created five autonomous swarm algorithms to compare with the performance of human operators.
                 <button class="collapsible">A-1. Random Motion</button>
                 <div class="content">
                     <img src="./website/resources/pics/a1.png" width = 90% class="center">
@@ -231,24 +248,24 @@ By iterating this algorithm, communication links will be maintained and agents w
                 </div>
     <h1 class="project_body_header" style="color: white">Test Results</h1>   
     <h2 class="project_body_subheader" style="color: white">Scalability</h2>
-    Taking a look at scalability, we see that the autonomous algorithms, though their performances varied, largely remained robust to swarm size.
-    Comparing the two kinds of human-swarm interaction, we see that <i>selection control performs better in all scenarios,</i> and <i>scales better than beacon control.</i> This is contrary to the authors’ original hypothesis that beacon control will be better.
-
     <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
         <source src="./website/resources/vids/scale.m4v" type="video/mp4" />
       </video>
+
+    Taking a look at scalability, we see that the autonomous algorithms, though their performances varied, largely remained robust to swarm size.
+    Comparing the two kinds of human-swarm interaction, we see that <i>selection control performs better in all scenarios,</i> and <i>scales better than beacon control.</i> This is contrary to the authors’ original hypothesis that beacon control will be better.
+
       
-      After reviewing the command logs, the authors come to the following conclusion.
+    After reviewing the command logs, the authors come to the following conclusion.
 
       <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
         <source src="./website/resources/vids/quote.m4v" type="video/mp4" />
       </video>
 
-      Beacon control should be more scalable in theory. So why isn’t it?
-      Well, the reason the authors cite in the paper is that beacon control “requires more operator training,” than selection control. <br><br>
+      Beacon control should be more scalable in theory. So why isn’t it? The reason cited in the paper is that beacon control “requires more operator training,” than selection control. <br><br>
      
       <h2 class="project_body_subheader" style="color: white">Map Complexity</h2>
-      The next thing we’re gonna look at is map complexity. How do the different kinds of human interaction and autonomous swarms perform in more complex environments?
+      The next thing we’re going to look at is map complexity. How do the different kinds of human interaction and autonomous swarms perform in more complex environments?
       <br><br>
       For humans, not so good. Humans are outperformed by autonomous swarms across the board. For the simpler maps, it is actually better for the human to not do anything at all then to intervene. Now to be fair, human operators did beat out 3 of the 5 autonomous swarms in the complex maps, but two of the autonomous algorithms, the ones based on the potential fields, consistently performed far better than human operators in complex environments.
 
@@ -263,9 +280,9 @@ By iterating this algorithm, communication links will be maintained and agents w
 
       Do you notice something interesting going on with the human operators? Look how little our performance varies in complex environments. These results suggest that although we are outperformed by the autonomous algorithms, <i>we adapt much better to increasingly complex environments. </i>
       <br><br>
-      This fact represents the foremost case for involving humans in autonomous swarms: our capacity for situational awareness. Our ability to adapt in the face of complexity and unforeseen errors. In fact, citing the Kolling paper, other studies recommend not placing humans in the role of operators, as was done here, but in a more supervisory role.
+      This fact represents the foremost case for involving humans in autonomous swarms: our capacity for situational awareness, our ability to adapt in the face of complexity and unforeseen errors. In fact, citing the Kolling paper, other studies recommend not placing humans in the role of operators, as was done here, but in a more supervisory role.
       <br><br>
-      This particular study explored humans fulfilling the role of operator. But when humans and autonomous swarms are working together at a low level, it may be tempting to punch up the autonomy of the swarm component. Initially this would make sense, right? After all, more autonomy lightens the load on humans. But a recent 2018 paper by Hussein and Abbass called “Mixed Initiative Systems for Human-Swarm Interaction” warns against this:
+      This particular study explored humans fulfilling the role of operator. But when humans and autonomous swarms are working together at a low level, it may be tempting to punch up the autonomy of the swarm component. Initially this would make sense, right? After all, more autonomy lightens the load on humans. But a recent 2018 paper by Hussein and Abbass titled “Mixed Initiative Systems for Human-Swarm Interaction” warns against this:
       
       <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
         <source src="./website/resources/vids/quote2.m4v" type="video/mp4" />
