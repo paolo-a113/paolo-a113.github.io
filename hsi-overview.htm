@@ -76,6 +76,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             color: #FF644E;
         }
 
+        .bar1, .bar2, .bar3 {
+         width: 35px;
+         height: 1px;
+         background-color: white;
+         margin: 8px 0;
+         transition: 0.2s;
+    }
+
         .content {
             padding: 0 18px;
             max-height: 0;
@@ -93,7 +101,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             <a class=myPages href="./speech.htm">SPEECH</a>
             <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
         </div>
-        <div id="myNav" class="overlay">
+        <div id="myNav" class="overlay" style="background-color: #434343;">
             <div class="Absolute-Center">
                 <div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
                     <a class=myPages href="./bio.htm">ABOUT ME</a>
@@ -102,7 +110,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
                 </div>
             </div>
         </div>
-        <div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+        <div id="toggle" class="container" style="cursor:pointer;" onclick="openNav()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -144,7 +152,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
                   The Case for Human-Swarm Interaction
             </div>
 
-            <div class="project_description" style="background-color: black;">This piece on "human-swarm interaction" was originally presented at a graduate seminar on bio-inspired multi-agent coordination facilitated by Kirstin Petersen.</div>
+            <div class="project_description" style="background-color: black;">This piece on "human-swarm interaction" was originally presented at a graduate seminar on bio-inspired multi-agent coordination facilitated by Kirstin Petersen. Animations and visualizations were originally created for the slide presentation, but have been adapted for the web here.</div>
 						<hr>
 						<div class="project_body" style="color: #808080;">
    
@@ -168,7 +176,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 
           <h1 class="project_body_header" style="color: white">The Mission</h1>   
 
-          <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
+          <video preload="yes" controls autoplay muted loop playsinline width = 80% class="center">
             <source src="./website/resources/vids/mission.m4v" type="video/mp4" />
           </video>
 
@@ -198,7 +206,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             <source src="./website/resources/vids/human_modes.m4v" type="video/mp4" />
           </video>   
 
-        Note that the agents are set to move randomly (see A-1. Random Motion) by default. The <i>Deploy</i> and <i>Rendezvous</i> modes require a bit more explanation.
+        Note that the agents are set to move randomly (see <i>A-1. Random Motion</i>) by default. The <i>Deploy</i> and <i>Rendezvous</i> modes require a bit more explanation.
 
         <button class="collapsible">Deploy Mode</button>
                 <div class="content">
@@ -308,20 +316,23 @@ By iterating this algorithm, communication links will be maintained and agents w
       </video>
 
       <h2 class="project_body_subheader" style="color: white">Flexible Autonomy</h2>
-      What does all this teach us about human-swarm interaction? Designing an effective human-interactive swarm, especially one suited to foraging or search-and-rescue missions, has to do with assigning the human a more supervisory role at a higher level. And in addition to humans as supervisors, the Kolling paper demonstrates the merits of having human operators-in-the-loop to guide low-level autonomous agents. And in this latter case the performance of the system hinges on finding the right level of autonomy to supplement human situational awareness. Too little, and the human won’t physically be able to carry out the mission. Too much, and according to the paper, the human loses their situational awareness about the mission.
+      What does all this teach us about human-swarm interaction? Designing an effective human-interactive swarm, especially one suited to foraging or search-and-rescue missions, has to do with assigning the human a more supervisory role at a higher level. In addition to humans as supervisors, the Kolling paper demonstrates the merits of having human operators-in-the-loop to guide low-level autonomous agents. In the latter case, the performance of the system hinges on finding the right level of autonomy to supplement human situational awareness. Too little and the human won’t physically be able to carry out the mission. Too much and the human loses their situational awareness about the mission.
       <br><br>
       Even if we do find the right measure of autonomy, even this might not be enough, because as long as the level of autonomy is fixed, studies have shown that this is associated with complacency and the performance of the system may deteriorate with a human-in-the-loop.
       <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
         <source src="./website/resources/vids/fixed.m4v" type="video/mp4" />
       </video>
 
-      There is an elegant and robust solution to this problem, and it involves incorporating flexible autonomy by creating a closed-loop feedback control system that modulates the autonomy parameters of a swarm depending on a set of indicators. 
+      There is an elegant and robust solution to this problem. It involves incorporating flexible autonomy by creating a closed-loop feedback control system that modulates the autonomy parameters of a swarm depending on a set of indicators. The Hussein and Abbass paper provides a very rough example of what such a system might look like. 
+      <br>
+
+      <img src="./website/resources/pics/control_loop.png" width = 70% class="center">
+      <br>
+   Exactly what those indicators are remains to be seen. They may include metrics on swarm performance and even heart rate and EEG sensors to determine whether the human operator is overwhelmed or complacent. This is an exciting, open question being investigated in HSI.
+
       <br><br>
 
-      Here is a very rough example of what such a system might look like. Now, exactly what those indicators are remains to be seen, but they may include metrics on swarm performance, even heart rate and EEG sensors to determine whether the human operator is either overwhelmed or complacent. This is an exciting, open question being investigated in HSI.
-      <br><br>
-
-      I want to end on this note of flexible autonomy because that seems to be where the field is at today. Again, this is all emergent research so I don’t believe there has yet been experimental implementation of this idea of flexible autonomy. At least from what I’ve seen the original scope of the Kolling paper seems to be one of the most comprehensive experimental testbeds to do with human-swarm interaction to date. Nevertheless, this idea of flexible autonomy seems to me like a worthwhile extension to the Kolling paper, as well as other current models of human-interactive swarms.
+      I want to end on this note of flexible autonomy because that seems to be where the field is at today. Again, this is all emergent research so I don’t believe there has yet been experimental implementation of this idea of flexible autonomy. From what I’ve seen, the original scope of the Kolling paper seems to be one of the most comprehensive experimental testbeds to do with human-swarm interaction to date. Nevertheless, this idea of flexible autonomy seems to me like a worthwhile extension to the Kolling paper, as well as other current models of human-interactive swarms.
       <br><br>
       <img src="./website/resources/pics/not_addressed.png" width = 70% class="center">
         
