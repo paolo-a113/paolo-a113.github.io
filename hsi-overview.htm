@@ -259,7 +259,13 @@ By iterating this algorithm, communication links will be maintained and agents w
                       This fifth one is interesting. We studied pheromones in the context of establishing a trail to collect stuff, and bring them back to a base. But in this case, the agents don’t have to return to a base, they simply transmit the stuff they collect. Here, they use pheromones to explore obstacles more effectively. Pheromones are not used as an attractant, rather, as a deterrent.
                       Upon encountering an obstacle, an agent hugs the boundary to the right while depositing pheromones. So when another agent encounters the same obstacle, it takes the road less travelled by. The pheromone trails decay after around 8 seconds.
                 </div>
-    <h1 class="project_body_header" style="color: white">Test Results</h1>   
+
+   <br>
+                Human operator and autonomous swarm trials were carried out for swarms of varying size (50 to 200 robots) in five maps. 
+   <img src="./website/resources/pics/maps.png" width = 90% class="center">
+
+   <h1 class="project_body_header" style="color: white">Test Results</h1>   
+
     <h2 class="project_body_subheader" style="color: white">Scalability</h2>
     <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
         <source src="./website/resources/vids/scale.m4v" type="video/mp4" />
