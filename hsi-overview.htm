@@ -129,10 +129,10 @@ pa394@cornell.edu
           It seems straightforward to project ourselves and our intentions onto single robots. What is arguably less apparent is how to make swarms work for and with us. And because any changes made at the local level are bound to have some emergent global effect, the ways by which we impose these swarm control methods matter and make a big difference.
           <br>
           <h1 class="project_body_header" style="color: white"><i>Kolling et al.</i></h1>   
-
-          In their paper, Kolling and others describe two ways in which we, humans, can interact with swarms in a foraging mission.
           <img src="./website/resources/pics/kolling_paper.png" width = 70% class="center">
           <br><br>
+          In their paper, Kolling and others describe two ways in which us humans can interact with swarms in a foraging mission.
+
           To explore HSI, the authors created a virtual swarm and implemented it on a virtual testbed. They then asked 32 students to play a game and use the swarm to accomplish a mission.
 
           <h1 class="project_body_header" style="color: white">The Mission</h1>   
@@ -229,7 +229,65 @@ By iterating this algorithm, communication links will be maintained and agents w
                       This fifth one is interesting. We studied pheromones in the context of establishing a trail to collect stuff, and bring them back to a base. But in this case, the agents don’t have to return to a base, they simply transmit the stuff they collect. Here, they use pheromones to explore obstacles more effectively. Pheromones are not used as an attractant, rather, as a deterrent.
                       Upon encountering an obstacle, an agent hugs the boundary to the right while depositing pheromones. So when another agent encounters the same obstacle, it takes the road less travelled by. The pheromone trails decay after around 8 seconds.
                 </div>
+    <h1 class="project_body_header" style="color: white">Test Results</h1>   
+    <h2 class="project_body_subheader" style="color: white">Scalability</h2>
+    Taking a look at scalability, we see that for the autonomous algorithm, though their performances varied, largely remained robust to swarm size.
+    Comparing the two kinds of human-swarm interaction, we see that <b>selection control performs better in all scenarios,</b> and <b>scales better than beacon control.</b> This is contrary to the authors’ original hypothesis that beacon control will be better.
 
+    <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
+        <source src="./website/resources/vids/scale.m4v" type="video/mp4" />
+      </video>
+      
+      After reviewing the command logs, the authors come to the following conclusion.
+
+      <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
+        <source src="./website/resources/vids/quote.m4v" type="video/mp4" />
+      </video>
+
+      Beacon control should be more scalable in theory. So why isn’t it?
+      Well, the reason the authors cite in the paper is that beacon control “requires more operator training,” than selection control. <br><br>
+     
+      <h2 class="project_body_subheader" style="color: white">Map Complexity</h2>
+      The next thing we’re gonna look at is map complexity. How do the different kinds of human interaction and autonomous swarms perform in more complex environments?
+      <br><br>
+      For humans, not so good. Humans are outperformed by autonomous swarms across the board. For the simpler maps, it is actually better for the human to not do anything at all then to intervene. Now to be fair, human operators did beat out 3 of the 5 autonomous swarms in the complex maps, but two of the autonomous algorithms, the ones based on the potential fields, consistently performed far better than human operators in complex environments.
+
+      <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
+        <source src="./website/resources/vids/complexity.m4v" type="video/mp4" />
+      </video>
+
+      To recap, we found that of the two methods for human operation, selection control scales better than beacon control. And human operators perform worse than autonomous agents. The case for human-swarm interaction is not looking that good. Until we look at that last chart again, very closely.
+      <br><br>
+      
+      <h1 class="project_body_header" style="color: white">The Case for Human-Swarm Interaction</h1>   
+
+      Do you notice something interesting going on with the human operators? Look how little our performance varies in complex environments. These results suggest that although we are outperformed by the autonomous algorithms, <b>we adapt much better to increasingly complex environments. </b>
+      <br><br>
+      This fact represents the foremost case for involving humans in autonomous swarms: our capacity for situational awareness. Our ability to adapt in the face of complexity and unforeseen errors. In fact, citing the Kolling paper, other studies recommend not placing humans in the role of operators, as was done here, but in a more supervisory role.
+      <br><br>
+      This particular study explored humans fulfilling the role of operator. But when humans and autonomous swarms are working together at a low level, it may be tempting to punch up the autonomy of the swarm component. Initially this would make sense, right? After all, more autonomy lightens the load on humans. But a recent 2018 paper by Hussein and Abbass called “Mixed Initiative Systems for Human-Swarm Interaction” warns against this:
+      
+      <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
+        <source src="./website/resources/vids/quote2.m4v" type="video/mp4" />
+      </video>
+
+      What does all this teach us about human-swarm interaction? Designing an effective human-interactive swarm, especially one suited to foraging or search-and-rescue missions, has to do with assigning the human a more supervisory role at a higher level. And in addition to humans as supervisors, the Kolling paper demonstrates the merits of having human operators-in-the-loop to guide low-level autonomous agents. And in this latter case the performance of the system hinges on finding the right level of autonomy to supplement human situational awareness. Too little, and the human won’t physically be able to carry out the mission. Too much, and according to the paper, the human loses their situational awareness about the mission.
+      <br><br>
+      Even if we do find the right measure of autonomy, even this might not be enough, because as long as the level of autonomy is fixed, studies have shown that this is associated with complacency and the performance of the system may deteriorate with a human-in-the-loop.
+      <video preload="yes" autoplay muted loop playsinline width = 80% class="center">
+        <source src="./website/resources/vids/fixed.m4v" type="video/mp4" />
+      </video>
+
+      <h2 class="project_body_subheader" style="color: white">Flexible Autonomy</h2>
+      Now, there is an elegant and robust solution to this problem, and it involves incorporating flexible autonomy by creating a closed-loop feedback control system that modulates the autonomy parameters of a swarm depending on a set of indicators. 
+      <br><br>
+
+      Here is a very rough example of what such a system might look like. Now, exactly what those indicators are remains to be seen, but they may include metrics on swarm performance, even heart rate and EEG sensors to determine whether the human operator is either overwhelmed or complacent. This is an exciting, open question being investigated in HSI.
+      <br><br>
+
+      I want to end on this note of flexible autonomy because that seems to be where the field is at today. Again, this is all emergent research so I don’t believe there has yet been experimental implementation of this idea of flexible autonomy. At least from what I’ve seen the original scope of the Kolling paper seems to be one of the most comprehensive experimental testbeds to do with human-swarm interaction to date. Nevertheless, this idea of flexible autonomy seems to me like a worthwhile extension to the Kolling paper, as well as other current models of human-interactive swarms.
+      <br><br>
+      <img src="./website/resources/pics/not_addressed.png" width = 70% class="center">
         
 <hr>
 <div class="footer" style="color: grey;">
