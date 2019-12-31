@@ -77,6 +77,10 @@ pa394@cornell.edu
             color: #FF644E;
         }
 
+        .center {
+            width: 80%;
+        }
+
         @media screen and (max-width: 800px) {
 
             .bar1,
@@ -87,6 +91,10 @@ pa394@cornell.edu
                 background-color: white;
                 margin: 8px 0;
                 transition: 0.2s;
+            }
+
+            .center{
+                width: 100%;
             }
         }
 
@@ -176,7 +184,7 @@ pa394@cornell.edu
                 robots aim to support our endeavors by automating repetitive low-level tasks and acting as physical
                 extensions of ourselves.
 
-                <video preload="yes" autoplay muted loop playsinline width=50% class="center">
+                <video preload="yes" autoplay muted loop playsinline class="center">
                     <source src="./website/resources/vids/robota.m4v" type="video/mp4" />
                 </video>
                 Human-robot interaction is more or less a one-to-one relationship. We do something and the robot does
@@ -192,7 +200,7 @@ pa394@cornell.edu
                 matter and make a big difference.
                 <br>
                 <h1 class="project_body_header" style="color: white"><i>Kolling et al.</i></h1>
-                <img src="./website/resources/pics/kolling_paper.png" width=70% class="center">
+                <img src="./website/resources/pics/kolling_paper.png" class="center">
                 <br><br>
                 In their paper, Kolling and others describe two ways in which us humans can interact with swarms in a
                 foraging mission.
@@ -202,7 +210,7 @@ pa394@cornell.edu
 
                 <h1 class="project_body_header" style="color: white">The Mission</h1>
 
-                <video preload="yes" controls autoplay muted loop playsinline width=80% class="center">
+                <video preload="yes" controls autoplay muted loop playsinline class="center">
                     <source src="./website/resources/vids/mission.m4v" type="video/mp4" />
                 </video>
 
@@ -210,7 +218,7 @@ pa394@cornell.edu
 
                 There are two kinds of control methods with which human operators are able to interact with certain
                 swarm agents to carry out some prescribed action.
-                <video preload="yes" autoplay muted loop playsinline width=90% class="center">
+                <video preload="yes" autoplay muted loop playsinline class="center">
                     <source src="./website/resources/vids/control_modes.m4v" type="video/mp4" />
                 </video>
 
@@ -237,7 +245,7 @@ pa394@cornell.edu
                 The authors made six algorithms, or modes, available to the human operators. Using either selection or
                 beacon control, the human operators can impose these modes on a subset of the swarm.
 
-                <video preload="yes" autoplay muted loop playsinline width=90% class="center">
+                <video preload="yes" autoplay muted loop playsinline  class="center">
                     <source src="./website/resources/vids/human_modes.m4v" type="video/mp4" />
                 </video>
 
@@ -246,7 +254,7 @@ pa394@cornell.edu
 
                 <button class="collapsible">Deploy Mode</button>
                 <div class="content">
-                    <video preload="yes" autoplay muted loop playsinline width=90% class="center">
+                    <video preload="yes" autoplay muted loop playsinline  class="center">
                         <source src="./website/resources/vids/deploy.m4v" type="video/mp4" />
                     </video>
 
@@ -259,7 +267,7 @@ pa394@cornell.edu
                 </div>
                 <button class="collapsible">Rendezvous Mode</button>
                 <div class="content">
-                    <video preload="yes" autoplay muted loop playsinline width=90% class="center">
+                    <video preload="yes" autoplay muted loop playsinline  class="center">
                         <source src="./website/resources/vids/rendezvous.m4v" type="video/mp4" />
                     </video>
                     In the rendezvous algorithm, agents mutually agree on a meeting place.
@@ -278,13 +286,13 @@ pa394@cornell.edu
                 operators.
                 <button class="collapsible">A-1. Random Motion</button>
                 <div class="content">
-                    <img src="./website/resources/pics/a1.png" width=90% class="center">
+                    <img src="./website/resources/pics/a1.png" class="center">
                     The simplest autonomous algorithm is based on random motion. Recall that this is the default mode
                     for the agents in human operator mode.
                 </div>
                 <button class="collapsible">A-2. Random Motion + Seek</button>
                 <div class="content">
-                    <video preload="yes" autoplay muted loop playsinline width=90% class="center">
+                    <video preload="yes" autoplay muted loop playsinline  class="center">
                         <source src="./website/resources/vids/a2.m4v" type="video/mp4" />
                     </video>
                     A second autonomous algorithm uses random motion, but overrides this random motion when it
@@ -295,13 +303,13 @@ pa394@cornell.edu
                 </div>
                 <button class="collapsible">A-3. Potential Field</button>
                 <div class="content">
-                    <video preload="yes" autoplay muted loop playsinline width=90% class="center">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
                         <source src="./website/resources/vids/a3.m4v" type="video/mp4" />
                     </video>
                 </div>
                 <button class="collapsible">A-4. Potential Field + Seek</button>
                 <div class="content">
-                    <video preload="yes" autoplay muted loop playsinline width=90% class="center">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
                         <source src="./website/resources/vids/a4.m4v" type="video/mp4" />
                     </video>
                     A variant of the "A-3. Potential Field" algorithm drops the attracting term due to information
@@ -311,7 +319,7 @@ pa394@cornell.edu
                 </div>
                 <button class="collapsible">A-5. Bio-Inspired Pheremones</button>
                 <div class="content">
-                    <video preload="yes" autoplay muted loop playsinline width=100% class="center">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
                         <source src="./website/resources/vids/a5.m4v" type="video/mp4" />
                     </video>
                     This fifth one is interesting. We studied pheromones in the context of establishing a trail to
@@ -326,12 +334,12 @@ pa394@cornell.edu
                 <br>
                 Human operator and autonomous swarm trials were carried out for swarms of varying size (50 to 200
                 robots) in five maps.
-                <img src="./website/resources/pics/maps.png" width=90% class="center">
+                <img src="./website/resources/pics/maps.png" class="center">
 
                 <h1 class="project_body_header" style="color: white">Test Results</h1>
 
                 <h2 class="project_body_subheader" style="color: white">Scalability</h2>
-                <video preload="yes" autoplay muted loop playsinline width=80% class="center">
+                <video preload="yes" autoplay muted loop playsinline class="center">
                     <source src="./website/resources/vids/scale.m4v" type="video/mp4" />
                 </video>
 
@@ -344,7 +352,7 @@ pa394@cornell.edu
 
                 After reviewing the command logs, the authors came to the following conclusion.
 
-                <video preload="yes" autoplay muted loop playsinline width=80% class="center">
+                <video preload="yes" autoplay muted loop playsinline class="center">
                     <source src="./website/resources/vids/quote.m4v" type="video/mp4" />
                 </video>
 
@@ -361,7 +369,7 @@ pa394@cornell.edu
                 algorithms, the ones based on the potential fields, consistently performed far better than human
                 operators in complex environments.
 
-                <video preload="yes" autoplay muted loop playsinline width=80% class="center">
+                <video preload="yes" autoplay muted loop playsinline class="center">
                     <source src="./website/resources/vids/complexity.m4v" type="video/mp4" />
                 </video>
 
@@ -387,7 +395,7 @@ pa394@cornell.edu
                 But a recent 2018 paper by Hussein and Abbass titled “Mixed Initiative Systems for Human-Swarm
                 Interaction” warns against this:
 
-                <video preload="yes" autoplay muted loop playsinline width=80% class="center">
+                <video preload="yes" autoplay muted loop playsinline class="center">
                     <source src="./website/resources/vids/quote2.m4v" type="video/mp4" />
                 </video>
 
@@ -403,7 +411,7 @@ pa394@cornell.edu
                 Even if we do find the right measure of autonomy, even this might not be enough, because as long as the
                 level of autonomy is fixed, studies have shown that this is associated with complacency and the
                 performance of the system may deteriorate with a human-in-the-loop.
-                <video preload="yes" autoplay muted loop playsinline width=80% class="center">
+                <video preload="yes" autoplay muted loop playsinline class="center">
                     <source src="./website/resources/vids/fixed.m4v" type="video/mp4" />
                 </video>
 
@@ -413,7 +421,7 @@ pa394@cornell.edu
                 such a system might look like.
                 <br>
 
-                <img src="./website/resources/pics/control_loop.png" width=70% class="center">
+                <img src="./website/resources/pics/control_loop.png" class="center">
                 <br>
                 Exactly what those indicators are remains to be seen. They may include metrics on swarm performance and
                 even heart rate and EEG sensors to determine whether the human operator is overwhelmed or complacent.
@@ -428,7 +436,7 @@ pa394@cornell.edu
                 Nevertheless, this idea of flexible autonomy seems to me like a worthwhile extension to the Kolling
                 paper, as well as other current models of human-interactive swarms.
                 <br><br>
-                <img src="./website/resources/pics/not_addressed.png" width=70% class="center">
+                <img src="./website/resources/pics/not_addressed.png" class="center">
 
                 <hr>
                 <div class="footer" style="color: grey;">
