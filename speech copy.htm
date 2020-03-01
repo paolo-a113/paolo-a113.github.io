@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<!-- ==================================================================
+This site was built and developed by Paolo Arguelles (6/19/2019).
+pa394@cornell.edu
+================================================================== -->
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Speech | Paolo Arguelles</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="./website/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="./website/fonts.css" media="all">
+	<style>
+		.embed-container {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
+			max-width: 100%;
+		}
+
+		.embed-container iframe,
+		.embed-container object,
+		.embed-container embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body class="body">
+	<div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+		<div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
+			<a class=myPages href="./bio.htm">ABOUT ME</a>
+			<a class=myPages href="./speech.htm">SPEECH</a>
+			<a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+		</div>
+		<div id="myNav" class="overlay">
+			<div class="Absolute-Center">
+				<div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
+					<a class=myPages href="./bio.htm">ABOUT ME</a>
+					<a class=myPages href="./speech.htm">SPEECH</a>
+					<a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+				</div>
+			</div>
+		</div>
+		<div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<script>
+			function myFunction(x) {
+				x.classList.toggle("change");
+			}
+		</script>
+		<script>
+			function openNav() {
+				myFunction(document.getElementById("toggle"));
+				document.getElementById("myNav").style.height = "100%";
+				document.getElementById("toggle").onclick = closeNav;
+			}
+
+			function closeNav() {
+				myFunction(document.getElementById("toggle"));
+				document.getElementById("myNav").style.height = "0%";
+				document.getElementById("toggle").onclick = openNav;
+
+			}
+		</script>
+	</div>
+
+	<div class="speechdesc">
+		<iframe
+		style="width: 640px; height: 480px; border: none;"
+		name="embedded_python_anywhere"
+		src="https://www.pythonanywhere.com/embedded/">
+	</iframe>
+		
+		
+		<br>COLLEGE OF ENGINEERING, COMPUTER SCIENCE, AND TECHNOLOGY | CALIFORNIA STATE UNIVERSITY - LOS ANGELES
+		<br>
+	</div>
+	<div class="speechtitle">Full Remarks at the 2019 Engineering Honors Convocation</div>
+	<div class="speechdesc">
+		<br>
+		<div class="footer">
+			<div class="text-block-6">© 2019 - 2023 by Paolo Arguelles. All rights reserved.
+				<br>
+			</div>
+		</div>
+</body>
+
+</html>
