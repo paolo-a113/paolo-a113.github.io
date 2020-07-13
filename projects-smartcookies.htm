@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<!-- ==================================================================
+This site was built and developed by Paolo Arguelles and hosted with GitHub Pages.
+pa394@cornell.edu
+================================================================== -->
+
+<html data-wf-domain="paolos-fabulous-project-e74cab96af4b9fc.webflow.io" data-wf-page="5cfd93a271000a535c533f97" data-wf-site="5cfd93a271000a4eb8533f96" data-wf-status="1" class="w-mod-js w-mod-ix wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-inconsolata-n4-active wf-inconsolata-n7-active wf-oswald-n2-active wf-oswald-n3-active wf-oswald-n4-active wf-oswald-n5-active wf-oswald-n6-active wf-oswald-n7-active wf-robotomono-n4-active wf-roboto-n4-active wf-active">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Smart Cookies | Paolo Arguelles</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="./website/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./website/fonts.css" media="all">
+    <style>
+        /* Style the header with a grey background and some padding */
+        
+        .project_image {
+            background-image: url("./website/resources/pics/smartcookie_hardware-3.jpg");
+            background-position: right bottom;
+        }
+        
+        .active,
+        .collapsible:hover {
+            transition: 200ms;
+            color: #DE5021;
+        }
+        
+        .collapsible:after {
+            content: '+';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            color: inherit;
+        }
+        
+        .active:after {
+            content: "−";
+            color: #DE5021;
+        }
+        
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+        <div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
+            <a class=myPages href="./bio.htm">ABOUT ME</a>
+            <a class=myPages href="./speech.htm">SPEECH</a>
+            <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+        </div>
+        <div id="myNav" class="overlay">
+            <div class="Absolute-Center">
+                <div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
+                    <a class=myPages href="./bio.htm">ABOUT ME</a>
+                    <a class=myPages href="./speech.htm">SPEECH</a>
+                    <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+                </div>
+            </div>
+        </div>
+        <div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <script>
+            function openNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "100%";
+                document.getElementById("toggle").onclick = closeNav;
+            }
+
+            function closeNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "0%";
+                document.getElementById("toggle").onclick = openNav;
+
+            }
+        </script>
+    </div>
+    <div class="project_image"></div>
+    <div class="sidenav"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
+        <br>Project Name
+        <d>Smart Cookies Sensor Ecosystem</d>
+
+        <br>Status
+        <d>In Progress</d>
+        <br>Affiliations
+        <br> <a href="https://www.spacecraftresearch.com/people/">Bridges for Digital Literacy
+            <br></a>
+    </div>
+    <div class="project_box">
+        <div class="project_contain">
+            <div class="project_topic">INTERNET OF THINGS</div>
+            <div class="project_title">Smart Cookies Distributed Sensor Ecosystem</div>
+
+
+            <div class="project_description">A distributed ad-hoc mesh sensor network to promote STEM education and accelerate research
+            </div>
+            <hr>
+            <div class="project_body">
+                <!-- <img src="./website/resources/pics/smart_cookie_logo.png" width=30% class="center"> -->
+
+                <h1 class="project_body_header">
+                    Reimagining the Modern Classroom
+                </h1>
+
+
+                barriers set high. significant programming experience and development resources to accomplish. The
+                <i>Smart Cookies</i> achieves is straightforward; with any WiFi-enabled device. remote communities with no Internet access. A minimally viable web app. lightweight enough to be contained entirely within the onboard memory of the ESP8266
+                chip.
+
+
+                <h1 class="project_body_header">
+                    Mesh Networking
+                </h1>
+
+                barriers set high. significant programming experience and development resources to accomplish. The
+                <i>Smart Cookies</i> concept is straightforward; with any WiFi-enabled device. remote communities with no Internet access. A minimally viable web app. lightweight enough to be contained entirely within the onboard memory of the ESP8266
+                chip.
+
+
+
+                <br>
+                <br>
+                <img src="./website/resources/pics/fullsetup.jpg" width=70% class="center">
+                <figcaption class="caption">Complete lab test setup of the simulator and testbed</figcaption>
+                <br>The <i> Spacecraft Flight Simulator and Attitude Testbed </i> provides a lab environment to test autonomous attitude control algorithms for the small spacecraft developed in our research lab, as well as provide Cornell engineering
+                professors with a hands-on instructional platform for advanced spacecraft control students.
+                <h1 class="project_body_header">
+                    <hr> Hardware and Design
+                </h1>
+                Each Smart Cookie consists of an ESP8266 Wi-Fi microchip, onboard sensors, and rechargeable lithium-ion batteries.
+
+                <h2 class="project_body_subheader">
+                    Autonomous (Closed-Loop) Control
+                </h2> Having built and successfully demonstrated open-loop control on the testbed to faculty members in the Sibley School of Mechanical and Aerospace Engineering, students from Professor Mason Peck's graduate spaceflight course were tasked
+                with creating a closed-loop attitude control algorithm in simulation and deploying the controller to our hardware testbed for verification. The Simulink control program may be simplified to a single subsystem that effectively acts as a
+                plant in a closed-loop control system.
+                <br>
+                <br>
+                <img src="./website/resources/pics/smartcookies.jpg" width=80% class="center">
+                <figcaption class="caption">Embedded web server prototype running on a low-cost Android tablet
+                </figcaption>A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or 1) and three reaction wheel speed
+                instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
+                <h2 class="project_body_subheader">
+                    <br>Custom PCB Integration
+                </h2> While fully operational, the electrical hookups on the testbed (i.e. jumper wires and solderless breadboards) are consistent with those of a preliminary prototyping phase. A refined design consists of a single PCB that integrates
+                all the wiring and electronics with bold, clear silkscreen labeling.
+                <hr>
+                <h1 class="project_body_header">Our Team </h1>
+                <img src="./website/resources/pics/ssds_team.jpg" width=100% class="center">
+                <figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical & Computer Engineer), and Zach Tretler (Mechanical Engineer)
+                </figcaption>
+                <hr>
+                <div class="footer">
+                    <center>© 2019 - 2023 by Paolo Arguelles.
+                        <br>All rights reserved.
+                </div>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
