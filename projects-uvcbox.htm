@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<!-- ==================================================================
+This site was built and developed by Paolo Arguelles and hosted with GitHub Pages.
+pa394@cornell.edu
+================================================================== -->
+
+<html data-wf-domain="paolos-fabulous-project-e74cab96af4b9fc.webflow.io" data-wf-page="5cfd93a271000a535c533f97" data-wf-site="5cfd93a271000a4eb8533f96" data-wf-status="1" class="w-mod-js w-mod-ix wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-inconsolata-n4-active wf-inconsolata-n7-active wf-oswald-n2-active wf-oswald-n3-active wf-oswald-n4-active wf-oswald-n5-active wf-oswald-n6-active wf-oswald-n7-active wf-robotomono-n4-active wf-roboto-n4-active wf-active">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Smart Cookies | Paolo Arguelles</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="./website/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./website/fonts.css" media="all">
+    <style>
+        /* Style the header with a grey background and some padding */
+        
+        .project_image {
+            background-image: url("./website/resources/pics/smartcookie_esp8266.jpg");
+            background-position: right;
+        }
+        
+        .active,
+        .collapsible:hover {
+            transition: 200ms;
+            color: #DE5021;
+        }
+        
+        .collapsible:after {
+            content: '+';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            color: inherit;
+        }
+        
+        .active:after {
+            content: "−";
+            color: #DE5021;
+        }
+        
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+        <div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
+            <a class=myPages href="./bio.htm">ABOUT ME</a>
+            <a class=myPages href="./speech.htm">SPEECH</a>
+            <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+        </div>
+        <div id="myNav" class="overlay">
+            <div class="Absolute-Center">
+                <div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
+                    <a class=myPages href="./bio.htm">ABOUT ME</a>
+                    <a class=myPages href="./speech.htm">SPEECH</a>
+                    <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+                </div>
+            </div>
+        </div>
+        <div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <script>
+            function openNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "100%";
+                document.getElementById("toggle").onclick = closeNav;
+            }
+
+            function closeNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "0%";
+                document.getElementById("toggle").onclick = openNav;
+
+            }
+        </script>
+    </div>
+    <div class="project_image"></div>
+    <div class="sidenav"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
+        <br>Project Name
+        <d>Personal UV-C Sterilization Box </d>
+
+        <br>Status
+        <d>On Hold</d>
+
+    </div>
+    <div class="project_box">
+        <div class="project_contain">
+            <div class="project_topic">ELECTRICAL ENGINEERING</div>
+            <div class="project_title">Personal UV-C Sterilization Box for COVID-19</div>
+            <div class="project_description">A heavy-duty, consumer-grade ultraviolet sterilization chamber, designed for COVID-19 pandemic mitigation efforts
+            </div>
+            <hr>
+            <div class="project_body">
+                <!-- <img src="./website/resources/pics/smart_cookie_logo.png" width=30% class="center"> -->
+
+                <h1 class="project_body_header">
+                    Background
+                </h1>
+                at the time of writing cas Air purifiers filter size to contain aerosolized droplets carrying viral loads. The best way to disinfect surfaces of potential viral loads remains using disinfecting solutions approved for use against COVID-19. during the pandemic
+                is UV-C sterilization. However, this is often not feasible for sterilizing the objects with light at UV-C wavelengths. this box was fabricated out of a pickup truck underbody tool box. its high interior reflectivity, maximizing scattering
+                of UV-C light. Safety measures such as an "automatic shutoff" feature when the box lid is opened.
+
+                <h1 class="project_body_header">
+                    Recommended Exposure Time
+                </h1>
+
+                <h1 class="project_body_header">
+                    Envisioned Applications </h1>
+                While regulatory steps involved in the sale and distribution.
+                <h2 class="project_body_subheader">
+                    <br>Reimagining Science Education for Remote Schools
+                </h2>
+                The best way for any student to learn science is to explore the world around them, all the while asking questions, taking measurements, and making exciting discoveries. Unfortunately, this is often a privilege reserved for schools that have access to
+                funding for lab equipment. Smart Cookies can provide students in low-resource areas the ability to explore the world through tablet distribution programs
+
+                <h2 class="project_body_subheader">
+                    <br> Accelerating University Research
+                </h2>
+                must-have for any university research group.
+                <div class=""></div>
+                Although there are several cost-effective sensors often requires significant programming experience and development resources to accomplish. simple as measuring temperature requires an expensive data acquisition system or a creating a sensor testbed.
+
+                <i>Smart Cookies</i> achieves is straightforward entire system is integrated onto a single board, each Smart Cookie can be placed virtually anywhere. barriers set high. significant programming experience and development resources to accomplish.
+                The
+                <i>Smart Cookies</i> concept is straightforward; with any WiFi-enabled device. remote communities with no Internet access. A minimally viable web app. lightweight enough to be contained entirely within the onboard memory of the ESP8266
+                chip.
+                <br><br> helped 10,000 researchers, academics, doctors, and industry professionals.
+
+
+                <h2 class="project_body_subheader">
+                    <br> Digital Agriculture
+                </h2>
+
+                <h2 class="project_body_subheader">
+                    <br> Smart City Development
+                </h2>
+
+                <h1 class="project_body_header">
+                    <hr> Engineering
+                </h1>
+                Each Smart Cookie is comprised of an ESP8266 WiFi module, rechargeable battery, and onboard sensor array.
+
+                <img src="././website/resources/pics/smartcookie_esp8266.jpg" width=90% class="center">
+                <figcaption class="caption">ESP8266 module mounted on a programming board
+                </figcaption>
+                <h2 class="project_body_subheader"> Embedded Web App
+                </h2>
+                The system is designed to work completely offline, with no software downloads requiring Internet connectivity required. the decreasing cost of generic Android tablets Functional web app should be stored completely within the onboard flash memory of the
+                ESP82666 module, while still allowing room for the program. Prototypes of the embedded web app use Google's Material Design Lite framework to achieve a minimal, clean, and functional user interface. Chart.js is used for the data visualization
+                elements and smooth animations that add vitality to the realtime data stream.
+
+                <h2 class="project_body_subheader">
+                    <br>Mesh Networking
+                </h2>
+                While a single Smart Cookie can be used as a self-contained data collection tool, using multiple Smart Cookies in close proximity with each other automatically creates a decentralized mesh network that intelligently routes data packets through other Smart
+                Cookies, through a root node, then to a low-cost tablet can be connected to visualize realtime telemetry from all Smart Cookies. This allows the effective range of data collection extend far beyond the estimated 100m signal radius of a
+                single WiFi module.
+                <hr>
+                <div class="footer">
+                    <center>© 2019 - 2023 by Paolo Arguelles.
+                        <br>All rights reserved.
+                </div>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
