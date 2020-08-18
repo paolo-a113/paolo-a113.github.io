@@ -556,7 +556,7 @@ a.description:hover {
 .project_bg {
     top: 0;
     height: 50vh;
-    background-image: url("./resources/pics/project_bg.jpg");
+    background-image: url("./resources/pics/project_bg-min.jpg");
     background-position: 50% 40%;
     background-size: cover;
     background-attachment: fixed;
