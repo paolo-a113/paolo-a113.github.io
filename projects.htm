@@ -63,9 +63,77 @@ pa394@cornell.edu
             opacity: 1;
         }
     </style>
+    <!-- PRELOADER STYLE -->
+    <style>
+        .spinner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e7e7e7;
+            z-index: 999999;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 48%;
+            left: 48%;
+        }
+        
+        .double-bounce1,
+        .double-bounce2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #de5021;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+            animation: sk-bounce 2.0s infinite ease-in-out;
+        }
+        
+        .double-bounce2 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+        
+        @-webkit-keyframes sk-bounce {
+            0%,
+            100% {
+                -webkit-transform: scale(0.0)
+            }
+            50% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+        
+        @keyframes sk-bounce {
+            0%,
+            100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+            50% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
+        }
+    </style>
 </head>
 
 <body class="body" style="background-color: #e7e7e7;">
+    <div class="spinner-wrapper">
+        <!-- <h1 style="text-align:center; padding-top: 30vh" class="h1 mx-3 font-weight-bold text-primary">SMART COOKIES</h1> -->
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
     <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
         <div class="header-right" style="font-weight: 400;"> <a class=myPages href="./projects.htm">Projects</a>
             <a class=myPages href="./bio.htm">About Me</a>
@@ -471,6 +539,18 @@ pa394@cornell.edu
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //Preloader
+            preloaderFadeOutTime = 500;
+
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+        });
+    </script>
 </body>
 
 </html>
