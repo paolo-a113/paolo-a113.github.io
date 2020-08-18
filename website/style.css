@@ -667,7 +667,7 @@ a.description:hover {
     font-weight: 400;
     text-decoration: none;
     text-transform: none;
-    text-shadow: 1px 0 2px rgba(0, 0, 0, 0.82);
+    /* text-shadow: 1px 0 2px rgba(0, 0, 0, 0.82); */
 }
 
 .item_title:hover~item_bg_grad {
@@ -747,7 +747,7 @@ a.description:hover {
     font-size: 18px;
     line-height: 30px;
     text-align: left;
-    text-shadow: 1px 1px 1px #000;
+    /* text-shadow: 1px 1px 1px #000; */
 }
 
 .item_bg_grad {
