@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- ==================================================================
-This site was built and developed by Paolo Arguelles and hosted with GitHub Pages.
+This site was built and developed by Paolo Arguelles (with a little help from Bootstrap) and hosted with GitHub Pages.
 pa394@cornell.edu
 ================================================================== -->
 
@@ -22,6 +22,21 @@ pa394@cornell.edu
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <style>
+        .nav-pills .nav-link {
+            color: gray;
+            /* font-family: 'Palatino'; */
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: #de5021;
+            color: white;
+        }
+        
+        .nav-link:hover {
+            color: #de5021;
+        }
+    </style>
+    <style>
         .box {
             /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
             -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -38,8 +53,8 @@ pa394@cornell.edu
         }
         
         .box:hover {
-            -webkit-transform: scale(1.01, 1.01);
-            transform: scale(1.01, 1.01);
+            -webkit-transform: scale(1.02, 1.02);
+            transform: scale(1.02, 1.02);
         }
         
         .box:hover::after {
@@ -50,10 +65,10 @@ pa394@cornell.edu
 
 <body class="body" style="background-color: #e7e7e7;">
     <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
-        <div class="header-right" style="font-weight: 400;"> <a class=myPages href="./projects.htm">PROJECTS</a>
-            <a class=myPages href="./bio.htm">ABOUT ME</a>
-            <a class=myPages href="./speech.htm">SPEECH</a>
-            <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+        <div class="header-right" style="font-weight: 400;"> <a class=myPages href="./projects.htm">Projects</a>
+            <a class=myPages href="./bio.htm">About Me</a>
+            <a class=myPages href="./speech.htm">Speech</a>
+            <a class=myPages href="./PaoloArguelles_Resume.pdf">Resume</a>
         </div>
         <div id="myNav" class="overlay">
             <div class="Absolute-Center">
@@ -95,19 +110,24 @@ pa394@cornell.edu
         </h1>
 
     </div>
-    <!-- <div class="tab-wrapper">
-        <ul class="nav nav-pills mb-3 nav-justified" style="color: red;" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Completed</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">In Development</a>
-            </li>
 
-        </ul>
-    </div> -->
+    <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-4" style="margin: 0px;">
+        <div class="col tab-wrapper">
+            <ul class="nav nav-pills mb-3 nav-justified" style="color: red;" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Completed</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">In Development</a>
+                </li>
 
-    <div class="tab-content" id="myTabContent">
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="tab-content" id="">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
             <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-4" style="margin: 20px;">
                 <div class="col mb-4">
@@ -305,15 +325,30 @@ pa394@cornell.edu
             </div>
         </div>
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
             <div class="row row-cols-1 row-cols-lg-3 row-cols-xl-4" style="margin: 20px;">
                 <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/US_Navy_110517-N-TU221-793_Hospital_Corpsman_3rd_Class_Jonathan_Martin_reads_a_book_to_orphans_at_Hospicio_De_San_Jose_Orphanage.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A COVID-19 relief fund for orphans, abandoned children, migrants, refugees, and the elderly at Hospicio de San Jose in Manila, Philippines
+                                </div>
+                            </div>
+                            <div class="item_topic">COVID-19 PANDEMIC</div>
+                            <h1 class="item_title">COVID-19 Relief for Orphans in the Philippines</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
                     <div style="background-image:url(&quot;./website/resources/pics/smart_cookie.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="./projects-smartcookies.htm" class="link-block w-inline-block">
+                        <a style="background-color: rgba(0, 0, 0, 0);" class="link-block w-inline-block">
                             <div class="item_bg_grad">
                                 <div class="item_desc">A distributed ad hoc mesh sensor network for the Internet of Things to accelerate research and promote STEM education
                                 </div>
                             </div>
-                            <div class="item_topic">INTERNET OF THINGS</div>
+                            <div class="item_topic">INTERNET OF THINGS
+
+                            </div>
                             <h1 class="item_title">Smart Cookies Distributed Sensor Ecosystem</h1>
                         </a>
                     </div>
@@ -358,6 +393,36 @@ pa394@cornell.edu
                         </a>
                     </div>
                 </div>
+
+                <!-- <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/passportable.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A map-based, drag-and-drop travel planning platform
+
+                                </div>
+                            </div>
+                            <div class="item_topic">PODCAST</div>
+                            <h1 class="item_title">Policy Lab</h1>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/passportable.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A map-based, drag-and-drop travel planning platform
+
+                                </div>
+                            </div>
+                            <div class="item_topic">BOOK</div>
+                            <h1 class="item_title">American Ingenuity</h1>
+                        </a>
+                    </div>
+                </div> -->
+
+
 
             </div>
 
