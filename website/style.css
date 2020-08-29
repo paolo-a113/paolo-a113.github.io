@@ -760,6 +760,9 @@ a.description:hover {
 }
 
 @media (max-width: 800px) {
+    .item_bg_grad {
+        height: 30vh;
+    }
     .project_heading {
         font-size: 30px;
         letter-spacing: -0.03em;
