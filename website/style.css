@@ -594,7 +594,7 @@ a.description:hover {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(0, 0, 0, 0.3);
     font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
     font-weight: 400;
     /* letter-spacing: -0.03em; */
