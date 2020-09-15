@@ -5,7 +5,7 @@ This site was built and developed by Paolo Arguelles and hosted with GitHub Page
 pa394@cornell.edu
 ================================================================== -->
 
-<html data-wf-domain="paolos-fabulous-project-e74cab96af4b9fc.webflow.io" data-wf-page="5cfd93a271000a535c533f97" data-wf-site="5cfd93a271000a4eb8533f96" data-wf-status="1" class="w-mod-js w-mod-ix wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-inconsolata-n4-active wf-inconsolata-n7-active wf-oswald-n2-active wf-oswald-n3-active wf-oswald-n4-active wf-oswald-n5-active wf-oswald-n6-active wf-oswald-n7-active wf-robotomono-n4-active wf-roboto-n4-active wf-active">
+<html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,9 +16,8 @@ pa394@cornell.edu
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap core JavaScript -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
 
 
     <!-- <link href="carousel.css" rel="stylesheet"> -->
@@ -45,6 +44,25 @@ pa394@cornell.edu
         
         .box:hover::after {
             opacity: 1;
+        }
+    </style>
+    <style>
+        .nav-pills .nav-link {
+            color: #3c4043;
+            font-weight: 400;
+            text-decoration: none;
+            /* font-size: larger; */
+            /* font-family: 'Palatino'; */
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: #de5021;
+            color: white;
+        }
+        
+        .nav-link:hover {
+            color: #de5021;
+            text-decoration: none;
         }
     </style>
     <style>
@@ -104,11 +122,11 @@ pa394@cornell.edu
 </head>
 
 <body class="body">
-    <div class="header" style="background-color: transparent; position:absolute; width:100%; z-index:1000;"> <a href="./index.htm" style="color: white; opacity:50%" class="myHeader">Paolo Arguelles</a>
-        <div class="header-right"> <a class=myPages style="color: white;opacity:50%" href="./projects.htm">Projects</a>
-            <a class=myPages style="color: white;opacity:50%" href="./bio.htm">About Me</a>
-            <a class=myPages style="color: white;opacity:50%" href="./speech.htm">Speech</a>
-            <a class=myPages style="color: white;opacity:50%" href="./PaoloArguelles_Resume.pdf">Resume</a>
+    <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+        <div class="header-right" style="font-weight: 400;"> <a class=myPages href="./projects.htm">Projects</a>
+            <a class=myPages href="./bio.htm">About Me</a>
+            <a class=myPages href="./speech.htm">Speech</a>
+            <a class=myPages href="./PaoloArguelles_Resume.pdf">Resume</a>
         </div>
         <div id="myNav" class="overlay">
             <div class="Absolute-Center">
@@ -119,7 +137,7 @@ pa394@cornell.edu
                 </div>
             </div>
         </div>
-        <div id="toggle" class="container" style="cursor:pointer" onclick="openNav()">
+        <div id="toggle" class="toggle-container" width="none" style="cursor:pointer;" onclick="openNav()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -143,6 +161,7 @@ pa394@cornell.edu
 
             }
         </script>
+
     </div>
     <!-- <div class="project_image"></div> -->
     <!-- <div class="sidenav"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
@@ -159,7 +178,7 @@ pa394@cornell.edu
             <img src="./website/resources/pics/logo-removebg-preview.png" width=50% class="align-middle animate__animated " style="font-family: 'Palatino'; padding-top:25%; ">
             <br><br><br><br>
             <div class="animate__animated box" style=" background-color: rgba(255,255,255,0.1); border-radius: 1rem; margin-right:30%; padding: 5% ">
-                <h1 style="opacity: 80%; ">
+                <h1 style="opacity: 80%;">
                     Drag and drop travel planning.
                 </h1>
                 <br>
