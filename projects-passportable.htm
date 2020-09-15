@@ -22,6 +22,73 @@ pa394@cornell.edu
 
     <!-- <link href="carousel.css" rel="stylesheet"> -->
     <style>
+        .main-logo {
+            width: 50%;
+        }
+        
+        .img-container {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .app-img {
+            border-radius: 1rem;
+            padding: 0;
+            margin: 15%;
+            margin-left: 0%;
+            overflow-x: hidden;
+            height: 70%;
+        }
+        
+        .logo-container {
+            height: 100%;
+            margin: 0;
+            padding-left: 10%
+        }
+        
+        .main-header {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            margin-right: 30%;
+            padding: 5%
+        }
+        
+        .row-container {
+            width: 100%;
+            height: 100vh;
+            background-image: radial-gradient(#304A78, #2C3259);
+            color: white;
+            margin: 0
+        }
+        
+        @media (max-width: 600px) {
+            .img-container {
+                height: auto;
+            }
+            .main-logo {
+                width: 90%;
+            }
+            .logo-container {
+                height: 100%;
+                margin: 0;
+                padding-left: 5%;
+                padding-right: 5%
+            }
+            .main-header {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-radius: 1rem;
+                margin-right: 0%;
+                padding: 5%
+            }
+            .row-container {
+                height: auto;
+            }
+            .app-img {
+                height: 30%;
+            }
+        }
+        
         .box {
             /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
             -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -172,18 +239,18 @@ pa394@cornell.edu
         <d>In Progress</d>
 
     </div> -->
-    <div class="row" style="width:100%; height:100vh; background-image: radial-gradient(#304A78,#2C3259); color: white; margin:0">
+    <div class="row row-container">
 
-        <div class="col-lg-9 col-xl-6 align-middle" style="height:100%; margin:0;padding-left:10%">
-            <img src="./website/resources/pics/logo-removebg-preview.png" width=50% class="align-middle animate__animated " style="font-family: 'Palatino'; padding-top:25%; ">
+        <div class="col-12 col-lg-9 col-xl-6 align-middle logo-container">
+            <img src="./website/resources/pics/logo-removebg-preview.png" class="align-middle main-logo animate__animated " style="font-family: 'Palatino'; padding-top:25%; ">
             <br><br><br><br>
-            <div class="animate__animated box" style=" background-color: rgba(255,255,255,0.1); border-radius: 1rem; margin-right:30%; padding: 5% ">
+            <div class="animate__animated box main-header">
                 <h1 style="opacity: 80%;">
                     Drag and drop travel planning.
                 </h1>
                 <br>
                 <h3 style="opacity: 50%;  font-weight: 400;">
-                    Passportable is a platform that makes it easy for anyone to create and share trip itineraries.
+                    Passportable makes it easy for anyone to create and share trip itineraries.
                     <!-- 
                     <br><br>Our fluid approach to itinerary creation any — from a quick coffee run to a month-long adventure in Southeast Asia.
                     <br><br>Packaged in a stylish user interface inspired by retro postcards. -->
@@ -196,9 +263,8 @@ pa394@cornell.edu
             </div>
 
         </div>
-        <div class="text-center col-lg-3 col-xl-6 " style="height:100%; margin:0; overflow:hidden; ">
-            <img src="./website/resources/pics/Screen Shot 2020-09-10 at 5.47.35 PM.png " height=70% class="box shadow-5 animate__animated   " style="border-radius:1rem; padding:0; margin:15%; margin-left: 0%; overflow-x:
-                hidden; ">
+        <div class="text-center col-12 col-lg-3 col-xl-6 img-container">
+            <img src="./website/resources/pics/Screen Shot 2020-09-10 at 5.47.35 PM.png " class="box app-img shadow-5 animate__animated">
 
         </div>
 
