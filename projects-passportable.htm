@@ -14,9 +14,30 @@ pa394@cornell.edu
     <link href="./website/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="./website/fonts.css" media="all">
     <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap core JavaScript -->
     <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+    <!-- <link href="carousel.css" rel="stylesheet"> -->
     <style>
         /* Style the header with a grey background and some padding */
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
         
         .shadow-5 {
             box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12), 0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12), 0 16px 16px rgba(0, 0, 0, 0.12);
@@ -57,11 +78,11 @@ pa394@cornell.edu
 </head>
 
 <body class="body">
-    <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
-        <div class="header-right"> <a class=myPages href="./projects.htm">Projects</a>
-            <a class=myPages href="./bio.htm">About Me</a>
-            <a class=myPages href="./speech.htm">Speech</a>
-            <a class=myPages href="./PaoloArguelles_Resume.pdf">Resume</a>
+    <div class="header" style="background-color: transparent; position:absolute; width:100%; z-index:1000;"> <a href="./index.htm" style="color: white; opacity:50%" class="myHeader">Paolo Arguelles</a>
+        <div class="header-right"> <a class=myPages style="color: white;opacity:50%" href="./projects.htm">Projects</a>
+            <a class=myPages style="color: white;opacity:50%" href="./bio.htm">About Me</a>
+            <a class=myPages style="color: white;opacity:50%" href="./speech.htm">Speech</a>
+            <a class=myPages style="color: white;opacity:50%" href="./PaoloArguelles_Resume.pdf">Resume</a>
         </div>
         <div id="myNav" class="overlay">
             <div class="Absolute-Center">
@@ -97,116 +118,46 @@ pa394@cornell.edu
             }
         </script>
     </div>
-    <div class="project_image"></div>
-    <div class="sidenav"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
+    <!-- <div class="project_image"></div> -->
+    <!-- <div class="sidenav"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
         <br>Project Name
         <d>Passportable</d>
 
         <br>Status
         <d>In Progress</d>
 
-    </div>
-    <div class="project_box">
-        <div class="project_contain">
-            <div class="project_topic">WEB APPLICATION</div>
-            <div class="project_title">Passportable</div>
-            <div class="project_description">A map-based, drag-and-drop travel planning platform
-            </div>
-            <!-- <hr> -->
-            <div class="project_body">
-                <!-- <img src="./website/resources/pics/smart_cookie_logo.png" width=30% class="center"> -->
-                <video preload="yes" autoplay muted loop playsinline width=100% class="center shadow-5">
-                    <!-- <source src="./website/resources/pics/testbed.webm" type="video/webm"/> -->
-                    <source src="./website/resources/vids/Screen Recording 2020-09-10 at 7.31.27 PM.mp4" type="video/mp4" />
-                  </video>
+    </div> -->
+    <div class="row" style="width:100%; height:100vh; background-image: radial-gradient(#304A78,#2C3259); color: white; margin:0">
+
+        <div class=" col-6 align-middle" style="height:100%; margin:0;padding-left:10%">
+            <img src="./website/resources/pics/logo-removebg-preview.png" width=50% class="align-middle" style="font-family: 'Palatino'; padding-top:30%; ">
+            <br><br><br><br>
+            <div style="background-color: rgba(255,255,255,0.1); border-radius: 1rem; margin-right:30%; padding: 5%">
+                <h1 style="opacity: 80%; ">
+                    Drag and Drop Travel Planning </h1>
                 <br>
-                <figcaption class="caption">Visit <b>passportable.io</b> to try a functional prototype (Chrome on desktop only)
-                </figcaption>
-
-
-                <h1 class="project_body_header">
-                    The Easiest Way to Plan a Trip
-                </h1>
-                I love travelling. Whether I was travelling with friends, family, or by myself the workflow seemed the same: use Google Maps for research, then switch to Google Docs or Microsoft Word to create the itinerary. While building an itinerary in a text editor
-                is simple, lightweight, flexible, customizeable, and easily shareable, it's also prone to typos and errors. And if plans change that affect the timing of other events, it's a hassle to have to go through the entire itinerary to make the
-                necessary changes.
-
+                <h5 style="opacity: 50%; font-weight: 400;">Whether I'm making a solo trip itinerary or planning a trip with friends and family, the workflow is usually the same: read some travel blogs to find must-see places, use Google Maps for research, then switch to Google Docs or Microsoft
+                    Word to actually create the itinerary. While building an itinerary in a text editor is simple, lightweight, flexible, customizable, and easily shareable, it's also very prone to typos and errors. And if plans change that affect the
+                    timing of other events, it's a hassle to have to go through the entire itinerary to make the necessary changes.</h5>
                 <br><br>
-                <i>Passportable</i> is a travel planning platform that makes it easy for anyone to create and share itineraries. Places and activities become "cards" which users can add to their itinerary and shuffle around. Users can also edit their
-                cards, specifying how long they'll be staying at a location for.
-
-                <i>Passportable</i> automatically updates the itinerary with transportation information and suggests leave times in order to stay on track. with a clean, responsive user interface inspired by retro travel postcards. If you're going on
-                a trip with friends, you'll have the option of sharing your itinerary with them so that everyone is on the same page. Once you're ready to embark on your adventure, <i>Passportable</i> compiles a print-ready PDF.
-
-                <h2 class="project_body_subheader">
-                    <br>1. Stay Time
-                </h2>
-                With Passportable, users may specify how long they will be staying at a location.
-                <br>
-                <img src="./website/resources/vids/Screen Shot 2020-09-10 at 8.08.23 PM.png" width=40% class="center shadow-5" style="margin-top:20px; padding:0;">
-                <figcaption class="caption"><br>Users can specify how much they will spend at a location
-                </figcaption>
-                <h2 class="project_body_subheader">
-                    <br>2. Different Transportation Modes
-                </h2>
-
-                <video preload="yes" autoplay muted loop playsinline width=30% class="center shadow-5">
-                    <source src="./website/resources/vids/Screen Recording 2020-09-10 at 8.20.46 PM.mp4" type="video/mp4" />
-
-                  </video>
-                <figcaption class="caption"><br>Users can choose different transportation modes for each leg of the trip
-                </figcaption>
-                Users can choose between different modes of transportation for each leg of the trip
-
-
-                <h2 class="project_body_subheader">
-                    <br>3. Flexibility
-                </h2>
-                Users can choose between different modes of transportation for each leg of the trip
-
-
-
-
-
-
-                <h2 class="project_body_subheader">
-                    <br>Technology
-                </h2>
-
-                Under the hood, <i>Passportable</i> is a simple web app with a frontend built with HTML5, CSS3, and Javascript (with some JQuery and Bootstrap) and a Firebase backend. It relies on the Google Maps and Mapbox APIs for its navigation features.
-
-                <h2 class="project_body_subheader">
-                    <br>Commercialization
-                </h2>
-
-                While a version of this platform will be made freely available to anyone who wishes to use it, it will generate revenue with ''freemium'' pricing.
-
-
-
-                <hr>
-                <div class="footer">
-                    <center>© 2019 - 2023 by Paolo Arguelles.
-                        <br>All rights reserved.
-                </div>
-                <script>
-                    var coll = document.getElementsByClassName("collapsible");
-                    var i;
-
-                    for (i = 0; i < coll.length; i++) {
-                        coll[i].addEventListener("click", function() {
-                            this.classList.toggle("active");
-                            var content = this.nextElementSibling;
-                            if (content.style.maxHeight) {
-                                content.style.maxHeight = null;
-                            } else {
-                                content.style.maxHeight = content.scrollHeight + "px";
-                            }
-                        });
-                    }
-                </script>
+                <button class="btn btn-lg btn-info" style="border-radius:2rem" href="#" target="_blank" disabled>
+                        Coming Soon
+                </button> <br><br>
+                <span style="opacity:20%">Desktop only, Requires Google Chrome</span>
             </div>
+            <br><br>
+
         </div>
+        <div class="text-center col-6" style="height:100%; margin:0; overflow:hidden;">
+            <img src="./website/resources/pics/Screen Shot 2020-09-10 at 5.47.35 PM.png" height=70% class="shadow-5" style="border-radius:1rem; padding:0; margin:15%; margin-left: 0%; overflow-x: hidden;">
+
+        </div>
+
     </div>
+
+
+
+
     </div>
 
 </body>

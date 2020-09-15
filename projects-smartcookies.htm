@@ -174,9 +174,9 @@ pa394@cornell.edu
                     <hr> Engineering
                 </h1>
                 Each Smart Cookie is comprised of an ESP8266 WiFi module, rechargeable battery, and onboard sensor array. The prototypes shown here contain temperature and humidity sensors.
-                <img src="./website/resources/pics/smartcookie_pcb.jpg" width=40% class="center">
+                <!-- <img src="./website/resources/pics/smartcookie_pcb.jpg" width=40% class="center">
                 <figcaption class="caption">First PCB prototype
-                </figcaption>
+                </figcaption> -->
                 <img src="./website/resources/pics/smart_cookie.jpg" width=60% class="center">
                 <figcaption class="caption">New prototype with recharging circuitry
                 </figcaption>
@@ -192,8 +192,12 @@ pa394@cornell.edu
                     <br>Mesh Networking
                 </h2>
                 While a single Smart Cookie can be used as a self-contained data collection tool, using multiple Smart Cookies in close proximity with each other automatically creates a decentralized mesh network that intelligently routes data packets through other Smart
-                Cookies through a root node to which a low-cost tablet can be connected to visualize realtime telemetry from all Smart Cookies. This allows the effective range of data collection extend far beyond the estimated 100m signal radius of a
-                single WiFi module.
+                Cookies to a root node that emits its own local WiFi network. Connecting a low-cost tablet to the hotspot will allow users to visualize realtime telemetry from all Smart Cookies connected to the mesh network. This not only allows the system
+                to accomodate a virtually limitless number of sensor nodes, but also extends the effective range of data collection far beyond the estimated 100m signal radius of a single WiFi module.
+                <br><br> In current working prototypes, at a 1 Hz refresh rate.
+
+
+
 
                 <hr>
                 <div class="footer">
