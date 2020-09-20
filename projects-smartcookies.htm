@@ -178,12 +178,19 @@ COPYRIGHT (C) 2020 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                 </h1>
                 <h2 class="project_body_subheader"> Hardware
                 </h2>
-                Each Smart Cookie is comprised of an ESP8266 WiFi module, rechargeable LiPoly battery, and onboard sensor array. Curent prototypes contains temperature and humidity sensors (Si7021 IC), although any low-power sensor chip with a digital I2C or SPI interface
+                Each Smart Cookie is comprised of an ESP8266 WiFi module, rechargeable LiPoly battery, and onboard sensor array. Current prototypes contains temperature and humidity sensors (Si7021 IC), although any low-power sensor chip with a digital I2C or SPI interface
                 may be used. A recent addition to the newer prototypes is a power management controller IC for onboard charging of the battery.
                 <!-- <img src="./website/resources/pics/smartcookie_pcb.jpg" width=40% class="center">
                 <figcaption class="caption">First PCB prototype
                 </figcaption> -->
-                <br><br>
+                <h2 class="project_body_subheader">
+                    <br>Mesh Networking
+                </h2>
+                While a single Smart Cookie can be used as a self-contained data collection tool, using multiple Smart Cookies in close proximity with each other automatically creates a decentralized mesh network that intelligently routes data packets through other Smart
+                Cookies to a root node that emits its own local hotspot. Connecting a tablet to the hotspot will allow users to visualize realtime telemetry from all Smart Cookies connected to the mesh network and send commands to each node. This allows
+                the system to accomodate a virtually limitless number of sensor nodes, enables hardware homogeneity, and extends the effective range of data collection far beyond the estimated 100m signal radius of a single WiFi module.
+                <br>
+                <br>
                 <h2 class="project_body_subheader"> Embedded Web App
                 </h2>
                 Students can visualize realtime data and interact with it through a lightweight web app that manages all the data streams and displays them on a user interface. This web app is stored withhin the microcontroller's internal filesystem (SPIFFS), and is
@@ -194,12 +201,7 @@ COPYRIGHT (C) 2020 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                 <figcaption class="caption">Improved web app prototype (stored on Smart Cookie onboard memory)
                 </figcaption>
 
-                <h2 class="project_body_subheader">
-                    <br>Mesh Networking
-                </h2>
-                While a single Smart Cookie can be used as a self-contained data collection tool, using multiple Smart Cookies in close proximity with each other automatically creates a decentralized mesh network that intelligently routes data packets through other Smart
-                Cookies to a root node that emits its own local WiFi network. Connecting a tablet to the hotspot will allow users to visualize realtime telemetry from all Smart Cookies connected to the mesh network and send commands to each node. This
-                allows the system to accomodate a virtually limitless number of sensor nodes, enables hardware homogeneity, and extends the effective range of data collection far beyond the estimated 100m signal radius of a single WiFi module.
+
 
                 <!-- <h2 class="project_body_subheader">
                     <br>Current Challenges
