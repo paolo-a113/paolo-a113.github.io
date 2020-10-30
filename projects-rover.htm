@@ -98,10 +98,10 @@ pa394@cornell.edu
     <div class="sidenav"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
         <br>Project Name
         <d>Mobile and Inflatable Interface for Human-Robot Interaction</d>
-        <br>Advisors
+        <br>Advisor
         <d>Professor Kirstin Petersen</d>
         <br>Contributing Authors
-        <d>Paolo Arguelles, Jonathan Jaramillo, Labhansh Atriwal, Emilie Baker, Connor Hahn, Yunshan Liu, Ta Wei Yeh</d>
+        <d>Paolo Arguelles, Jonathan Jaramillo, Labhansh Atriwal, Emilie Baker, Connor Hahn, Yunshan Liu, and Ta Wei Yeh</d>
         <br>Affiliations
         <br> <a href="https://cei.ece.cornell.edu/">Collective Embodied Intelligence Lab, Cornell University
             <br></a>
@@ -118,99 +118,18 @@ pa394@cornell.edu
             <video preload="yes" controls autoplay muted loop playsinline width=90% class="center" poster="./website/resources/pics/testbed.gif">
                 <source src="./website/resources/vids/19-1511_01_VI.mp4" type="video/mp4" />
               </video>
-            <hr>
+            <!-- <hr> -->
 
             <div class="project_body">
-                <h1 class="project_body_header">Abstract</h1>
-
-                Researchers hypothesize that networked physical robots may efficiently and safely manage large crowds in scenarios ranging from festivals and conventions to building evacuation. These scenarios pose a unique combination of hardware constraints involving
-                safety for human contact, durability to withstand physical interaction, agility to keep up with moving crowds in non-trivial terrains, versatility to adapt to the situation and audience, and low cost to permit mass deployment.
+                <!-- <h1 class="project_body_header">Abstract</h1> -->
+                <br><br> Researchers hypothesize that networked physical robots may efficiently and safely manage large crowds in scenarios ranging from festivals and conventions to building evacuation. These scenarios pose a unique combination of hardware
+                constraints involving safety for human contact, durability to withstand physical interaction, agility to keep up with moving crowds in non-trivial terrains, versatility to adapt to the situation and audience, and low cost to permit mass
+                deployment.
                 <br><br> We present a new mobile robot platform composed of a small rover base and a soft human-scale inflatable interface, capable of visual, tactile, and audible interaction with a variety of layman users.
 
                 <br><br>The inflatable interface allows the robot to maneuver discretely or in confined spaces when deflated, yet grow to encourage interaction. It combines an internal projector, a camera, and speakers, to emit and receive user information.
                 The rover base is designed to keep up with humans at jogging speeds over relatively uneven terrain. Low weight further permits easy handling and transport. The entire robot costs less than $1.5K, and can serve as a general purpose test
                 platform for a range of future human-robot interaction research.
-
-
-                <h1 class="project_body_header">
-                    <hr>Introduction</h1>
-
-                We present a novel, matrix-based platform for implementing multi-agent distributed control in a shape-shifting robot. This project incorporates modular robots and decentralized controls to create a swarm of inter-connected agents that can sense and deform
-                by actively morphing between an expanded and contracted state. Neighboring agents communicate among themselves to determine optimal self change percentage, such behaviors propagate throughout the swarm to generate a gradient of interesting
-                states and shapes. This enables individual agent to utilize their local rules to impact the global shape of the swarm. For example, when a swarm of small square agents come into contact with an obstacle, the squares will shape shift into
-                elongated diamonds to reduce the global width of the swarm, allowing the obstacles to pass.
-                <img src="./website/resources/pics/diagram_v2.jpg" width=80% class="center">
-                <figcaption class="caption">(A) swarm approaches an obstacle; (B) capacitive sensing modules (gray) detect obstacles upon contact, pulling strings (red dash line) are actuated to deform modules; (C) neighbor modules are further deformed and global swarm shape shifted
-                    to let obstacle pass}
-                </figcaption>
-
-
-                This work is different from other modular robots in that we are examining emergent morphological behavior patterns at a swarm level with codependent agents that are physically linked together. There are many benefits in studying and developing autonomous
-                shape-shifting robots. For example, the usage of conventional centralized control for infrastructural management can be time consuming and expensive. In water flow management such as dams, the WaffleBot can be used as a filtration layer
-                to allow granular control over water flow volume and to catch debris by adjusting the aperture size of each agent. This robot system can also be applied to smart buildings for energy management. With a large enough swarm fitted onto the
-                exterior building skin, the WaffleBot can be programmed to shape shift to allow more or less sunlight into the room, which in turn helps with energy reduction in indoor cooling demand. This new facade layer can also provide protection
-                against severe weather events, when all the agents contract, the swarm becomes a solid panel deflecting hail and flying debris away from the windows behind.
-
-
-                <h1 class="project_body_header"> Actuation Mechanism </h1>
-
-                Agents are actuated by sub-micro motors (26:1 Sub-Micro Plastic Planetary Gearmotors from Pololu) winding a single tendon connecting two opposing vertices along the matrix's deformation axis. To relieve unwanted load on the motors sliding against Ecoflex,
-                the tendons are routed through 3D printed plastic channels. The resulting actuation mechanism consists of an antagonistic force pair; winding the tendon causes the agent to contract, while the intrinsic elastic properties of the Ecoflex
-                opposes this motion. H-bridge motor drivers are used to programmatically control the speed and direction of the motor rotation. Spindles were 3D printed and placed on the end of each motor; these were essential in ensuring that the tendon
-                does not slip off the end of the motor and entangle with itself, subjecting the low-torque motors to stall torque conditions and potentially breaking the system.
-
-                <h1 class="project_body_header"> Obstacle Sensing </h1>
-                The original design called for the placement of VCNL4010 proximity sensors at each outward-facing facet of the matrix. However, at $8 per chip, not only does the cost of these sensors not scale well as the matrix size is increased, this scheme also introduces
-                many blindspots along the perimeter of the matrix due to narrow sensing cones for each sensor. We implemented capacitive sensing as a cheaper, more scalable alternative. This inexpensive sensing scheme takes up two pins on the microcontroller
-                and uses a high-value resistor (1 MΩ is used here) and aluminum foil to sense touch and proximity events.
-
-                <img src="./website/resources/pics/capsense_schem.png" width=50% class="center">
-                <figcaption class="caption">A capacitive sensing scheme was implemented using two microcontroller pins, a high-value resistor, and aluminum foil.</figcaption>
-
-                The capacitance created by the generated electric field between human skin or a conductive surface and the receive pin \( D_{\mathrm{receive}} \) is modeled in the schematic above as a variable capacitance \( C_{\mathrm{proximity}} \). A rising edge is
-                written to the microcontroller send pin \( D_{\mathrm{send}} \). The R-C circuit created by the resistor and effective capacitance yields a time delay before the receive pin \( D_{\mathrm{receive}} \) achieves the same logic level as the
-                send pin. This delay is described by the R-C time constant \( \tau \) as in Eqn. \eqref{RC_eqn}: \begin{equation} \tau=RC_{\mathrm{proximity}} \label{RC_eqn} \end{equation} The microcontroller is able to determine the effective capacitance
-                \( C_{\mathrm{proximity}} \) by measuring this time delay, and sends a corresponding value to its serial buffer. This sensor is implemented for each agent by placing a strip of conductive foil over its outward-facing facets. This conductive
-                surface is then connected to the \( D_{\mathrm{receive}} \) side of the high-value resistor. The 1 MΩ resistor used here enables the system to function as a touch sensor as opposed to a proximity sensor. However, proximity sensing may
-                be realized up to a foot away when implementing higher value resistors. This scheme also carries some information about the kind of obstacle with which the robot is interacting. For instance, higher detected capacitance values often indicate
-                a finger touch. Lower values correspond to planar conductive surfaces and cylindrical shells, respectively. While the system is intended to function in a binary manner (either the robot is close to an obstacle or not), setting different
-                thresholds to differentiate between types of obstacles (i.e., a finger touch vs. a foil obstacle) enables control algorithms to be written for the robot to react differently to each.
-
-                <video autoplay loop muted playsinline width=50% class="center" poster="./website/resources/pics/capsense.gif">
-                    <source src="./website/resources/pics/capsense.webm" type="video/webm">
-                    <source src="./website/resources/pics/capsense.mp4" type="video/mp4">
-                </video>
-                <figcaption class="caption">Motor control and capacitive obstacle sensing implemented on microcontroller
-                </figcaption>
-
-
-                The switch to capacitive sensing amounted to a significant decrease in cost.
-
-                <img src="./website/resources/pics/costscaling.png" width=80% class="center">
-                <figcaption class="caption">Approximate total electronic components cost for an N-by-N matrix
-                </figcaption>
-
-
-                The original approximate cost of a 3-by-3 matrix, using commercial-off-the-shelf proximity sensors, is around $256. Implementing capacitive sensing, which includes the is the negligible cost of the sensing resistor and aluminum foil, can reduce the per-agent
-                pricing substantially. For the present example of a 3-by-3 matrix, this amounted to savings of over $100. This price point may potentially be lowered further by custom implementing the ATmega328P microcontroller and H-bridge motor driver
-                integrated circuits.
-
-                <h1 class="project_body_header"> Communication and Control </h1>
-                Each agent consists of a microcontroller, H-bridge motor driver, capacitive sensing resistor, battery and holder, and sub-micro motor. These elements are connected for each according to the schematic below.
-
-                <img src="./website/resources/pics/agent_schem.png" width=80% class="center">
-                <figcaption class="caption">User interface as control plant</figcaption>A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or
-                1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes. Inter-agent communication is achieved by connecting all agents to an I²C
-                bus with an agent arbitrarily chosen to act as a master device. A benefit of this communication scheme is that different levels of decentralization can be explored by constraining each agent's communication abilities to its 4-connected,
-                8-connected, or some other set of neighbors. A byte string containing each agent's role as either an I²C slave or master, its status as a sensing agent (i.e., whether the agent is situated along the perimeter of the matrix), and a unique
-                I²C address are stored in each agent's microcontroller EEPROM. This allows a single program to be flashed to all microcontrollers.
-                <hr>
-                <h1 class="project_body_header"> Continuing Work </h1>
-                The physical assembly process of the next iteration will be designed such that our efforts scale better. This would consist of a neater implementation of the microcontrollers and H-bridge motor drivers on PCBs. Power is to be distributed from a centralized
-                source (as opposed to the current design where each agent is connected to its own power source), and the programming scheme should be realized with a more reliable and robust USB connection as opposed to the ICSP header pins. The microchannels
-                are to be placed within the Ecoflex to be able to better manage the pulling forces generated by tendon actuation. Larger physical prototype matrix can be considered for analyzing how scaling impacts overall behaviors of the system. Additionally,
-                thinking about how the current matrix prototype could be redesigned in such a way so that the number of actuators could be reduced while maintained the current shape shifting capabilities. Also, the current prototype can be seen as a 2D
-                matrix and there maybe more interesting emergent behaviors if the physical prototype were extended to 3D.
 
                 <hr>
                 <div class="footer">
