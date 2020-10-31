@@ -120,7 +120,7 @@ pa394@cornell.edu
 
                 <br>
                 <br>
-                <video preload="yes" autoplay muted loop playsinline width=85% class="center" poster="./website/resources/pics/testbed.gif">
+                <video preload="yes" autoplay muted loop playsinline width=85% class="center" poster="./website/resources/pics/testbed.gif" style="border-radius: 0.5rem;">
                   <source src="./website/resources/pics/testbed.webm" type="video/webm"/>
                   <source src="./website/resources/pics/testbed.mp4" type="video/mp4" />
                 </video>
@@ -130,7 +130,7 @@ pa394@cornell.edu
                 user interface.
                 <br>
                 <br>
-                <img src="./website/resources/pics/fullsetup.jpg" width=70% class="center">
+                <img src="./website/resources/pics/fullsetup.jpg" width=70% class="center" style="border-radius: 0.5rem;">
                 <figcaption class="caption">Complete lab test setup of the simulator and testbed</figcaption>
                 <br>The <i> Spacecraft Flight Simulator and Attitude Testbed </i> provides a lab environment to test autonomous attitude control algorithms for the small spacecraft developed in our research lab, as well as provide Cornell engineering
                 professors with a hands-on instructional platform for advanced spacecraft control students.
@@ -141,7 +141,7 @@ pa394@cornell.edu
                 <button class="collapsible">SIMULINK CONTROL INTERFACE</button>
                 <div class="content">
                     <br>
-                    <img src="./website/resources/pics/interface.png" width=100% class="center">
+                    <img src="./website/resources/pics/interface.png" width=100% class="center" style="border-radius: 0.5rem;">
                     <figcaption class="caption">User interface for the spacecraft flight simulator</figcaption>
                     <h2 class="project_body_subheader">
                         Design
@@ -155,7 +155,7 @@ pa394@cornell.edu
                     </h2>
                     <p>The user interface allows operators to specify a combination of thruster activations and reaction wheel speeds which will be commanded to the testbed at a button press. The dashboard also updates with realtime inertial and attitude
                         telemetry, reaction wheel speeds, and other system status metrics. There are also failsafe functions that command the onboard flight computer to execute bash scripts that shutdown or reboot the testbed.</p>
-                    <img src="./website/resources/pics/scope.png" width=70% class="center">
+                    <img src="./website/resources/pics/scope.png" width=70% class="center" style="border-radius: 0.5rem;">
                     <figcaption class="caption">Realtime telemetry visualization</figcaption>
                 </div>
                 <button class="collapsible">FLIGHT COMPUTER</button>
@@ -168,7 +168,7 @@ pa394@cornell.edu
                             <li>Receives realtime telemetry from the inertial measurement unit (IMU) and pressure sensor</li>
                             <li>Detects pulse information from three optical tachometers and calculates corresponding reaction wheel speed readings</li>
                             <li>Transmits inertial telemetry, reaction wheel speeds, and pressure readings back to the operator</ul>
-                        <img src="./website/resources/pics/flightcomputer.jpg" width=80% class="center">
+                        <img src="./website/resources/pics/flightcomputer.jpg" width=80% class="center" style="border-radius: 0.5rem;">
                         <figcaption class="caption">Raspberry Pi flight computer with XBee adapter shield for wireless bidirectional communication</figcaption>
                         <br>
                         <h2 class="project_body_subheader"> Switching from Arduino Due to Raspberry Pi </h2> Previous teams' designs called for an Arduino Due to act as the flight computer. However, after compiling a requirement set for the flight computer, I realized that an Arduino Due
@@ -178,7 +178,7 @@ pa394@cornell.edu
                         <h2 class="project_body_subheader"> <br>Transmitting Telemetry</h2> A primary task of the flight computer is to relay telemetry from the onboard IMU sensor back to the operator. The flight computer achieves this by reading serial data from the IMU reader microcontroller
                         to gather inertial telemetry and using a FIFO to collect reaction wheel speed calculated by another Python script running in the background. The program then compiles an ASCII string and transmits it to the operator over the local
                         XBee link.
-                        <img src="./website/resources/pics/telemetry.png" width=100% class="center">
+                        <img src="./website/resources/pics/telemetry.png" width=100% class="center" style="border-radius: 0.5rem;">
                         <figcaption class="caption">Transmitted strings containing wheel speeds and inertial telemetry</figcaption>Each line carries information about the speed of each reaction wheel, and accelerometer, gyroscope, and magnetometer readings in three axes from the
                         IMU sensor. This serial stream is captured and parsed in Simulink where the resulting information is displayed to the operator in a readable manner.
                         <h2 class="project_body_subheader"> <br>Persistent Serial Device Identification </h2> Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0)
@@ -189,10 +189,10 @@ pa394@cornell.edu
                 <div class="content">
                     <p>
                         <br>The six solenoid valves controlling each of the six thrust outlets are each connected to a logic-level MOSFET driven by an Arduino microcontroller. Code on the microcontroller limits each thrust duration to 200 ms.</p>
-                    <img src="./website/resources/pics/valves.jpg" width=80% class="center">
+                    <img src="./website/resources/pics/valves.jpg" width=80% class="center" style="border-radius: 0.5rem;">
                     <figcaption class="caption">MOSFET drivers to control thrusters</figcaption>The microcontroller controlling the propulsion subsystem is also connected to a pressure transducer which monitors the air pressure within the manifold that channels air from the tanks
                     to the thruster outlets. If the pressure dips below a certain threshold, an LED signalling that the tanks need to be refilled. The warning light turns off when the air pressure returns to its nominal range.
-                    <img src="./website/resources/pics/transducer.jpg" width=80% class="center">
+                    <img src="./website/resources/pics/transducer.jpg" width=80% class="center" style="border-radius: 0.5rem;">
                     <figcaption class="caption">Transducer in-line with manifold</figcaption>
                     <img src="./website/resources/pics/tanks.jpg" width=80% class="center">
                     <figcaption class="caption">Onboard compressed air tanks</figcaption>
@@ -201,12 +201,12 @@ pa394@cornell.edu
                 <div class="content">
                     <p>
                         <br>The testbed contains three high-torque DC pancake motors that act as reaction wheels. The reaction wheels are affixed orthogonally to each other to effect torques around three axes.
-                        <img src="./website/resources/pics/reactionwheels.jpg" width=80% class="center">
+                        <img src="./website/resources/pics/reactionwheels.jpg" width=80% class="center" style="border-radius: 0.5rem;">
                         <figcaption class="caption">Reaction wheels and optical tachometers</figcaption>An optical tachometer was carefully aimed at the spindle of each motor (which held a piece of reflective tape) to count revolutions. The optical tachometers were connected electrically
                         to the flight computer's GPIO, where a pulse resulting from one revolution would trigger an interrupt service routine that updates an RPM value and sends it to the operator. Additionally, each reaction wheel was driven by a motor
                         driver that actively monitors temperature, voltage, and current and cuts power to the load when a prespecified shutoff event is detected.
                         <br>
-                        <img src="./website/resources/pics/drivers.jpg" width=80% class="center">
+                        <img src="./website/resources/pics/drivers.jpg" width=80% class="center" style="border-radius: 0.5rem;">
                         <figcaption class="caption">Motor drivers and Raspberry Pi flight computer</figcaption>Constraints were also placed on the brake ability of the reaction wheels (i.e., limits for acceleration/deceleration were put in place) to prevent large, sudden current
                         draws. The reaction wheel direction and speed are both controlled by an 8-bit integer; a value of '128' sent by the operator to a reaction wheel on the testbed corresponds to zero rotation, '255' to full-speed (3600 RPM) clockwise,
                         and '0' to full-speed counter-clockwise.</p>
@@ -222,7 +222,7 @@ pa394@cornell.edu
                 plant in a closed-loop control system.
                 <br>
                 <br>
-                <img src="./website/resources/pics/block.png" width=80% class="center">
+                <img src="./website/resources/pics/block.png" width=80% class="center" style="border-radius: 0.5rem;">
                 <figcaption class="caption">User interface as control plant</figcaption>A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or
                 1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
                 <h2 class="project_body_subheader">
@@ -231,7 +231,7 @@ pa394@cornell.edu
                 all the wiring and electronics with bold, clear silkscreen labeling.
                 <hr>
                 <h1 class="project_body_header">Our Team </h1>
-                <img src="./website/resources/pics/ssds_team.jpg" width=100% class="center">
+                <img src="./website/resources/pics/ssds_team.jpg" width=100% class="center" style="border-radius: 0.5rem;">
                 <figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical & Computer Engineer), and Zach Tretler (Mechanical Engineer)</figcaption>
                 <hr>
                 <div class="footer">
