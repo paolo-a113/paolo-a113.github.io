@@ -768,7 +768,7 @@ a.description:hover {
         letter-spacing: -0.03em;
     }
     .project_bg {
-        height: 30vh;
+        height: 250px;
         background-image: url("./resources/pics/project_bg.jpg");
         background-position: 50% 10%;
         background-size: cover;
