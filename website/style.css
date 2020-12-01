@@ -557,9 +557,9 @@ a.description:hover {
     top: 0;
     height: 45vh;
     background-image: url("./resources/pics/project_bg-min.jpg");
-    background-position: 50% 40%;
+    background-position: 50% 30%;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     line-height: 30px;
     /* position: fixed; */
 }
