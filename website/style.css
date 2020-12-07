@@ -109,6 +109,9 @@ img {
         margin-top: 1vh;
         margin-left: 5vw;
     }
+    .header {
+        padding: 15px 25px;
+    }
     .header a {
         float: none;
         display: block;
