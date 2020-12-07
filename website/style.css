@@ -759,7 +759,16 @@ a.description:hover {
     cursor: pointer;
 }
 
+.margin-handler {
+    margin: 20px !important;
+    margin-top: 0;
+}
+
 @media (max-width: 800px) {
+    .margin-handler {
+        margin: 0px !important;
+        margin-top: 0;
+    }
     .link-block:hover {
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0), #000);
         cursor: pointer;
