@@ -270,7 +270,7 @@ img {
     height: 70vh;
     padding-left: 50vw;
     padding-right: 10vw;
-    overflow: hidden;
+    overflow: scroll;
     padding-bottom: 100;
     float: left;
     -webkit-box-orient: vertical;
