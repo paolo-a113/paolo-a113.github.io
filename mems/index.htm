@@ -1,79 +1,167 @@
 <!DOCTYPE html>
+<!-- Try this one Julius:
+XF'MM NFFU BHBJO EPO'U LOPX XIFSF EPO'U LOPX XIFO
+CVU J LOPX XF'MM NFFU BHBJO TPNF TVOOZ EBZ ... -->
 
 <!-- ==================================================================
-Built and developed from scratch by Paolo Arguelles and hosted with GitHub Pages.
+This site was created by Paolo Arguelles and hosted with GitHub Pages.
 pa394@cornell.edu
 
 COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
 ================================================================== -->
 
-<html data-wf-domain="paolos-fabulous-project-e74cab96af4b9fc.webflow.io" data-wf-page="5cfd93a271000a535c533f97" data-wf-site="5cfd93a271000a4eb8533f96" data-wf-status="1" class="w-mod-js w-mod-ix wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-inconsolata-n4-active wf-inconsolata-n7-active wf-oswald-n2-active wf-oswald-n3-active wf-oswald-n4-active wf-oswald-n5-active wf-oswald-n6-active wf-oswald-n7-active wf-robotomono-n4-active wf-roboto-n4-active wf-active"
-    xmlns:og="http://opengraphprotocol.org/schema/">
+<html xmlns:og="http://opengraphprotocol.org/schema/">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
     <meta data-rh="true" property="og:type" content="website">
-    <meta data-rh="true" property="og:title" content="Cornell Spacecraft Flight Simulator">
-    <meta data-rh="true" property="og:image" content="../website/resources/pics/ssds_bg.jpg">
+    <meta data-rh="true" property="og:title" content="Projects and Research Page">
+    <meta data-rh="true" property="og:image" content="../website/resources/pics/projects-thumbnail.png">
     <meta name="description" property="og:description" content=" ">
 
-    <title>Gyroscope for Missile Guidance | Paolo Arguelles</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <title>Projects | Paolo Arguelles</title>
+
     <link href="../website/style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../website/fonts.css" media="all">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <style>
-        /* Style the header with a grey background and some padding */
-        
-        .project_image {
-            background-image: url("../website/resources/pics/ssds_bg.jpg");
+        .nav-pills .nav-link {
+            color: #3c4043;
+            font-weight: 400;
+            /* font-size: larger; */
+            /* font-family: 'Palatino'; */
         }
         
-        .active,
-        .collapsible:hover {
-            transition: 200ms;
-            color: #DE5021;
+        .nav-pills .nav-link.active {
+            background-color: #de5021;
+            color: white;
         }
         
-        .collapsible:after {
-            content: '+';
-            font-weight: bold;
-            float: right;
-            margin-left: 5px;
-            color: inherit;
+        .nav-link:hover {
+            color: #de5021;
+        }
+    </style>
+    <style>
+        .box {
+            /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         
-        .active:after {
-            content: "−";
-            color: #DE5021;
+        .box::after {
+            position: absolute;
+            z-index: -1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         
-        .content {
-            padding: 0 18px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 300ms;
-            background-color: #f1f1f1;
+        .box:hover {
+            -webkit-transform: scale(1.02, 1.02);
+            transform: scale(1.02, 1.02);
+        }
+        
+        .box:hover::after {
+            opacity: 1;
+        }
+    </style>
+    <!-- PRELOADER STYLE -->
+    <style>
+        .spinner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e7e7e7;
+            z-index: 999999;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 48%;
+            left: 48%;
+        }
+        
+        .double-bounce1,
+        .double-bounce2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #de5021;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+            animation: sk-bounce 2.0s infinite ease-in-out;
+        }
+        
+        .double-bounce2 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+        
+        @-webkit-keyframes sk-bounce {
+            0%,
+            100% {
+                -webkit-transform: scale(0.0)
+            }
+            50% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+        
+        @keyframes sk-bounce {
+            0%,
+            100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+            50% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
         }
     </style>
 </head>
 
-<body class="body">
+<body class="body" style="background-color: #e7e7e7;">
+    <!-- <div class="spinner-wrapper">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    </div> -->
     <div class="header"> <a href="../index.htm" class="myHeader">Paolo Arguelles</a>
-        <div class="header-right"> <a class=myPages href="../projects.htm">Projects</a>
-            <a class=myPages href="../bio.htm">About Me</a>
+        <div class="header-right" style="font-weight: 400;"> <a class=myPages href="../projects.htm">Projects</a>
+            <a class=myPages href="../bio.htm">About</a>
             <a class=myPages href="../speech.htm">Speech</a>
             <a class=myPages href="../PaoloArguelles_Resume.pdf">Resume</a>
         </div>
         <div id="myNav" class="overlay">
             <div class="Absolute-Center">
                 <div class="myPages"> <a class=myPages href="../projects.htm">PROJECTS</a>
-                    <a class=myPages href="../bio.htm">ABOUT ME</a>
+                    <a class=myPages href="../bio.htm">ABOUT</a>
                     <a class=myPages href="../speech.htm">SPEECH</a>
                     <a class=myPages href="../PaoloArguelles_Resume.pdf">RESUME</a>
                 </div>
             </div>
         </div>
-        <div id="toggle" class="toggle-container" style="cursor:pointer" onclick="openNav()">
+        <div id="toggle" class="toggle-container" width="none" style="cursor:pointer;" onclick="openNav()">
             <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div>
@@ -97,174 +185,274 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
 
             }
         </script>
-    </div>
-    <div class="project_image"></div>
-    <div class="sidenav"> <a href="../projects.htm" text-align: "center"> ‹ Back to Projects </a>
-        <br>Project Name
-        <d>Advanced Inertial Microsensors: <i>In Situ</i> Inertial Characterization of a Surface and Bulk Acoustic Wave Gyroscope</d>
-        <br>Advisors
-        <d>Professor Amit Lal<br>Former Director, DARPA Microsystems Office</d>
-        <br>Status
-        <d>Completed (May 2019)</d>
-        <br>Affiliations
-        <br> <a href="https://www.spacecraftresearch.com/people/">SonicMEMS Lab, Electrical and Computer Engineering, Cornell University
-      <br></a>
-        <br>Documentation <a href="Final_MENG_Report-2 (1).pdf">Project Report</a>
 
     </div>
-    <div class="project_box">
-        <div class="project_contain">
-            <div class="project_topic">AEROSPACE AND DEFENSE</div>
-            <div class="project_title">Acoustic Wave Gyroscope for Missile Guidance (DARPA)</div>
+    <div class="project_bg" style="background-image: url(&quot;../website/resources/pics/CornellGrad-2658_Original.jpg&quot;);">
+        <h1 class="project_heading">MEMS Technology
+        </h1>
 
-            <div class="project_description"> A surface and bulk acoustic wave (SAW/BAW) gyroscopic microsensor for missile guidance</div>
-            <hr>
-            <div class="project_body">
-                <h1 class="project_body_header">
-                    Retro Tech for Modern Applications
-                </h1> This testbed provides a hardware platform to test spacecraft attitude control algorithms in a frictionless environment simulating outer space. The platform consists of an aluminum chassis levitated on a spherical air bearing and
-                uses six cold gas thrusters and three reaction wheels to maneuver. Our team was advised by the former NASA Chief Technologist, Dr. Mason Peck.
-
-                <br>
-                <br>
+    </div>
 
 
-                <figcaption class="caption">Air bearing levitates testbed to create friction-free environment</figcaption>
-                <br>The simulator maneuvers using three reaction wheels (motors that turn spacecraft through gyroscopic effects) and six cold gas thrusters. The electronics are controlled wirelessly from a nearby computer with a custom-built graphical
-                user interface.
-                <br>
-                <br>
-                <img src="../website/resources/pics/mems-min.jpeg" width=70% class="center" style="border-radius: 0.5rem;">
-                <figcaption class="caption">Complete lab test setup of the simulator and testbed</figcaption>
-                <br>The <i> Spacecraft Flight Simulator and Attitude Testbed </i> provides a lab environment to test autonomous attitude control algorithms for the small spacecraft developed in our research lab, as well as provide Cornell engineering
-                professors with a hands-on instructional platform for advanced spacecraft control students.
-                <h1 class="project_body_header">
-                    <hr> Hardware and Design
-                </h1>
-                <i> Explore testbed components and subsystems. </i>
-                <button class="collapsible">SIMULINK CONTROL INTERFACE</button>
-                <div class="content">
-                    <br>
-                    <img src="../website/resources/pics/IMG_3222_Original.JPG" width=90% class="center" style="border-radius: 0.5rem;">
-                    <figcaption class="caption">Simulink Control Station</figcaption>
-                    <h2 class="project_body_subheader">
-                        Design
-                    </h2>
-                    <p>Significant effort was invested in ensuring that the user interface was aesthetically pleasing and evoked in users the excitement of space travel. The typography, color palette, and overall design was inspired by UI design in popular
-                        science fiction films with heavy influence from <a href="https://territorystudio.com/project/the-martian/"> Territory Studio's VFX work</a> on the 2015 film <i>The Martian</i>. The Simulink Aerospace Instrumentation blockset was
-                        used to provide operational instrumentation graphics such as an artificial horizon (which was fed with a vector containing roll, pitch, and yaw components) and RPM indicators to display reaction wheel speed. Unfortunately, further
-                        artistic liberty was heavily limited by the design constraints of Simulink.</p><br>
-                    <img src="../website/resources/pics/interface.png" width=100% class="center" style="border-radius: 0.5rem;">
-                    <figcaption class="caption">User interface for the spacecraft flight simulator</figcaption>
-                    <h2 class="project_body_subheader">
-                        Functionality
-                    </h2>
-                    <p>The user interface allows operators to specify a combination of thruster activations and reaction wheel speeds which will be commanded to the testbed at a button press. The dashboard also updates with realtime inertial and attitude
-                        telemetry, reaction wheel speeds, and other system status metrics. There are also failsafe functions that command the onboard flight computer to execute bash scripts that shutdown or reboot the testbed.</p>
-                    <img src="../website/resources/pics/scope.png" width=70% class="center" style="border-radius: 0.5rem;">
-                    <figcaption class="caption">Realtime telemetry visualization</figcaption>
-                </div>
-                <button class="collapsible">FLIGHT COMPUTER</button>
-                <div class="content">
-                    <br>
-                    <p>The FLIGHT COMPUTER retains the following roles:
-                        <ul>
-                            <li>Receives and interprets commands sent wirelessly to the testbed by an operator</li>
-                            <li>Sends instructions to the REACTION WHEEL CONTROLLER and THRUSTER CONTROLLER to execute operator commands</li>
-                            <li>Receives realtime telemetry from the inertial measurement unit (IMU) and pressure sensor</li>
-                            <li>Detects pulse information from three optical tachometers and calculates corresponding reaction wheel speed readings</li>
-                            <li>Transmits inertial telemetry, reaction wheel speeds, and pressure readings back to the operator</ul>
-                        <img src="../website/resources/pics/flightcomputer.jpg" width=80% class="center" style="border-radius: 0.5rem;">
-                        <figcaption class="caption">Raspberry Pi flight computer with XBee adapter shield for wireless bidirectional communication</figcaption>
-                        <br>
-                        <h2 class="project_body_subheader"> Switching from Arduino Due to Raspberry Pi </h2> Previous teams' designs called for an Arduino Due to act as the flight computer. However, after compiling a requirement set for the flight computer, I realized that an Arduino Due
-                        is not sufficient to realize the requirement set and instead opted for a Raspberry Pi 3B+. This switch enabled me to take advantage of a number of new capabilities including multithreading (enabling multiple processes to run concurrently,
-                        a desired trait for realtime hardware applications), increased clock speed for faster code execution, and the benefit of an entire Linux-based embedded operating system fully contained on the testbed. Each Arduino microcontroller
-                        acting as a peripheral device was plugged directly into the Raspberry Pi USB hub and would achieve bidirectional communication with the flight computer over a UART bus.
-                        <h2 class="project_body_subheader"> <br>Transmitting Telemetry</h2> A primary task of the flight computer is to relay telemetry from the onboard IMU sensor back to the operator. The flight computer achieves this by reading serial data from the IMU reader microcontroller
-                        to gather inertial telemetry and using a FIFO to collect reaction wheel speed calculated by another Python script running in the background. The program then compiles an ASCII string and transmits it to the operator over the local
-                        XBee link.
-                        <img src="../website/resources/pics/telemetry.png" width=100% class="center" style="border-radius: 0.5rem;">
-                        <figcaption class="caption">Transmitted strings containing wheel speeds and inertial telemetry</figcaption>Each line carries information about the speed of each reaction wheel, and accelerometer, gyroscope, and magnetometer readings in three axes from the
-                        IMU sensor. This serial stream is captured and parsed in Simulink where the resulting information is displayed to the operator in a readable manner.
-                        <h2 class="project_body_subheader"> <br>Persistent Serial Device Identification </h2> Each COM device had to be configured in the Raspbian kernel to always be identified with a constant name. However, the operating system randomly assigns names (e.g., /dev/tty0)
-                        depending on which Arduino was recognized first. I introduced u-dev rules to capture uniquely identifying id values for each connected COM device and used SYMLINKs to create an identifying name (e.g., /dev/imu_reader, /dev/motor_controller,
-                        etc.) that uniquely and persistently identifies each microcontroller.</p>
-                </div>
-                <button class="collapsible">CONTROLLING THE THRUSTERS</button>
-                <div class="content">
-                    <p>
-                        <br>The six solenoid valves controlling each of the six thrust outlets are each connected to a logic-level MOSFET driven by an Arduino microcontroller. Code on the microcontroller limits each thrust duration to 200 ms.</p>
-                    <img src="../website/resources/pics/valves.jpg" width=80% class="center" style="border-radius: 0.5rem;">
-                    <figcaption class="caption">MOSFET drivers to control thrusters</figcaption>The microcontroller controlling the propulsion subsystem is also connected to a pressure transducer which monitors the air pressure within the manifold that channels air from the tanks
-                    to the thruster outlets. If the pressure dips below a certain threshold, an LED signalling that the tanks need to be refilled. The warning light turns off when the air pressure returns to its nominal range.
-                    <img src="../website/resources/pics/transducer.jpg" width=80% class="center" style="border-radius: 0.5rem;">
-                    <figcaption class="caption">Transducer in-line with manifold</figcaption>
-                    <img src="../website/resources/pics/tanks.jpg" width=80% class="center">
-                    <figcaption class="caption">Onboard compressed air tanks</figcaption>
-                </div>
-                <button class="collapsible">DRIVING THE REACTION WHEELS</button>
-                <div class="content">
-                    <p>
-                        <br>The testbed contains three high-torque DC pancake motors that act as reaction wheels. The reaction wheels are affixed orthogonally to each other to effect torques around three axes.
-                        <img src="../website/resources/pics/reactionwheels.jpg" width=80% class="center" style="border-radius: 0.5rem;">
-                        <figcaption class="caption">Reaction wheels and optical tachometers</figcaption>An optical tachometer was carefully aimed at the spindle of each motor (which held a piece of reflective tape) to count revolutions. The optical tachometers were connected electrically
-                        to the flight computer's GPIO, where a pulse resulting from one revolution would trigger an interrupt service routine that updates an RPM value and sends it to the operator. Additionally, each reaction wheel was driven by a motor
-                        driver that actively monitors temperature, voltage, and current and cuts power to the load when a prespecified shutoff event is detected.
-                        <br>
-                        <img src="../website/resources/pics/drivers.jpg" width=80% class="center" style="border-radius: 0.5rem;">
-                        <figcaption class="caption">Motor drivers and Raspberry Pi flight computer</figcaption>Constraints were also placed on the brake ability of the reaction wheels (i.e., limits for acceleration/deceleration were put in place) to prevent large, sudden current
-                        draws. The reaction wheel direction and speed are both controlled by an 8-bit integer; a value of '128' sent by the operator to a reaction wheel on the testbed corresponds to zero rotation, '255' to full-speed (3600 RPM) clockwise,
-                        and '0' to full-speed counter-clockwise.</p>
-                </div>
-                <hr>
-                <h1 class="project_body_header">
-                    Future Work
-                </h1>
-                <h2 class="project_body_subheader">
-                    Autonomous (Closed-Loop) Control
-                </h2> Having built and successfully demonstrated open-loop control on the testbed to faculty members in the Sibley School of Mechanical and Aerospace Engineering, students from Professor Mason Peck's graduate spaceflight course were tasked
-                with creating a closed-loop attitude control algorithm in simulation and deploying the controller to our hardware testbed for verification. The Simulink control program may be simplified to a single subsystem that effectively acts as a
-                plant in a closed-loop control system.
-                <br>
-                <br>
-                <img src="../website/resources/pics/block.png" width=80% class="center" style="border-radius: 0.5rem;">
-                <figcaption class="caption">User interface as control plant</figcaption>A controller block may interface with the plant to achieve closed-loop and hardware-in-the-loop control. The controller block should consist of nine outputs: six valve state instructions (0 or
-                1) and three reaction wheel speed instructions (0-255). The block outputs accelerometer, gyroscope, magnetometer, and reaction wheel speed data in all three axes.
-                <h2 class="project_body_subheader">
-                    <br>Custom PCB Integration
-                </h2> While fully operational, the electrical hookups on the testbed (i.e. jumper wires and solderless breadboards) are consistent with those of a preliminary prototyping phase. A refined design consists of a single PCB that integrates
-                all the wiring and electronics with bold, clear silkscreen labeling.
-                <hr>
-                <h1 class="project_body_header">Our Team </h1>
-                <img src="../website/resources/pics/ssds_team.jpg" width=100% class="center" style="border-radius: 0.5rem;">
-                <figcaption class="caption">Testbed Team (left to right) — Bettina Aristorenas (Team Lead, Mechanical Engineer), Paolo Arguelles (Electrical & Computer Engineer), and Zach Tretler (Mechanical Engineer)</figcaption>
-                <hr>
-                <div class="footer">
-                    <center>© 2019 - 2023 by Paolo Arguelles.
-                        <br>All rights reserved.
-                </div>
-                <script>
-                    var coll = document.getElementsByClassName("collapsible");
-                    var i;
+    <div class="tab-content" id="">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="margin-handler row row-cols-1 row-cols-lg-3 row-cols-xl-4">
 
-                    for (i = 0; i < coll.length; i++) {
-                        coll[i].addEventListener("click", function() {
-                            this.classList.toggle("active");
-                            var content = this.nextElementSibling;
-                            if (content.style.maxHeight) {
-                                content.style.maxHeight = null;
-                            } else {
-                                content.style.maxHeight = content.scrollHeight + "px";
-                            }
-                        });
-                    }
-                </script>
+                <div class="col mb-4">
+                    <!-- Card -->
+                    <div class="mask rgba-white-slight"></div>
+
+                    <div style="background-image:url(&quot;../website/resources/pics/mems-min.jpeg&quot;);" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="Final_MENG_Report-2 (1).pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A surface acoustic wave gyroscope for high-velocity ballistics, funded by the DARPA High Operational Rate and Shock Environment SAW Inertial Sensors (HORSES) program </div>
+                            </div>
+                            <div class="item_topic">SPACE AND DEFENSE</div>
+                            <h1 class="item_title">Acoustic Wave Gyroscope for Missile Guidance (DARPA)</h1>
+                        </a>
+                    </div>
+                    <!-- Card -->
+                </div>
+
+
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/project_card_bg_mems.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="../tessellated_microstructures.pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">Conceptual futuristic tessellation-based MEMS for biomedical applications.
+                                </div>
+                            </div>
+                            <div class="item_topic">MICROSYSTEMS</div>
+                            <h1 class="item_title">Tessellated Microstructures for BioMEMS Devices</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/project_card_bg_acc-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="ECE4320_Project1Paper (1).pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">COMSOL Multiphysics modeling software was used to design and simulate the operation of a two-axis MEMS accelerometer, much like those found in today's smartphones.
+                                </div>
+                            </div>
+                            <div class="item_topic">MICROSYSTEMS</div>
+                            <h1 class="item_title">Designing and Analyzing a Two-Axis Accelerometer</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <!-- Card -->
+                    <div style="background-image:url(&quot;../website/resources/pics/crops-min.png&quot;); " class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://gcgh.grandchallenges.org/grant/massively-deployed-ghz-ultrasonic-imagers-pest-detection" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc"> Project details are proprietary and confidential to Geegah LLC, but here's a profile of our technology from the Gates Foundation.
+                                </div>
+                            </div>
+                            <div class="item_topic">SMART AGRICULTURE</div>
+                            <h1 class="item_title">Massively Deployed Ultrasonic Imagers for Smart Agriculture</h1>
+                        </a>
+                    </div>
+                    <!-- Card -->
+                </div>
             </div>
         </div>
-    </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+            <div class="margin-handler row row-cols-1 row-cols-lg-3 row-cols-xl-4">
+
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/b4dl-logo.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" href="https://bridges4.org" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">I started a nonprofit during the pandemic to help bridge the digital divide for students in low-income communities both at home and abroad.
+                                </div>
+                            </div>
+                            <div class="item_topic">NONPROFIT</div>
+                            <h1 class="item_title">Bridges for Digital Literacy Nonprofit</h1>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/passportable-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" href="projects-passportable.htm" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A travel planning platform that makes it easy for anyone to create and share trip itineraries</div>
+                            </div>
+                            <div class="item_topic">WEB APP</div>
+                            <h1 class="item_title">Passportable</h1>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/smartcookies_logo.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">An subscription service that provides affordable educational kits that teaches 
+                                </div>
+                            </div>
+                            <div class="item_topic">EDUCATION
+
+                            </div>
+                            <h1 class="item_title">Smart Cookies Education</h1>
+                        </a>
+                    </div>
+                </div> -->
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/IMG_0120.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="projects-smartcookies.htm" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A distributed, wireless, ad hoc mesh sensor network and embedded web app to accelerate scientific research and promote accessible STEM education in developing communities
+                                </div>
+                            </div>
+                            <div class="item_topic">INTERNET OF THINGS
+
+                            </div>
+                            <h1 class="item_title">Distributed Wireless Sensor Ecosystem</h1>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/sunspot-1.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" href="https://www.bridges4.org/post/a-solar-powered-library-hotspot-for-no-internet-areas" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">Bringing millions of libraries worth of educational resources to rural schools without an Internet connection
+                                </div>
+                            </div>
+                            <div class="item_topic">SERVICE</div>
+                            <h1 class="item_title">Sunspot: A Solar-Powered Library Hotspot</h1>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/US_Navy_110517-N-TU221-793_Hospital_Corpsman_3rd_Class_Jonathan_Martin_reads_a_book_to_orphans_at_Hospicio_De_San_Jose_Orphanage-min.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" href="https://www.bridges4.org/covid-19-fund" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">
+                                    <p>A COVID-19 relief fund for orphans, abandoned children, migrants, refugees, and the elderly at <i>Hospicio de San Jose,</i> an orphanage in Manila, Philippines</p>
+                                </div>
+                            </div>
+                            <div class="item_topic">COVID-19 PANDEMIC</div>
+                            <h1 class="item_title">COVID-19 Relief for Orphans in the Philippines</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/engineering_nbk-min.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">By engineers, for engineers — this is the engineering notebook you wish you had in school
+                                </div>
+                            </div>
+                            <div class="item_topic">PROJECT MANAGEMENT</div>
+                            <h1 class="item_title">Engineering Notebook</h1>
+                        </a>
+                    </div>
+                </div>
+                <!-- <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/vids/Screen Shot 2020-12-09 at 5.42.35 PM.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">By engineers, for engineers — this is the engineering notebook you wish you had in school
+                                </div>
+                            </div>
+                            <div class="item_topic">SCIENCE PODCAST</div>
+                            <h1 class="item_title">Cafe Symposium Podcast</h1>
+                        </a>
+                    </div>
+                </div> -->
+
+                <!-- <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/passportable.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A map-based, drag-and-drop travel planning platform
+
+                                </div>
+                            </div>
+                            <div class="item_topic">PODCAST</div>
+                            <h1 class="item_title">Policy Lab</h1>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;../website/resources/pics/passportable.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A map-based, drag-and-drop travel planning platform
+
+                                </div>
+                            </div>
+                            <div class="item_topic">BOOK</div>
+                            <h1 class="item_title">American Ingenuity</h1>
+                        </a>
+                    </div>
+                </div> -->
+
+
+
+            </div>
+
+        </div>
     </div>
 
+
+    <hr>
+
+    <div class="footer">
+        <center>© 2021 by Paolo Arguelles.
+            <br>All rights reserved.
+    </div>
+
+    <script src="../website/projects_files/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="../website/projects_files/webflow.147763e2a.js" type="text/javascript"></script>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Slick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Custom -->
+    <script src="../website/scripts.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').slick({
+                slidesToShow: 3,
+                dots: true,
+                centerMode: true,
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //Preloader
+            preloaderFadeOutTime = 500;
+
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+        });
+    </script>
 </body>
 
 </html>
