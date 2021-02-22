@@ -770,7 +770,7 @@ a.description:hover {
 @media (max-width: 800px) {
     .margin-handler {
         margin: 0px !important;
-        margin-top: 0;
+        margin-top: 15px !important;
     }
     .link-block:hover {
         background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.0), #000);
