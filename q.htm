@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<!-- ==================================================================
+This site was built and developed by Paolo Arguelles and hosted with GitHub Pages.
+pa394@cornell.edu
+================================================================== -->
+
+<html data-wf-domain="paolos-fabulous-project-e74cab96af4b9fc.webflow.io" data-wf-page="5cfd93a271000a535c533f97" data-wf-site="5cfd93a271000a4eb8533f96" data-wf-status="1" class="w-mod-js w-mod-ix wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-inconsolata-n4-active wf-inconsolata-n7-active wf-oswald-n2-active wf-oswald-n3-active wf-oswald-n4-active wf-oswald-n5-active wf-oswald-n6-active wf-oswald-n7-active wf-robotomono-n4-active wf-roboto-n4-active wf-active"
+    style="background-color: #434343;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Human-Swarm Interaction | Paolo Arguelles</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="./website/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./website/fonts.css" media="all">
+    <style>
+        /* Style the header with a grey background and some padding */
+        
+        .d {
+            color: white;
+        }
+        
+        .project_image {
+            background-color: #ff644e;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23434343' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .sidenav a {
+            color: white;
+        }
+        
+        .myHeader {
+            color: white
+        }
+        
+        .sidenav a:hover {
+            transition: 200ms;
+            color: #FF644E;
+        }
+        
+        .header a:hover {
+            color: #FF644E;
+        }
+        
+        .myHeader a:hover {
+            color: #FF644E;
+        }
+        
+        .header a {
+            color: white;
+        }
+        
+        .collapsible {
+            color: white;
+            background-color: black
+        }
+        
+        .active,
+        .collapsible:hover {
+            transition: 200ms;
+            color: #FF644E;
+        }
+        
+        .collapsible:after {
+            content: '+';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            color: inherit;
+        }
+        
+        .active:after {
+            content: "−";
+            color: #FF644E;
+        }
+        
+        .center {
+            width: 80%;
+        }
+        
+        @media screen and (max-width: 800px) {
+            .bar1,
+            .bar2,
+            .bar3 {
+                width: 35px;
+                height: 1px;
+                background-color: white;
+                margin: 8px 0;
+                transition: 0.2s;
+            }
+            .center {
+                width: 100%;
+            }
+        }
+        
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body class="body" style="background-color: #434343;">
+    <div class="header" style="background-color: #434343;"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+        <div class="header-right"> <a class=myPages href="./projects.htm">PROJECTS</a>
+            <a class=myPages href="./bio.htm">ABOUT ME</a>
+            <a class=myPages href="./speech.htm">SPEECH</a>
+            <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+        </div>
+        <div id="myNav" class="overlay" style="background-color: #434343;">
+            <div class="Absolute-Center">
+                <div class="myPages"> <a class=myPages href="./projects.htm">PROJECTS</a>
+                    <a class=myPages href="./bio.htm">ABOUT ME</a>
+                    <a class=myPages href="./speech.htm">SPEECH</a>
+                    <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+                </div>
+            </div>
+        </div>
+        <div id="toggle" class="toggle-container" style="cursor:pointer;" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <script>
+            function openNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "100%";
+                document.getElementById("toggle").onclick = closeNav;
+            }
+
+            function closeNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "0%";
+                document.getElementById("toggle").onclick = openNav;
+
+            }
+        </script>
+    </div>
+    <div class="project_image"></div>
+    <div class="sidenav" style="color: white; background-color: #434343;"> <a href="./projects.htm" text-align: "center"> ‹ Back to Projects </a>
+
+        <br>Supplemental Material <a href="https://ri.cmu.edu/pub_files/2013/6/Paper_JHRI.pdf">Kolling et al. (2012)</a>
+        <a href="http://motion.me.ucsb.edu/talks/2009i-GeomOptimContrl-Coordination-StP-10jul09-2x2.pdf">Bullo et al.
+            (2009)</a>
+        <a href="https://arxiv.org/abs/1808.06211">Hussein and Abbass (2018)</a>
+    </div>
+    <div class="project_box" style="background-color: black">
+        <div class="project_contain">
+            <div class="project_topic" style="color: #ff644e;">ROBOTICS</div>
+            <div class="project_title" style="color: white;">
+                The Case for Human-Swarm Interaction
+            </div>
+
+            <div class="project_description" style="background-color: black;">This piece on "human-swarm interaction" was originally presented at a graduate seminar on bio-inspired multi-agent coordination facilitated by Kirstin Petersen. Animations and visualizations were originally created for the slide presentation,
+                but have been adapted for the web here.</div>
+            <hr>
+            <div class="project_body" style="color: #808080;">
+
+                <br><br> The term <i>robot</i>, originally invented for a play in 1920, was derived from the Slavic word
+                <i>robota</i>, which literally means <i>drudgery</i> or <i>forced labor.</i> Today, 100 years after the word robot first came into our vocabulary, although the physical form of robots has definitely evolved, the relationship between humans
+                and robots in the real world has largely been the same, insofar as robots aim to support our endeavors by automating repetitive low-level tasks and acting as physical extensions of ourselves.
+
+                <video preload="yes" autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/robota.m4v" type="video/mp4" />
+                </video> Human-robot interaction is more or less a one-to-one relationship. We do something and the robot does something in response. But in interacting with single robots, we can only do so much. We are, of course, no
+                stranger to the immense power of the swarm. We know that swarms possess power in numbers. And because of their distributed, often decentralized nature, swarms afford us much further reach in tasks such as urban search and rescue. It makes
+                sense that the conversation in recent years has shifted from
+                <i>human-robot interaction</i> to <i>human-swarm interaction (HSI).</i>
+                <br><br> It seems straightforward to project ourselves and our intentions onto single robots. What is arguably less apparent is how to make swarms work for and with us. Because any changes made at the local level are bound to have some
+                emergent global effect, the ways by which we impose these swarm control methods matter and make a big difference.
+                <br>
+                <h1 class="project_body_header" style="color: white"><i>Kolling et al.</i></h1>
+                <img src="./website/resources/pics/kolling_paper.png" class="center">
+                <br><br> In their paper, Kolling and others describe two ways in which us humans can interact with swarms in a foraging mission. To explore HSI, the authors created a virtual swarm and implemented it on a virtual testbed. They then asked
+                32 students to play a game and use the swarm to accomplish a mission.
+
+                <h1 class="project_body_header" style="color: white">The Mission</h1>
+
+                <video preload="yes" controls autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/mission.m4v" type="video/mp4" />
+                </video>
+
+                <h1 class="project_body_header" style="color: white">Control Methods</h1>
+
+                There are two kinds of control methods with which human operators are able to interact with certain swarm agents to carry out some prescribed action.
+                <video preload="yes" autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/control_modes.m4v" type="video/mp4" />
+                </video> The first kind is called <i>intermittent control,</i> where a human operator performs a one-time assignment of some algorithm onto a group of agents of their choosing. This kind of control is persistent through
+                time because the agents maintain their assigned mode as they propagate throughout the swarm. In the testbed this is realized by <i>selection control;</i> the authors use a selection tool to select robots.
+                <br><br> The second kind is called <i>environmental control.</i> Unlike the active influence of intermittent control, environmental control controls agents by changing their environment, exerting passive influence on nearby agents. This
+                is realized by <i>beacon control,</i> where users can place beacons and set a radius of influence. Simple leader-predator models can be simulated by beacon control. When you program the beacon to attract agents, it’s a leader. When you
+                program the beacon to repel agents, it’s a predator.
+
+
+                <h1 class="project_body_header" style="color: white">Human Control Algorithms</h1>
+
+                The authors made six algorithms, or modes, available to the human operators. Using either selection or beacon control, the human operators can impose these modes on a subset of the swarm.
+
+                <video preload="yes" autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/human_modes.m4v" type="video/mp4" />
+                </video> Note that the agents are set to move randomly (see <i>A-1. Random Motion</i>) by default. The
+                <i>Deploy</i> and <i>Rendezvous</i> modes require a bit more explanation.
+
+                <button class="collapsible">Deploy Mode</button>
+                <div class="content">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
+                        <source src="./website/resources/vids/deploy.m4v" type="video/mp4" />
+                    </video>
+
+                    <br><br> The purpose of the deploy algorithm is to distribute agents uniformly throughout a space. It does this by iteratively calculating Voronoi tessellations with each agent’s current position as the generating point for each facet.
+                    This algorithm will converge to what’s called a centroidal Voronoi tessellation over time.
+
+                </div>
+                <button class="collapsible">Rendezvous Mode</button>
+                <div class="content">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
+                        <source src="./website/resources/vids/rendezvous.m4v" type="video/mp4" />
+                    </video> In the rendezvous algorithm, agents mutually agree on a meeting place. And they must agree on one such that they don’t break line-of-sight communication links. One way to accomplish this is by using the
+                    circumcenter algorithm, where each agent computes the circumcenter of itself and its neighbors. The circumcenter is defined as the smallest circle containing all agents. By iterating this algorithm, communication links will be maintained
+                    and agents will eventually converge to the center of that circle.
+                </div>
+                <br>
+                <h1 class="project_body_header" style="color: white">Autonomous Swarm Algorithms</h1>
+                The authors also created five autonomous swarm algorithms to compare with the performance of human operators.
+                <button class="collapsible">A-1. Random Motion</button>
+                <div class="content">
+                    <img src="./website/resources/pics/a1.png" class="center"> The simplest autonomous algorithm is based on random motion. Recall that this is the default mode for the agents in human operator mode.
+                </div>
+                <button class="collapsible">A-2. Random Motion + Seek</button>
+                <div class="content">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
+                        <source src="./website/resources/vids/a2.m4v" type="video/mp4" />
+                    </video> A second autonomous algorithm uses random motion, but overrides this random motion when it encounters an information object. When an information object invades its sensing radius, it will stop what it’s
+                    doing, and collect information from that object. This algorithm may be seen as a comparable baseline to human performance.
+                </div>
+                <button class="collapsible">A-3. Potential Field</button>
+                <div class="content">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
+                        <source src="./website/resources/vids/a3.m4v" type="video/mp4" />
+                    </video>
+                </div>
+                <button class="collapsible">A-4. Potential Field + Seek</button>
+                <div class="content">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
+                        <source src="./website/resources/vids/a4.m4v" type="video/mp4" />
+                    </video> A variant of the "A-3. Potential Field" algorithm drops the attracting term due to information objects, and instead executes a special case when it encounters an information object. Upon detecting an information
+                    object, the agent will send out a message that will attract up to 10 nearby robots.
+                </div>
+                <button class="collapsible">A-5. Bio-Inspired Pheremones</button>
+                <div class="content">
+                    <video preload="yes" autoplay muted loop playsinline class="center">
+                        <source src="./website/resources/vids/a5.m4v" type="video/mp4" />
+                    </video> This fifth one is interesting. We studied pheromones in the context of establishing a trail to collect stuff, and bring them back to a base. But in this case, the agents don’t have to return to a base,
+                    they simply transmit the stuff they collect. Here, they use pheromones to explore obstacles more effectively. Pheromones are not used as an attractant, rather, as a deterrent. Upon encountering an obstacle, an agent hugs the boundary
+                    to the right while depositing pheromones. So when another agent encounters the same obstacle, it takes the road less travelled by. The pheromone trails decay after around 8 seconds.
+                </div>
+
+                <br> Human operator and autonomous swarm trials were carried out for swarms of varying size (50 to 200 robots) in five maps.
+                <img src="./website/resources/pics/maps.png" class="center">
+
+                <h1 class="project_body_header" style="color: white">Test Results</h1>
+
+                <h2 class="project_body_subheader" style="color: white">Scalability</h2>
+                <video preload="yes" autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/scale.m4v" type="video/mp4" />
+                </video> Taking a look at scalability, we see that the autonomous algorithms, though their performances varied, largely remained robust to swarm size. Comparing the two kinds of human-swarm interaction, we see that <i>selection control performs better in
+                    all scenarios,</i> and <i>scales better than beacon control.</i> This is contrary to the authors’ original hypothesis that beacon control will be better. After reviewing the command logs, the authors came to the following conclusion.
+
+                <video preload="yes" autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/quote.m4v" type="video/mp4" />
+                </video> Beacon control should be more scalable in theory. So why isn’t it? The reason cited in the paper is that beacon control “requires more operator training,” than selection control. <br><br>
+
+                <h2 class="project_body_subheader" style="color: white">Map Complexity</h2>
+                The next thing we’re going to look at is map complexity. How do the different kinds of human interaction and autonomous swarms perform in more complex environments?
+                <br><br> For humans, not so good. Humans are outperformed by autonomous swarms across the board. For the simpler maps, it is actually better for the human to not do anything at all then to intervene. Now to be fair, human operators did
+                beat out 3 of the 5 autonomous swarms in the complex maps, but two of the autonomous algorithms, the ones based on the potential fields, consistently performed far better than human operators in complex environments.
+
+                <video preload="yes" autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/complexity.m4v" type="video/mp4" />
+                </video> To recap, we found that of the two methods for human operation, selection control scales better than beacon control. And human operators perform worse than autonomous agents. The case for human-swarm interaction
+                is not looking that good. Until we look at that last chart again, very closely.
+                <br><br>
+
+                <h1 class="project_body_header" style="color: white">Making the Case for HSI</h1>
+
+                Do you notice something interesting going on with the human operators? Look how little our performance varies in complex environments. These results suggest that although we are outperformed by the autonomous algorithms, <i>we adapt much better to increasingly complex environments. </i>
+                <br><br> This fact represents the foremost case for involving humans in autonomous swarms: our capacity for situational awareness, our ability to adapt in the face of complexity and unforeseen errors. In fact, citing the Kolling paper,
+                other studies recommend not placing humans in the role of operators, as was done here, but in a more supervisory role.
+                <br><br> This particular study explored humans fulfilling the role of operator. But when humans and autonomous swarms are working together at a low level, it may be tempting to punch up the autonomy of the swarm component. Initially this
+                would make sense, right? After all, more autonomy lightens the load on humans. But a recent 2018 paper by Hussein and Abbass titled “Mixed Initiative Systems for Human-Swarm Interaction” warns against this:
+
+                <video preload="yes" autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/quote2.m4v" type="video/mp4" />
+                </video>
+
+                <h2 class="project_body_subheader" style="color: white">Flexible Autonomy</h2>
+                What does all this teach us about human-swarm interaction? Designing an effective human-interactive swarm, especially one suited to foraging or search-and-rescue missions, has to do with assigning the human a more supervisory role at a higher level. In
+                addition to humans as supervisors, the Kolling paper demonstrates the merits of having human operators-in-the-loop to guide low-level autonomous agents. In the latter case, the performance of the system hinges on finding the right level
+                of autonomy to supplement human situational awareness. Too little and the human won’t physically be able to carry out the mission. Too much and the human loses their situational awareness about the mission.
+                <br><br> Even if we do find the right measure of autonomy, even this might not be enough, because as long as the level of autonomy is fixed, studies have shown that this is associated with complacency and the performance of the system
+                may deteriorate with a human-in-the-loop.
+                <video preload="yes" autoplay muted loop playsinline class="center">
+                    <source src="./website/resources/vids/fixed.m4v" type="video/mp4" />
+                </video> There is an elegant and robust solution to this problem. It involves incorporating flexible autonomy by creating a closed-loop feedback control system that modulates the autonomy parameters of a swarm depending
+                on a set of indicators. The Hussein and Abbass paper provides a very rough example of what such a system might look like.
+                <br>
+
+                <img src="./website/resources/pics/control_loop.png" class="center">
+                <br> Exactly what those indicators are remains to be seen. They may include metrics on swarm performance and even heart rate and EEG sensors to determine whether the human operator is overwhelmed or complacent. This is an exciting, open
+                question being investigated in HSI.
+
+                <br><br> I want to end on this note of flexible autonomy because that seems to be where the field is at today. Again, this is all emergent research so I don’t believe there has yet been experimental implementation of this idea of flexible
+                autonomy. From what I’ve seen, the original scope of the Kolling paper seems to be one of the most comprehensive experimental testbeds to do with human-swarm interaction to date. Nevertheless, this idea of flexible autonomy seems to me
+                like a worthwhile extension to the Kolling paper, as well as other current models of human-interactive swarms.
+                <br><br>
+                <img src="./website/resources/pics/not_addressed.png" class="center">
+
+                <hr>
+                <div class="footer" style="color: grey;">
+                    <center>© 2021 by Paolo Arguelles.
+                        <br>All rights reserved.
+                </div>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
