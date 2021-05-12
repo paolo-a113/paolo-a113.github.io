@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<!-- ==================================================================
+This site was created by Paolo Arguelles and hosted with GitHub Pages.
+pa394@cornell.edu
+
+COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
+================================================================== -->
+
+<html data-wf-domain="paolos-fabulous-project-e74cab96af4b9fc.webflow.io" data-wf-page="5cfd93a271000a535c533f97" data-wf-site="5cfd93a271000a4eb8533f96" data-wf-status="1" class="w-mod-js w-mod-ix wf-lato-n1-active wf-lato-i1-active wf-lato-n3-active wf-lato-i3-active wf-lato-n4-active wf-lato-i4-active wf-lato-n7-active wf-lato-i7-active wf-lato-n9-active wf-lato-i9-active wf-ptserif-n4-active wf-ptserif-i4-active wf-ptserif-n7-active wf-ptserif-i7-active wf-inconsolata-n4-active wf-inconsolata-n7-active wf-oswald-n2-active wf-oswald-n3-active wf-oswald-n4-active wf-oswald-n5-active wf-oswald-n6-active wf-oswald-n7-active wf-robotomono-n4-active wf-roboto-n4-active wf-active">
+
+<head>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Smart Cookies | Paolo Arguelles</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="./website/style.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="./website/fonts.css" media="all">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <style>
+        /* Style the header with a grey background and some padding */
+        
+        .project_image {
+            background-image: url("./website/resources/pics/sprout2.png");
+            background-position: bottom left;
+        }
+        
+        .active,
+        .collapsible:hover {
+            transition: 200ms;
+            color: #DE5021;
+        }
+        
+        .collapsible:after {
+            content: '+';
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+            color: inherit;
+        }
+        
+        .active:after {
+            content: "−";
+            color: #DE5021;
+        }
+        
+        .content {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 300ms;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body class="body" style="background-color: #e7e7e7;">
+    <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+        <div class="header-right"> <a class=myPages href="./index.htm">Projects</a>
+            <a class=myPages href="./bio.htm">About</a>
+            <!-- <a class=myPages href="./speech.htm">Speech</a> -->
+            <a class=myPages href="./PaoloArguelles_Resume.pdf">Resume</a>
+        </div>
+        <div id="myNav" class="overlay">
+            <div class="Absolute-Center">
+                <div class="myPages"> <a class=myPages href="./index.htm">PROJECTS</a>
+                    <a class=myPages href="./bio.htm">ABOUT</a>
+                    <!-- <a class=myPages href="./speech.htm">SPEECH</a> -->
+                    <a class=myPages href="./PaoloArguelles_Resume.pdf">RESUME</a>
+                </div>
+            </div>
+        </div>
+        <div id="toggle" class="toggle-container" style="cursor:pointer" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <script>
+            function openNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "100%";
+                document.getElementById("toggle").onclick = closeNav;
+            }
+
+            function closeNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "0%";
+                document.getElementById("toggle").onclick = openNav;
+
+            }
+        </script>
+    </div>
+    <div class="project_image"></div>
+    <div class="sidenav"> <a href="./index.htm" text-align: "center"> ‹ Back to Projects </a>
+        <br>Project Name
+        <d>Sprout</d>
+
+        <br>Parent Project
+        <br> <a href="">Distributed Wireless Sensor Ecosystem
+            <br></a>
+    </div>
+
+    <div class="project_box">
+        <div class="project_contain">
+            <div class="project_topic">INTERNET OF THINGS</div>
+            <div class="project_title">Sprout</div>
+            <div class="project_description">A wireless sensor node for smart agriculture compatible with the Distributed Wireless Sensor Ecosystem
+            </div>
+            <hr>
+            <div class="project_body">
+                <!-- <img src="./website/resources/pics/smart_cookie_logo.png" width=30% class="center"> -->
+
+                <h1 class="project_body_header">
+                    Overview
+                </h1>
+                from an integrated capacitive soil moisture sensor, to a load sharing circuit, complete with automatic over-the-air firmware updates.
+
+                <img src="./website/resources/pics/sprout_cover.png" width=60% class="center">
+                <figcaption class="caption">New prototype sensor nodes with recharging circuitry and housing
+                </figcaption>
+
+                <h1 class="project_body_header">
+                    <hr> Engineering
+                </h1>
+                <h2 class="project_body_subheader"> Automatic OTA Firmware Updates
+                </h2>
+                Sprout automatically updates its firmware when it connects to the Internet. This is accomplished through a remote Amazon EC2 instance running a Node-RED application.
+                <!-- <img src="./website/resources/pics/pcbevolution.png" width=70% class="center">
+                <figcaption class="caption">Evolution of PCB prototype
+                </figcaption> -->
+                <h2 class="project_body_subheader">
+                    <br>Persistent Configuration
+                </h2>
+                Users can change the settings of any node in the mesh network through a web app. This is accomplished with a back-and-forth exchange of JSON packets, addressed to any or all of the connected nodes. Any configurations that need to be preserved for the
+                next startup (such as node names) are saved to each node's flash memory and are recalled from memory upon boot.
+                <br>
+                <br>
+                <img src="./website/resources/pics/smart_cookie-2.jpg" width=70% class="center">
+                <figcaption class="caption">Improved web app prototype (stored on Smart Cookie onboard memory)
+                </figcaption>
+                <h2 class="project_body_subheader">
+                    <br>Capacitive Soil Moisture Sensing
+                </h2>
+                Capacitive moisture sensing is achieved with a 555 timer, R-C low-pass filter (where capacitance C is created by the sensing terminals), peak detector (created with a )
+                <br>
+                <br>
+                <img src="./website/resources/pics/sprout2.png" width=90% class="center">
+                <figcaption class="caption">Improved web app prototype (stored on Smart Cookie onboard memory)
+                </figcaption>
+
+
+
+                <!-- <h2 class="project_body_subheader">
+                    <br>Current Challenges
+                </h2>
+                In current working prototypes, at a 1 Hz refresh rate.
+ -->
+
+
+                <hr>
+                <div class="footer">
+                    <center>© 2019 - 2023 by Paolo Arguelles.
+                        <br>All rights reserved.
+                </div>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+</body>
+
+</html>
