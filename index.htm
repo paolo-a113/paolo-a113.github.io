@@ -193,8 +193,6 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
 
     </div>
 
-
-
     <div class="row " style="margin: 0px;">
         <div class="col tab-wrapper">
             <ul class="nav nav-pills  mb-3 nav-justified" id="myTab" role="tablist">
@@ -632,7 +630,7 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <script>
-        $(document).ready(function() {
+        window.onload = function() {
             //Preloader
             preloaderFadeOutTime = 500;
 
@@ -641,7 +639,7 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                 preloader.fadeOut(preloaderFadeOutTime);
             }
             hidePreloader();
-        });
+        };
     </script>
 </body>
 
