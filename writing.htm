@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- Try this one Julius:
+XF'MM NFFU BHBJO EPO'U LOPX XIFSF EPO'U LOPX XIFO
+CVU J LOPX XF'MM NFFU BHBJO TPNF TVOOZ EBZ ... -->
+
+<!-- ==================================================================
+This site was created by Paolo Arguelles and hosted with GitHub Pages.
+pa394@cornell.edu
+
+COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
+================================================================== -->
+
+<html xmlns:og="http://opengraphprotocol.org/schema/">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <meta data-rh="true" property="og:type" content="website">
+    <meta data-rh="true" property="og:title" content="Projects and Research Page">
+    <meta data-rh="true" property="og:image" content="./website/resources/pics/projects-thumbnail.png">
+    <meta name="description" property="og:description" content=" ">
+
+
+    <title>Projects | Paolo Arguelles</title>
+
+    <link href="./website/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./website/fonts.css" media="all">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <style>
+        .nav-pills .nav-link {
+            color: #3c4043;
+            font-weight: 400;
+            /* font-size: larger; */
+            /* font-family: 'Palatino'; */
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: #de5021;
+            color: white;
+        }
+        
+        .nav-link:hover {
+            color: #de5021;
+        }
+    </style>
+    <style>
+        .box {
+            /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); */
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .box::after {
+            position: absolute;
+            z-index: -1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        .box:hover {
+            -webkit-transform: scale(1.02, 1.02);
+            transform: scale(1.02, 1.02);
+        }
+        
+        .box:hover::after {
+            opacity: 1;
+        }
+    </style>
+    <!-- PRELOADER STYLE -->
+    <style>
+        .spinner-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e7e7e7;
+            z-index: 999999;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 48%;
+            left: 48%;
+        }
+        
+        .double-bounce1,
+        .double-bounce2 {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #de5021;
+            opacity: 0.6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+            animation: sk-bounce 2.0s infinite ease-in-out;
+        }
+        
+        .double-bounce2 {
+            -webkit-animation-delay: -1.0s;
+            animation-delay: -1.0s;
+        }
+        
+        @-webkit-keyframes sk-bounce {
+            0%,
+            100% {
+                -webkit-transform: scale(0.0)
+            }
+            50% {
+                -webkit-transform: scale(1.0)
+            }
+        }
+        
+        @keyframes sk-bounce {
+            0%,
+            100% {
+                transform: scale(0.0);
+                -webkit-transform: scale(0.0);
+            }
+            50% {
+                transform: scale(1.0);
+                -webkit-transform: scale(1.0);
+            }
+        }
+    </style>
+</head>
+
+<body class="body" style="background-color: #e7e7e7;">
+    <!-- <div class="spinner-wrapper">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+    </div> -->
+    <div class="header"> <a href="./index.htm" class="myHeader">Paolo Arguelles</a>
+        <div class="header-right" style="font-weight: 400;">
+            <a class=myPages href="./index.htm">Projects</a>
+            <a class=myPages href="./bio.htm">About</a>
+            <a class=myPages href="./speech.htm">Speech</a>
+            <a class=myPages href="./writing.htm">Writing</a>
+            <a class=myPages href="./PaoloArguelles_Resume.pdf">Resume</a>
+        </div>
+        <div id="myNav" class="overlay">
+            <div class="Absolute-Center">
+                <div class="myPages">
+                    <a class=myPages href="./index.htm">Projects</a>
+                    <a class=myPages href="./bio.htm">About</a>
+                    <a class=myPages href="./speech.htm">Speech</a>
+                    <a class=myPages href="./writing.htm">Writing</a>
+                    <a class=myPages href="./PaoloArguelles_Resume.pdf">Resume</a>
+                </div>
+            </div>
+        </div>
+        <div id="toggle" class="toggle-container" width="none" style="cursor:pointer;" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+        <script>
+            function myFunction(x) {
+                x.classList.toggle("change");
+            }
+        </script>
+        <script>
+            function openNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "100%";
+                document.getElementById("toggle").onclick = closeNav;
+            }
+
+            function closeNav() {
+                myFunction(document.getElementById("toggle"));
+                document.getElementById("myNav").style.height = "0%";
+                document.getElementById("toggle").onclick = openNav;
+
+            }
+        </script>
+
+    </div>
+    <div class="project_bg" style="background-image: url(&quot;./website/resources/pics/CornellGrad-2658_Original.jpg&quot;);">
+        <h1 class="project_heading">Papers, Publications, and Other Writings
+        </h1>
+
+    </div>
+
+
+    <div class="tab-content" id="">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="margin-handler row row-cols-1 row-cols-lg-3 row-cols-xl-4">
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/SSRN-id3812046.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://dx.doi.org/10.2139/ssrn.3812046" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">Primary author of this 20-page policy analysis on the digital divide in prisons addressing recidivism, taxpayer impact, case studies, and opportunities for micromarket innovation and antitrust regulations</div>
+                            </div>
+                            <div class="item_topic">TECHNOLOGY AND POLICY</div>
+                            <h1 class="item_title">Bars Behind Bars: Digital Technology in the Prison System</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/arxiv-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://www.researchgate.net/publication/340964255_Estimating_UV-C_Sterilization_Dosage_for_COVID-19_Pandemic_Mitigation_Efforts" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc"> A method to evaluate the effectiveness of a simple UV-C germicidal system in an effort to guide COVID-19 pandemic mitigation efforts
+                                </div>
+                            </div>
+                            <div class="item_topic">COVID-19 PANDEMIC</div>
+                            <h1 class="item_title"> Effective UV-C Sterilization for the COVID-19 Pandemic</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <!-- Card -->
+                    <div class="mask rgba-white-slight"></div>
+
+                    <div style="background-image:url(&quot;./website/resources/pics/mems-min.jpeg&quot;);" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="./Final_MENG_Report-2 (1).pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A surface acoustic wave gyroscope for high-velocity ballistics, funded by the DARPA High Operational Rate and Shock Environment SAW Inertial Sensors (HORSES) program </div>
+                            </div>
+                            <div class="item_topic">SPACE AND DEFENSE</div>
+                            <h1 class="item_title">Acoustic Wave Gyroscope for Missile Guidance (DARPA)</h1>
+                        </a>
+                    </div>
+                    <!-- Card -->
+                </div>
+
+
+
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_bme-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="SENSORNETS_2018_23 (1).pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">We present a novel application for wireless EMG sensors. To combat the physical inactivity which has tended toward cardiovascular disease in individuals who use wheelchairs, we have developed a monitoring system to encourage
+                                    exercise.
+                                </div>
+                            </div>
+                            <div class="item_topic">BIOMEDICAL ENGINEERING</div>
+                            <h1 class="item_title">Wireless EMG to Promote Cardiovascular Health</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_mems.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="./tessellated_microstructures.pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">Futuristic tessellation-based MEMS concept for biomedical applications.
+                                </div>
+                            </div>
+                            <div class="item_topic">MICROSYSTEMS</div>
+                            <h1 class="item_title">Tessellated Microstructures for BioMEMS Devices</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;website/resources/pics/project_card_bg_acc-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="ECE4320_Project1Paper (1).pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">COMSOL Multiphysics modeling software was used to design and simulate the operation of a two-axis MEMS accelerometer, much like those found in today's smartphones.
+                                </div>
+                            </div>
+                            <div class="item_topic">MICROSYSTEMS</div>
+                            <h1 class="item_title">Designing and Analyzing a Two-Axis Accelerometer</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/upad_pub.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="82a545_2a9ed9f5f769494db2c2b22e5c54fd03 (1).pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">Research in microfluidic, colorimetric glucose assays to promote affordable diagnostic capability in resource-limited regions</div>
+                            </div>
+                            <div class="item_topic">BIOMEDICAL ENGINEERING</div>
+                            <h1 class="item_title">Point-of-Care Diagnostics Using Paper and Thread</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/circuit-board.svg&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="PaoloArguelles_Thesis_Final.pdf" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">This thesis presents research conducted with paper-based microfluidic devices and discusses the full realization of this platform through the integration of machine learning and electrical engineering.</div>
+                            </div>
+                            <div class="item_topic">BIOMEDICAL ENGINEERING</div>
+                            <h1 class="item_title">Towards a Medical Tricorder</h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <!-- Card -->
+                    <div style="background-image:url(&quot;./website/resources/pics/random-shapes.svg&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="./hsi-overview.htm" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">This piece on "human-swarm interaction" was originally presented at a Cornell graduate seminar on bio-inspired multi-agent coordination.</div>
+                            </div>
+                            <div class="item_topic">BIO-INSPIRED ROBOTICS</div>
+                            <h1 class="item_title">The Case for Human-Swarm Interaction</h1>
+                        </a>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <div class="col mb-4">
+                    <div style="background-image:url(&quot;./website/resources/pics/pbicharts-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://calstatela.patbrowninstitute.org/what-we-do/pbi-polling-program/" class="link-block w-inline-block">
+                            <div class="item_bg_grad">
+                                <div class="item_desc">A series of data visualizations created for the Pat Brown Institute for Public Affairs showcasing poll findings on voter engagement in Los Angeles County
+                                </div>
+                            </div>
+                            <div class="item_topic">PUBLIC POLICY</div>
+                            <h1 class="item_title">A Portrait of Voter Engagement in Los Angeles</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <div class="footer">
+        <center>© 2021 by Paolo Arguelles.
+            <br>All rights reserved.
+    </div>
+
+    <script src="./website/projects_files/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./website/projects_files/webflow.147763e2a.js" type="text/javascript"></script>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Slick -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Custom -->
+    <script src="./website/scripts.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.carousel').slick({
+                slidesToShow: 3,
+                dots: true,
+                centerMode: true,
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            //Preloader
+            preloaderFadeOutTime = 500;
+
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+            hidePreloader();
+        });
+    </script>
+</body>
+
+</html>
