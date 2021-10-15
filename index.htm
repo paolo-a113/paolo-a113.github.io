@@ -11,6 +11,7 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
 ================================================================== -->
 
 <html xmlns:og="http://opengraphprotocol.org/schema/">
+<meta name="robots" content="noindex">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -41,12 +42,12 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             /* font-size: larger; */
             /* font-family: 'Palatino'; */
         }
-        
+
         .nav-pills .nav-link.active {
             background-color: #de5021;
             color: white;
         }
-        
+
         .nav-link:hover {
             color: #de5021;
         }
@@ -57,7 +58,7 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
             transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
-        
+
         .box::after {
             position: absolute;
             z-index: -1;
@@ -66,12 +67,12 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
             transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
-        
+
         .box:hover {
             -webkit-transform: scale(1.02, 1.02);
             transform: scale(1.02, 1.02);
         }
-        
+
         .box:hover::after {
             opacity: 1;
         }
@@ -87,7 +88,7 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             background-color: #e7e7e7;
             z-index: 999999;
         }
-        
+
         .spinner {
             width: 40px;
             height: 40px;
@@ -95,7 +96,7 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             top: 48%;
             left: 48%;
         }
-        
+
         .double-bounce1,
         .double-bounce2 {
             width: 100%;
@@ -109,28 +110,32 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
             animation: sk-bounce 2.0s infinite ease-in-out;
         }
-        
+
         .double-bounce2 {
             -webkit-animation-delay: -1.0s;
             animation-delay: -1.0s;
         }
-        
+
         @-webkit-keyframes sk-bounce {
+
             0%,
             100% {
                 -webkit-transform: scale(0.0)
             }
+
             50% {
                 -webkit-transform: scale(1.0)
             }
         }
-        
+
         @keyframes sk-bounce {
+
             0%,
             100% {
                 transform: scale(0.0);
                 -webkit-transform: scale(0.0);
             }
+
             50% {
                 transform: scale(1.0);
                 -webkit-transform: scale(1.0);
@@ -201,10 +206,12 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
         <div class="col tab-wrapper">
             <ul class="nav nav-pills  mb-3 nav-justified" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Completed</a>
+                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                        aria-controls="home" aria-selected="true">Completed</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Continuing</a>
+                    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                        aria-controls="profile" aria-selected="false">Continuing</a>
                 </li>
 
 
@@ -220,11 +227,15 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             <div class="margin-handler row row-cols-1 row-cols-lg-3 row-cols-xl-4">
                 <div class="col mb-4">
                     <!-- Card -->
-                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_ssds-min.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="space/index.htm" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_ssds-min.jpg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="space/index.htm"
+                            class="link-block w-inline-block">
 
                             <div class="item_bg_grad">
-                                <div class="item_desc">A levitating testbed with gas thrusters and reaction wheels to simulate multi-axis orbital dynamics of spacecraft in a frictionless lab environment, built for Cornell's Space Systems Design Studio (SSDS)
+                                <div class="item_desc">A levitating testbed with gas thrusters and reaction wheels to
+                                    simulate multi-axis orbital dynamics of spacecraft in a frictionless lab
+                                    environment, built for Cornell's Space Systems Design Studio (SSDS)
                                 </div>
                             </div>
                             <div class="item_topic">SPACE AND DEFENSE</div>
@@ -237,10 +248,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     <!-- Card -->
                     <div class="mask rgba-white-slight"></div>
 
-                    <div style="background-image:url(&quot;./website/resources/pics/mems-min.jpeg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="Final_MENG_Report-2 (1).pdf" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/mems-min.jpeg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="Final_MENG_Report-2 (1).pdf"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">A surface acoustic wave gyroscope for high-velocity ballistics, funded by the DARPA High Operational Rate and Shock Environment SAW Inertial Sensors (HORSES) program </div>
+                                <div class="item_desc">A surface acoustic wave gyroscope for high-velocity ballistics,
+                                    funded by the DARPA High Operational Rate and Shock Environment SAW Inertial Sensors
+                                    (HORSES) program </div>
                             </div>
                             <div class="item_topic">SPACE AND DEFENSE</div>
                             <h1 class="item_title">Acoustic Wave Gyroscope for Missile Guidance (DARPA)</h1>
@@ -249,10 +264,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     <!-- Card -->
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/marshbot-min.PNG&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="ECE_Poster_2019_Final (1).pdf" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/marshbot-min.PNG&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="ECE_Poster_2019_Final (1).pdf"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">An autonomous rover to conduct crowd control in disaster or high-duress scenarios, featuring a life-sized translucent "bladder" to project information
+                                <div class="item_desc">An autonomous rover to conduct crowd control in disaster or
+                                    high-duress scenarios, featuring a life-sized translucent "bladder" to project
+                                    information
                                 </div>
                             </div>
                             <div class="item_topic">BIO-INSPIRED ROBOTICS</div>
@@ -263,8 +282,11 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
 
                 <div class="col mb-4">
                     <!-- Card -->
-                    <div style="background-image:url(&quot;./website/resources/pics/crops-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://gcgh.grandchallenges.org/grant/massively-deployed-ghz-ultrasonic-imagers-pest-detection" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/crops-min.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);"
+                            href="https://gcgh.grandchallenges.org/grant/massively-deployed-ghz-ultrasonic-imagers-pest-detection"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
                                 <div class="item_desc"> Project details are proprietary and confidential to Geegah LLC.
                                 </div>
@@ -277,10 +299,13 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                 </div>
                 <div class="col mb-4">
                     <!-- Card -->
-                    <div style="background-image:url(&quot;./website/resources/pics/random-shapes.svg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="./hsi-overview.htm" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/random-shapes.svg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="./hsi-overview.htm"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">This piece on "human-swarm interaction" was originally presented at a Cornell graduate seminar on bio-inspired multi-agent coordination.</div>
+                                <div class="item_desc">This piece on "human-swarm interaction" was originally presented
+                                    at a Cornell graduate seminar on bio-inspired multi-agent coordination.</div>
                             </div>
                             <div class="item_topic">BIO-INSPIRED ROBOTICS</div>
                             <h1 class="item_title">The Case for Human-Swarm Interaction</h1>
@@ -289,10 +314,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     <!-- Card -->
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/arxiv-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://www.researchgate.net/publication/340964255_Estimating_UV-C_Sterilization_Dosage_for_COVID-19_Pandemic_Mitigation_Efforts" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/arxiv-min.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);"
+                            href="https://www.researchgate.net/publication/340964255_Estimating_UV-C_Sterilization_Dosage_for_COVID-19_Pandemic_Mitigation_Efforts"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc"> A method to evaluate the effectiveness of a simple UV-C germicidal system in an effort to guide COVID-19 pandemic mitigation efforts
+                                <div class="item_desc"> A method to evaluate the effectiveness of a simple UV-C
+                                    germicidal system in an effort to guide COVID-19 pandemic mitigation efforts
                                 </div>
                             </div>
                             <div class="item_topic">COVID-19 PANDEMIC</div>
@@ -301,10 +330,15 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/gesture-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://courses.ece.cornell.edu/ece5990/ECE5725_Spring2019_Projects/Wednesday_051519/pa394_md848/index.html" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/gesture-min.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);"
+                            href="https://courses.ece.cornell.edu/ece5990/ECE5725_Spring2019_Projects/Wednesday_051519/pa394_md848/index.html"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">This embedded OS project uses a camera and a Raspberry Pi running OpenCV to track a user's hand movements and gestures and wirelessly control the mouse on a nearby computer.</div>
+                                <div class="item_desc">This embedded OS project uses a camera and a Raspberry Pi running
+                                    OpenCV to track a user's hand movements and gestures and wirelessly control the
+                                    mouse on a nearby computer.</div>
                             </div>
                             <div class="item_topic">COMPUTER VISION</div>
                             <h1 class="item_title">Gesture Controlled Mouse</h1>
@@ -312,10 +346,13 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/waffle_bg-min.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="./projects-waffle.htm" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/waffle_bg-min.jpg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="./projects-waffle.htm"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">A bio-inspired, decentralized shape-shifting robot created at Cornell's Collective Embodied Intelligence Lab</div>
+                                <div class="item_desc">A bio-inspired, decentralized shape-shifting robot created at
+                                    Cornell's Collective Embodied Intelligence Lab</div>
                             </div>
                             <div class="item_topic">BIO-INSPIRED ROBOTICS</div>
                             <h1 class="item_title">WaffleBot: A Shapeshifting Soft Robotic Matrix</h1>
@@ -323,10 +360,15 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_cubesat.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="FINAL REPORT CubeSat Team Spring 2018_Final (1).pdf" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_cubesat.jpg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);"
+                            href="FINAL REPORT CubeSat Team Spring 2018_Final (1).pdf"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">My senior capstone project partnered with liaisons from Northrop Grumman to explore articulating solar sails as CubeSat attitude control in low-earth orbit
+                                <div class="item_desc">My senior capstone project partnered with liaisons from Northrop
+                                    Grumman to explore articulating solar sails as CubeSat attitude control in low-earth
+                                    orbit
                                 </div>
                             </div>
                             <div class="item_topic">SPACE AND DEFENSE</div>
@@ -336,10 +378,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                 </div>
 
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/circuit-board.svg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="PaoloArguelles_Thesis_Final.pdf" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/circuit-board.svg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="PaoloArguelles_Thesis_Final.pdf"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">This thesis presents research conducted with paper-based microfluidic devices and discusses the full realization of this platform through the integration of machine learning and electrical engineering.</div>
+                                <div class="item_desc">This thesis presents research conducted with paper-based
+                                    microfluidic devices and discusses the full realization of this platform through the
+                                    integration of machine learning and electrical engineering.</div>
                             </div>
                             <div class="item_topic">BIOMEDICAL ENGINEERING</div>
                             <h1 class="item_title">Towards a Medical Tricorder</h1>
@@ -361,10 +407,13 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div> -->
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/upad_pub.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="82a545_2a9ed9f5f769494db2c2b22e5c54fd03 (1).pdf" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/upad_pub.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);"
+                            href="82a545_2a9ed9f5f769494db2c2b22e5c54fd03 (1).pdf" class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">Research in microfluidic, colorimetric glucose assays to promote affordable diagnostic capability in resource-limited regions</div>
+                                <div class="item_desc">Research in microfluidic, colorimetric glucose assays to promote
+                                    affordable diagnostic capability in resource-limited regions</div>
                             </div>
                             <div class="item_topic">BIOMEDICAL ENGINEERING</div>
                             <h1 class="item_title">Point-of-Care Diagnostics Using Paper and Thread</h1>
@@ -372,10 +421,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/SSRN-id3812046.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://dx.doi.org/10.2139/ssrn.3812046" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/SSRN-id3812046.jpg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://dx.doi.org/10.2139/ssrn.3812046"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">Primary author of this 20-page policy analysis on the digital divide in prisons addressing recidivism, taxpayer impact, case studies, and opportunities for micromarket innovation and antitrust regulations</div>
+                                <div class="item_desc">Primary author of this 20-page policy analysis on the digital
+                                    divide in prisons addressing recidivism, taxpayer impact, case studies, and
+                                    opportunities for micromarket innovation and antitrust regulations</div>
                             </div>
                             <div class="item_topic">TECHNOLOGY AND POLICY</div>
                             <h1 class="item_title">Digital Technology in the Prison System</h1>
@@ -383,10 +436,15 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/pbicharts-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="https://calstatela.patbrowninstitute.org/what-we-do/pbi-polling-program/" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/pbicharts-min.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);"
+                            href="https://calstatela.patbrowninstitute.org/what-we-do/pbi-polling-program/"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">A series of data visualizations created for the Pat Brown Institute for Public Affairs showcasing poll findings on voter engagement in Los Angeles County
+                                <div class="item_desc">A series of data visualizations created for the Pat Brown
+                                    Institute for Public Affairs showcasing poll findings on voter engagement in Los
+                                    Angeles County
                                 </div>
                             </div>
                             <div class="item_topic">PUBLIC POLICY</div>
@@ -396,10 +454,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                 </div>
 
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_bme-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="SENSORNETS_2018_23 (1).pdf" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_bme-min.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="SENSORNETS_2018_23 (1).pdf"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">We present a novel application for wireless EMG sensors. To combat the physical inactivity which has tended toward cardiovascular disease in individuals who use wheelchairs, we have developed a monitoring system to encourage
+                                <div class="item_desc">We present a novel application for wireless EMG sensors. To
+                                    combat the physical inactivity which has tended toward cardiovascular disease in
+                                    individuals who use wheelchairs, we have developed a monitoring system to encourage
                                     exercise.
                                 </div>
                             </div>
@@ -409,10 +471,13 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_mems.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="./tessellated_microstructures.pdf" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/project_card_bg_mems.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="./tessellated_microstructures.pdf"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">Futuristic tessellation-based MEMS concept for biomedical applications.
+                                <div class="item_desc">Futuristic tessellation-based MEMS concept for biomedical
+                                    applications.
                                 </div>
                             </div>
                             <div class="item_topic">MICROSYSTEMS</div>
@@ -421,10 +486,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;website/resources/pics/project_card_bg_acc-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="ECE4320_Project1Paper (1).pdf" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;website/resources/pics/project_card_bg_acc-min.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="ECE4320_Project1Paper (1).pdf"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">COMSOL Multiphysics modeling software was used to design and simulate the operation of a two-axis MEMS accelerometer, much like those found in today's smartphones.
+                                <div class="item_desc">COMSOL Multiphysics modeling software was used to design and
+                                    simulate the operation of a two-axis MEMS accelerometer, much like those found in
+                                    today's smartphones.
                                 </div>
                             </div>
                             <div class="item_topic">MICROSYSTEMS</div>
@@ -439,10 +508,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             <div class="margin-handler row row-cols-1 row-cols-lg-3 row-cols-xl-4">
 
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/b4dl-logo.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(83, 5, 5, 0);" href="https://bridges4.org" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/b4dl-logo.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" href="https://bridges4.org"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">I started a nonprofit corporation during the pandemic to help bridge the digital divide for students in low-income communities in the United States and abroad.
+                                <div class="item_desc">I started a nonprofit corporation during the pandemic to help
+                                    bridge the digital divide for students in low-income communities in the United
+                                    States and abroad.
                                 </div>
                             </div>
                             <div class="item_topic">NONPROFIT</div>
@@ -452,10 +525,13 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                 </div>
 
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/passportable-min.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(83, 5, 5, 0);" href="projects-passportable.htm" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/passportable-min.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" href="projects-passportable.htm"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">A travel planning platform that makes it easy for anyone to create and share trip itineraries</div>
+                                <div class="item_desc">A travel planning platform that makes it easy for anyone to
+                                    create and share trip itineraries</div>
                             </div>
                             <div class="item_topic">WEB APP</div>
                             <h1 class="item_title">Passportable</h1>
@@ -477,10 +553,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div> -->
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/IMG_0120.png&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(0, 0, 0, 0);" href="projects-smartcookies.htm" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/IMG_0120.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(0, 0, 0, 0);" href="projects-smartcookies.htm"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">A distributed, wireless, ad hoc mesh sensor network and embedded web app to accelerate scientific research and promote accessible STEM education in developing communities
+                                <div class="item_desc">A distributed, wireless, ad hoc mesh sensor network and embedded
+                                    web app to accelerate scientific research and promote accessible STEM education in
+                                    developing communities
                                 </div>
                             </div>
                             <div class="item_topic">INTERNET OF THINGS
@@ -491,10 +571,12 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/sprout1.png&quot;)" class="box card collection-item w-dyn-item h-100">
+                    <div style="background-image:url(&quot;./website/resources/pics/sprout1.png&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
                         <a style="background-color: rgba(0, 0, 0, 0);" href="" class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">A wireless sensor node for smart agriculture compatible with the Distributed Wireless Sensor Ecosystem
+                                <div class="item_desc">A wireless sensor node for smart agriculture compatible with the
+                                    Distributed Wireless Sensor Ecosystem
                                 </div>
                             </div>
                             <div class="item_topic">INTERNET OF THINGS
@@ -505,10 +587,14 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                 </div>
 
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/sunspot-1.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(83, 5, 5, 0);" href="https://www.bridges4.org/post/a-solar-powered-library-hotspot-for-no-internet-areas" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/sunspot-1.jpg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);"
+                            href="https://www.bridges4.org/post/a-solar-powered-library-hotspot-for-no-internet-areas"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">Bringing millions of libraries worth of educational resources to rural schools without an Internet connection
+                                <div class="item_desc">Bringing millions of libraries worth of educational resources to
+                                    rural schools without an Internet connection
                                 </div>
                             </div>
                             <div class="item_topic">SERVICE</div>
@@ -521,11 +607,15 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
 
 
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/US_Navy_110517-N-TU221-793_Hospital_Corpsman_3rd_Class_Jonathan_Martin_reads_a_book_to_orphans_at_Hospicio_De_San_Jose_Orphanage-min.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
-                        <a style="background-color: rgba(83, 5, 5, 0);" href="https://www.bridges4.org/covid-19-fund" class="link-block w-inline-block">
+                    <div style="background-image:url(&quot;./website/resources/pics/US_Navy_110517-N-TU221-793_Hospital_Corpsman_3rd_Class_Jonathan_Martin_reads_a_book_to_orphans_at_Hospicio_De_San_Jose_Orphanage-min.jpg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
+                        <a style="background-color: rgba(83, 5, 5, 0);" href="https://www.bridges4.org/covid-19-fund"
+                            class="link-block w-inline-block">
                             <div class="item_bg_grad">
                                 <div class="item_desc">
-                                    <p>A COVID-19 relief fund for orphans, abandoned children, migrants, refugees, and the elderly at <i>Hospicio de San Jose,</i> an orphanage in Manila, Philippines</p>
+                                    <p>A COVID-19 relief fund for orphans, abandoned children, migrants, refugees, and
+                                        the elderly at <i>Hospicio de San Jose,</i> an orphanage in Manila, Philippines
+                                    </p>
                                 </div>
                             </div>
                             <div class="item_topic">COVID-19 PANDEMIC</div>
@@ -534,10 +624,12 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
                     </div>
                 </div>
                 <div class="col mb-4">
-                    <div style="background-image:url(&quot;./website/resources/pics/engineering_nbk-min.jpg&quot;)" class="box card collection-item w-dyn-item h-100">
+                    <div style="background-image:url(&quot;./website/resources/pics/engineering_nbk-min.jpg&quot;)"
+                        class="box card collection-item w-dyn-item h-100">
                         <a style="background-color: rgba(83, 5, 5, 0);" class="link-block w-inline-block">
                             <div class="item_bg_grad">
-                                <div class="item_desc">By engineers, for engineers — this is the engineering notebook you wish you had in school
+                                <div class="item_desc">By engineers, for engineers — this is the engineering notebook
+                                    you wish you had in school
                                 </div>
                             </div>
                             <div class="item_topic">PROJECT MANAGEMENT</div>
@@ -601,7 +693,8 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             Built from scratch and hosted by GitHub pages. <br> © 2021 by Paolo Arguelles.
     </div>
 
-    <script src="./website/projects_files/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="./website/projects_files/jquery-3.3.1.min.js" type="text/javascript"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="./website/projects_files/webflow.147763e2a.js" type="text/javascript"></script>
 
     <!-- JQuery -->
@@ -614,7 +707,7 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
     <script src="./website/scripts.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('.carousel').slick({
                 slidesToShow: 3,
                 dots: true,
@@ -622,17 +715,26 @@ COPYRIGHT (C) 2021 BY PAOLO ARGUELLES. ALL RIGHTS RESERVED.
             });
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <!-- JQuery -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
     <!-- <script>
         window.onload = function() {
             //Preloader
